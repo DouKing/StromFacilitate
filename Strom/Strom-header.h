@@ -9,7 +9,6 @@
 #ifndef Strom_header_h
 #define Strom_header_h
 
-#import "STMMaros.h"
 #import "STMConfiguration.h"
 
 #import "NSDictionary+STM.h"

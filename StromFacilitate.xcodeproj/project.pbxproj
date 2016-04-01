@@ -35,7 +35,6 @@
 		B891F7F01CAE71770043BD59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B891F7F31CAE71770043BD59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B891F7F51CAE71770043BD59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B891F7FD1CAE72590043BD59 /* STMMaros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMMaros.h; sourceTree = "<group>"; };
 		B891F8001CAE72590043BD59 /* NSArray+STM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+STM.h"; sourceTree = "<group>"; };
 		B891F8011CAE72590043BD59 /* NSArray+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+STM.m"; sourceTree = "<group>"; };
 		B891F8021CAE72590043BD59 /* NSMutableArray+STM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+STM.h"; sourceTree = "<group>"; };
@@ -133,7 +132,6 @@
 		B891F7FC1CAE72590043BD59 /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				B891F7FD1CAE72590043BD59 /* STMMaros.h */,
 				B891F8331CAE7A080043BD59 /* STMConfiguration.h */,
 				B891F8341CAE7A080043BD59 /* STMConfiguration.m */,
 			);
@@ -512,6 +510,7 @@
 				B891F7FA1CAE71770043BD59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
