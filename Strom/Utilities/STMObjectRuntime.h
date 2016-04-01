@@ -21,8 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 FOUNDATION_EXPORT void STMSwizzMethod(Class aClass, SEL originSelector, SEL swizzSelector);
 
+
 @interface STMObjectRuntime : NSObject
 @end
-
 
 NS_ASSUME_NONNULL_END

@@ -24,6 +24,7 @@
 		B891F82E1CAE738F0043BD59 /* UIColor+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F82D1CAE738F0043BD59 /* UIColor+STM.m */; };
 		B891F8321CAE772C0043BD59 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8311CAE772C0043BD59 /* ViewController.m */; };
 		B891F8351CAE7A080043BD59 /* STMConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8341CAE7A080043BD59 /* STMConfiguration.m */; };
+		B891F8381CAECC9A0043BD59 /* NSString+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8371CAECC9A0043BD59 /* NSString+STM.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,8 @@
 		B891F8311CAE772C0043BD59 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B891F8331CAE7A080043BD59 /* STMConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMConfiguration.h; sourceTree = "<group>"; };
 		B891F8341CAE7A080043BD59 /* STMConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMConfiguration.m; sourceTree = "<group>"; };
+		B891F8361CAECC9A0043BD59 /* NSString+STM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+STM.h"; sourceTree = "<group>"; };
+		B891F8371CAECC9A0043BD59 /* NSString+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+STM.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +176,8 @@
 		B891F8091CAE72590043BD59 /* NSString */ = {
 			isa = PBXGroup;
 			children = (
+				B891F8361CAECC9A0043BD59 /* NSString+STM.h */,
+				B891F8371CAECC9A0043BD59 /* NSString+STM.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -351,6 +356,7 @@
 				B891F7E61CAE71770043BD59 /* main.m in Sources */,
 				B891F81E1CAE72590043BD59 /* STMNavigationController.m in Sources */,
 				B891F8321CAE772C0043BD59 /* ViewController.m in Sources */,
+				B891F8381CAECC9A0043BD59 /* NSString+STM.m in Sources */,
 				B891F8211CAE72590043BD59 /* UIViewController+STM.m in Sources */,
 				B891F81A1CAE72590043BD59 /* NSArray+STM.m in Sources */,
 				B891F8351CAE7A080043BD59 /* STMConfiguration.m in Sources */,
