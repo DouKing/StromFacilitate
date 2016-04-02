@@ -26,6 +26,7 @@
 		B891F8351CAE7A080043BD59 /* STMConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8341CAE7A080043BD59 /* STMConfiguration.m */; };
 		B891F8381CAECC9A0043BD59 /* NSString+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8371CAECC9A0043BD59 /* NSString+STM.m */; };
 		B891F8421CAF6C580043BD59 /* STMRSAEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8411CAF6C580043BD59 /* STMRSAEncryptor.m */; };
+		B891F8461CAF6DBC0043BD59 /* NSData+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8451CAF6DBC0043BD59 /* NSData+STM.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,8 @@
 		B891F8371CAECC9A0043BD59 /* NSString+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+STM.m"; sourceTree = "<group>"; };
 		B891F8401CAF6C580043BD59 /* STMRSAEncryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMRSAEncryptor.h; sourceTree = "<group>"; };
 		B891F8411CAF6C580043BD59 /* STMRSAEncryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMRSAEncryptor.m; sourceTree = "<group>"; };
+		B891F8441CAF6DBC0043BD59 /* NSData+STM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+STM.h"; sourceTree = "<group>"; };
+		B891F8451CAF6DBC0043BD59 /* NSData+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+STM.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +151,7 @@
 		B891F7FE1CAE72590043BD59 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				B891F8431CAF6DAD0043BD59 /* NSData */,
 				B891F7FF1CAE72590043BD59 /* NSArray */,
 				B891F8041CAE72590043BD59 /* NSDictionary */,
 				B891F8091CAE72590043BD59 /* NSString */,
@@ -292,6 +296,15 @@
 			path = Security;
 			sourceTree = "<group>";
 		};
+		B891F8431CAF6DAD0043BD59 /* NSData */ = {
+			isa = PBXGroup;
+			children = (
+				B891F8441CAF6DBC0043BD59 /* NSData+STM.h */,
+				B891F8451CAF6DBC0043BD59 /* NSData+STM.m */,
+			);
+			path = NSData;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -376,6 +389,7 @@
 				B891F81B1CAE72590043BD59 /* NSMutableArray+STM.m in Sources */,
 				B891F8421CAF6C580043BD59 /* STMRSAEncryptor.m in Sources */,
 				B891F8201CAE72590043BD59 /* STMViewController.m in Sources */,
+				B891F8461CAF6DBC0043BD59 /* NSData+STM.m in Sources */,
 				B891F81C1CAE72590043BD59 /* NSDictionary+STM.m in Sources */,
 				B891F81F1CAE72590043BD59 /* STMTableViewController.m in Sources */,
 			);
