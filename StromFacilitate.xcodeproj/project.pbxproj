@@ -25,6 +25,7 @@
 		B891F8321CAE772C0043BD59 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8311CAE772C0043BD59 /* ViewController.m */; };
 		B891F8351CAE7A080043BD59 /* STMConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8341CAE7A080043BD59 /* STMConfiguration.m */; };
 		B891F8381CAECC9A0043BD59 /* NSString+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8371CAECC9A0043BD59 /* NSString+STM.m */; };
+		B891F83E1CAF66350043BD59 /* STMRSAEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F83D1CAF66350043BD59 /* STMRSAEncryptor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,8 @@
 		B891F8341CAE7A080043BD59 /* STMConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMConfiguration.m; sourceTree = "<group>"; };
 		B891F8361CAECC9A0043BD59 /* NSString+STM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+STM.h"; sourceTree = "<group>"; };
 		B891F8371CAECC9A0043BD59 /* NSString+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+STM.m"; sourceTree = "<group>"; };
+		B891F83C1CAF66350043BD59 /* STMRSAEncryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMRSAEncryptor.h; sourceTree = "<group>"; };
+		B891F83D1CAF66350043BD59 /* STMRSAEncryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMRSAEncryptor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +225,8 @@
 			children = (
 				B891F8171CAE72590043BD59 /* STMObjectRuntime.h */,
 				B891F8181CAE72590043BD59 /* STMObjectRuntime.m */,
+				B891F83C1CAF66350043BD59 /* STMRSAEncryptor.h */,
+				B891F83D1CAF66350043BD59 /* STMRSAEncryptor.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -361,6 +366,7 @@
 				B891F81A1CAE72590043BD59 /* NSArray+STM.m in Sources */,
 				B891F8351CAE7A080043BD59 /* STMConfiguration.m in Sources */,
 				B891F81B1CAE72590043BD59 /* NSMutableArray+STM.m in Sources */,
+				B891F83E1CAF66350043BD59 /* STMRSAEncryptor.m in Sources */,
 				B891F8201CAE72590043BD59 /* STMViewController.m in Sources */,
 				B891F81C1CAE72590043BD59 /* NSDictionary+STM.m in Sources */,
 				B891F81F1CAE72590043BD59 /* STMTableViewController.m in Sources */,
