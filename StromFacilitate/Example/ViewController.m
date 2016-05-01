@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "DetailViewController.h"
 
 @interface ViewController ()
 
@@ -20,6 +21,9 @@
   
   self.view.backgroundColor = [UIColor stm_colorWithRGBValue:0xFFFFFF];
   STMLogObj(STMDocumentPath());
+  
+  UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:NULL];
+  self.navigationItem.backBarButtonItem = back;
   
   [self example1];
   [self example2];
@@ -49,11 +53,20 @@
 }
 
 - (void)example3 {
-  
+  UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
+  btn.frame = CGRectMake(10, 64, 100, 40);
+  btn.backgroundColor = [UIColor yellowColor];
+  [btn addTarget:self action:@selector(push) forControlEvents:UIControlEventTouchUpInside];
+  [self.view addSubview:btn];
 }
 
 - (void)example4 {
   
+}
+
+- (void)push {
+  DetailViewController *vc = [[DetailViewController alloc] init];
+  [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

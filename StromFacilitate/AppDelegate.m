@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "STMNavigationController.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Override point for customization after application launch.
+  self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+  self.window.backgroundColor = [UIColor whiteColor];
+  self.window.rootViewController = [[STMNavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
+  [self.window makeKeyAndVisible];
+  
+  UIImage *image = [UIImage imageNamed:@"back"];
+  image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+  [[UINavigationBar appearance] setBackIndicatorImage:image];
+  [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:image];
+  
+  UIBarButtonItem *buttonItem = [UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil];
+  UIOffset offset = UIOffsetMake(-10, 0);
+  [buttonItem setBackButtonTitlePositionAdjustment:offset forBarMetrics:UIBarMetricsDefault];  
   return YES;
 }
 
