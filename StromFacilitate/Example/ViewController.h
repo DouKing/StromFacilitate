@@ -6,8 +6,8 @@
 //  Copyright © 2016年 secoo. All rights reserved.
 //
 
-#import "STMViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface ViewController : STMViewController
+@interface ViewController : UIViewController
 
 @end
