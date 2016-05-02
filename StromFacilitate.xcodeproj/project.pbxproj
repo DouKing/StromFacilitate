@@ -20,7 +20,6 @@
 		B891F81B1CAE72590043BD59 /* NSMutableArray+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8031CAE72590043BD59 /* NSMutableArray+STM.m */; };
 		B891F81C1CAE72590043BD59 /* NSDictionary+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8061CAE72590043BD59 /* NSDictionary+STM.m */; };
 		B891F81D1CAE72590043BD59 /* NSMutableDictionary+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8081CAE72590043BD59 /* NSMutableDictionary+STM.m */; };
-		B891F81E1CAE72590043BD59 /* STMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F80E1CAE72590043BD59 /* STMNavigationController.m */; };
 		B891F8211CAE72590043BD59 /* UIViewController+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8141CAE72590043BD59 /* UIViewController+STM.m */; };
 		B891F8221CAE72590043BD59 /* STMObjectRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8181CAE72590043BD59 /* STMObjectRuntime.m */; };
 		B891F82E1CAE738F0043BD59 /* UIColor+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F82D1CAE738F0043BD59 /* UIColor+STM.m */; };
@@ -57,8 +56,6 @@
 		B891F8071CAE72590043BD59 /* NSMutableDictionary+STM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+STM.h"; sourceTree = "<group>"; };
 		B891F8081CAE72590043BD59 /* NSMutableDictionary+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+STM.m"; sourceTree = "<group>"; };
 		B891F80A1CAE72590043BD59 /* Strom-header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Strom-header.h"; sourceTree = "<group>"; };
-		B891F80D1CAE72590043BD59 /* STMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMNavigationController.h; sourceTree = "<group>"; };
-		B891F80E1CAE72590043BD59 /* STMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMNavigationController.m; sourceTree = "<group>"; };
 		B891F8131CAE72590043BD59 /* UIViewController+STM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+STM.h"; sourceTree = "<group>"; };
 		B891F8141CAE72590043BD59 /* UIViewController+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+STM.m"; sourceTree = "<group>"; };
 		B891F8171CAE72590043BD59 /* STMObjectRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMObjectRuntime.h; sourceTree = "<group>"; };
@@ -233,8 +230,6 @@
 		B891F80C1CAE72590043BD59 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B891F80D1CAE72590043BD59 /* STMNavigationController.h */,
-				B891F80E1CAE72590043BD59 /* STMNavigationController.m */,
 				B891F8131CAE72590043BD59 /* UIViewController+STM.h */,
 				B891F8141CAE72590043BD59 /* UIViewController+STM.m */,
 				B839EC101CD6F832002667D6 /* UINavigationController+STM.h */,
@@ -460,7 +455,6 @@
 				B87169A11CD60CF7009D166A /* DetailViewController.m in Sources */,
 				B891F7E91CAE71770043BD59 /* AppDelegate.m in Sources */,
 				B891F7E61CAE71770043BD59 /* main.m in Sources */,
-				B891F81E1CAE72590043BD59 /* STMNavigationController.m in Sources */,
 				B891F8321CAE772C0043BD59 /* ViewController.m in Sources */,
 				B891F8381CAECC9A0043BD59 /* NSString+STM.m in Sources */,
 				B891F8211CAE72590043BD59 /* UIViewController+STM.m in Sources */,
