@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A9E202CC02A68FB6D1190FB2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 432F79F15A36EE5E5490C65B /* libPods.a */; };
+		B839EC121CD6F832002667D6 /* UINavigationController+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = B839EC111CD6F832002667D6 /* UINavigationController+STM.m */; };
 		B87169A11CD60CF7009D166A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B87169A01CD60CF7009D166A /* DetailViewController.m */; };
 		B87169A41CD612E7009D166A /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B87169A21CD612E7009D166A /* back@2x.png */; };
 		B87169A51CD612E7009D166A /* back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B87169A31CD612E7009D166A /* back@3x.png */; };
@@ -34,6 +35,8 @@
 		432F79F15A36EE5E5490C65B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		75E2586A8919587421916D94 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		91B1D6C13E64563B8A00508B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B839EC101CD6F832002667D6 /* UINavigationController+STM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+STM.h"; sourceTree = "<group>"; };
+		B839EC111CD6F832002667D6 /* UINavigationController+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+STM.m"; sourceTree = "<group>"; };
 		B871699F1CD60CF7009D166A /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		B87169A01CD60CF7009D166A /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		B87169A21CD612E7009D166A /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
@@ -234,6 +237,8 @@
 				B891F80E1CAE72590043BD59 /* STMNavigationController.m */,
 				B891F8131CAE72590043BD59 /* UIViewController+STM.h */,
 				B891F8141CAE72590043BD59 /* UIViewController+STM.m */,
+				B839EC101CD6F832002667D6 /* UINavigationController+STM.h */,
+				B839EC111CD6F832002667D6 /* UINavigationController+STM.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -464,6 +469,7 @@
 				B891F81B1CAE72590043BD59 /* NSMutableArray+STM.m in Sources */,
 				B891F8421CAF6C580043BD59 /* STMRSAEncryptor.m in Sources */,
 				B891F8461CAF6DBC0043BD59 /* NSData+STM.m in Sources */,
+				B839EC121CD6F832002667D6 /* UINavigationController+STM.m in Sources */,
 				B891F81C1CAE72590043BD59 /* NSDictionary+STM.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
