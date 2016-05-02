@@ -21,10 +21,7 @@
   
   self.view.backgroundColor = [UIColor stm_colorWithRGBValue:0xFFFFFF];
   STMLogObj(STMDocumentPath());
-  
-  UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:NULL];
-  self.navigationItem.backBarButtonItem = back;
-  
+    
   [self example1];
   [self example2];
   [self example3];
