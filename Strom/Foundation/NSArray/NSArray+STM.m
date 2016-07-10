@@ -26,4 +26,16 @@
   return [self stm_objectAtIndex:index];
 }
 
++ (instancetype)arrayWithObjects:(const id  _Nonnull __unsafe_unretained *)objects count:(NSUInteger)cnt {
+  NSMutableArray *objArray = [NSMutableArray array];
+  for (NSUInteger i = 0; i < cnt; ++i) {
+    if (objects[i]) {
+      [objArray addObject:objects[i]];
+    } else {
+      STMLog(@"`arrayWithObjects:count:` can't insert nil");
+    }
+  }
+  return [self arrayWithArray:objArray];
+}
+
 @end
