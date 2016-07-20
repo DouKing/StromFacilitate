@@ -33,13 +33,13 @@
   self.window.rootViewController = tabBarController;
   [self.window makeKeyAndVisible];
   
-  UIImage *image = [UIImage imageNamed:@"back"];
+  UIImage *image = [UIImage imageNamed:@"img_goBack_icon"];
   image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
   [[UINavigationBar appearance] setBackIndicatorImage:image];
   [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:image];
   
   UIBarButtonItem *buttonItem = [UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil];
-  UIOffset offset = UIOffsetMake(-10, 0);
+  UIOffset offset = UIOffsetMake(-5, 2);
   [buttonItem setBackButtonTitlePositionAdjustment:offset forBarMetrics:UIBarMetricsDefault];
   
   return YES;
