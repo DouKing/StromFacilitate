@@ -18,9 +18,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Override point for customization after application launch.
+  UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
+  UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:[UIViewController new]];
+  UITabBarController *tabBarController = [[UITabBarController alloc] init];
+  [tabBarController setViewControllers:@[nav1, nav2] animated:YES];
+
+  UITabBarItem *tab1 = tabBarController.tabBar.items[0];
+  UITabBarItem *tab2 = tabBarController.tabBar.items[1];
+  tab1.title = @"测试1";
+  tab2.title = @"测试2";
+  
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
   self.window.backgroundColor = [UIColor whiteColor];
-  self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
+  self.window.rootViewController = tabBarController;
   [self.window makeKeyAndVisible];
   
   UIImage *image = [UIImage imageNamed:@"back"];
@@ -30,7 +40,8 @@
   
   UIBarButtonItem *buttonItem = [UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil];
   UIOffset offset = UIOffsetMake(-10, 0);
-  [buttonItem setBackButtonTitlePositionAdjustment:offset forBarMetrics:UIBarMetricsDefault];  
+  [buttonItem setBackButtonTitlePositionAdjustment:offset forBarMetrics:UIBarMetricsDefault];
+  
   return YES;
 }
 

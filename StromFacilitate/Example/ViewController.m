@@ -95,6 +95,7 @@
 
 - (void)push {
   DetailViewController *vc = [[DetailViewController alloc] init];
+  vc.hidesBottomBarWhenPushed = YES;
   [self.navigationController pushViewController:vc animated:YES];
 }
 
