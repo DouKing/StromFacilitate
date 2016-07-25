@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "UINavigationController+STMTransition.h"
 
 @interface AppDelegate ()
 
@@ -19,6 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Override point for customization after application launch.
   UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
+  nav1.transitionStyle = STMNavigationTransitionStyleResignLeft;
   UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:[UIViewController new]];
   UITabBarController *tabBarController = [[UITabBarController alloc] init];
   [tabBarController setViewControllers:@[nav1, nav2] animated:YES];
