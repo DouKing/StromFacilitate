@@ -7,9 +7,23 @@
 //
 
 #import "UIViewController+STMTransition.h"
-#import <objc/runtime.h>
+#import "STMObjectRuntime.h"
 
 @implementation UIViewController (STMTransition)
+
++ (void)load {
+  static dispatch_once_t onceToken;
+  dispatch_once(&onceToken, ^{
+    SEL systemSel = @selector(viewDidLoad);
+    SEL swizzSel = @selector(_stm_viewDidLoad);
+    STMSwizzMethod([self class], systemSel, swizzSel);
+  });
+}
+
+- (void)_stm_viewDidLoad {
+  [self _stm_viewDidLoad];
+  self.navigationTransitionStyle = STMNavigationTransitionStyleNone;
+}
 
 - (STMNavigationTransitionStyle)navigationTransitionStyle {
   NSNumber *style = objc_getAssociatedObject(self, @selector(navigationTransitionStyle));

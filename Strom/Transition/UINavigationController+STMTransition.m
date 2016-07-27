@@ -8,12 +8,14 @@
 
 #import "UINavigationController+STMTransition.h"
 #import "STMObjectRuntime.h"
+#import "UIViewController+STMTransition.h"
 #import "STMResignLeftTransitionAnimator.h"
 
 @interface STMTransitionProxy : NSProxy<UINavigationControllerDelegate>
 
 @property (nonatomic, assign) STMNavigationTransitionStyle transitionStyle;
 @property (nonatomic, weak) id<UINavigationControllerDelegate> delegate;
+@property (nonatomic, strong) STMBaseTransitionAnimator *baseTransitionAnimator;
 @property (nonatomic, strong) STMResignLeftTransitionAnimator *resignLeftTransitionAnimator;
 
 @end
@@ -43,11 +45,21 @@
   return [self.delegate respondsToSelector:aSelector];
 }
 
-- (STMResignLeftTransitionAnimator *)resignLeftTransitionAnimator {
-  if (!_resignLeftTransitionAnimator) {
-    _resignLeftTransitionAnimator = [[STMResignLeftTransitionAnimator alloc] init];
+- (STMBaseTransitionAnimator *)_animatorForTransitionStyle:(STMNavigationTransitionStyle)transitionStyle {
+  switch (transitionStyle) {
+    case STMNavigationTransitionStyleSystem: {
+      return nil;
+      break;
+    }
+    case STMNavigationTransitionStyleResignLeft: {
+      return self.resignLeftTransitionAnimator;
+      break;
+    }
+    case STMNavigationTransitionStyleNone: {
+      return self.baseTransitionAnimator;
+      break;
+    }
   }
-  return _resignLeftTransitionAnimator;
 }
 
 #pragma mark - UINavigationControllerDelegate
@@ -57,8 +69,29 @@
 }
 
 - (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC {
-  self.resignLeftTransitionAnimator.operation = operation;
-  return self.resignLeftTransitionAnimator;
+  STMNavigationTransitionStyle transitionStyle = toVC.navigationTransitionStyle;
+  if (STMNavigationTransitionStyleNone == transitionStyle) {
+    transitionStyle = self.transitionStyle;
+  }
+  STMBaseTransitionAnimator *animator = [self _animatorForTransitionStyle:transitionStyle];
+  animator.operation = operation;
+  return animator;
+}
+
+#pragma mark - setter & getter
+
+- (STMResignLeftTransitionAnimator *)resignLeftTransitionAnimator {
+  if (!_resignLeftTransitionAnimator) {
+    _resignLeftTransitionAnimator = [[STMResignLeftTransitionAnimator alloc] init];
+  }
+  return _resignLeftTransitionAnimator;
+}
+
+- (STMBaseTransitionAnimator *)baseTransitionAnimator {
+  if (!_baseTransitionAnimator) {
+    _baseTransitionAnimator = [[STMBaseTransitionAnimator alloc] init];
+  }
+  return _baseTransitionAnimator;
 }
 
 @end
