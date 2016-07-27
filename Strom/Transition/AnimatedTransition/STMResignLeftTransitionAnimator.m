@@ -87,6 +87,8 @@ static NSInteger const kSTMSnapshotViewTag = 19999;
       [containerView addSubview:toViewController.view];
       [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
     }];
+  } else {
+    [super animateTransition:transitionContext];
   }
 }
 

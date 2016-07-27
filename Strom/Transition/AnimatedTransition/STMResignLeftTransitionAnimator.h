@@ -6,10 +6,8 @@
 //  Copyright © 2016年 secoo. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "STMBaseTransitionAnimator.h"
 
-@interface STMResignLeftTransitionAnimator : NSObject<UIViewControllerAnimatedTransitioning>
-
-@property (nonatomic, assign) UINavigationControllerOperation operation;
+@interface STMResignLeftTransitionAnimator : STMBaseTransitionAnimator
 
 @end
