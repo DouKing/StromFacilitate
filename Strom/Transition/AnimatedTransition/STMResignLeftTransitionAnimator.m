@@ -68,25 +68,30 @@ static NSInteger const kSTMSnapshotViewTag = 19999;
         cachedSnapshot = snapshot;
         cachedView = snapshot.snapshotView;
         cachedView.frame = keyWindow.bounds;
-        [keyWindow addSubview:cachedView];
         break;
       }
     }
     
-    UIView *snapshotView = [[UIApplication sharedApplication].keyWindow snapshotViewAfterScreenUpdates:NO];
-    snapshotView.frame = keyWindow.bounds;
-    [keyWindow addSubview:snapshotView];
+    if (cachedView) {
+      [keyWindow addSubview:cachedView];
+      UIView *snapshotView = [[UIApplication sharedApplication].keyWindow snapshotViewAfterScreenUpdates:NO];
+      snapshotView.frame = keyWindow.bounds;
+      [keyWindow addSubview:snapshotView];
+      
+      [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
+        snapshotView.transform = CGAffineTransformMakeTranslation(keyWindow.bounds.size.width, 0);
+        [cachedView viewWithTag:kSTMSnapshotViewTag].transform = CGAffineTransformIdentity;
+      } completion:^(BOOL finished) {
+        [cachedView removeFromSuperview];
+        [self.cachedSnapShotViews removeObject:cachedSnapshot];
+        [snapshotView removeFromSuperview];
+        [containerView addSubview:toViewController.view];
+        [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
+      }];
+    } else {
+      [super animateTransition:transitionContext];
+    }
     
-    [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
-      snapshotView.transform = CGAffineTransformMakeTranslation(keyWindow.bounds.size.width, 0);
-      [cachedView viewWithTag:kSTMSnapshotViewTag].transform = CGAffineTransformIdentity;
-    } completion:^(BOOL finished) {
-      [cachedView removeFromSuperview];
-      [self.cachedSnapShotViews removeObject:cachedSnapshot];
-      [snapshotView removeFromSuperview];
-      [containerView addSubview:toViewController.view];
-      [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
-    }];
   } else {
     [super animateTransition:transitionContext];
   }
