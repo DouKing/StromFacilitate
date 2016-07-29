@@ -8,20 +8,63 @@
 
 #import "ViewController.h"
 #import "DetailViewController.h"
+#import "UIViewController+STMTransition.h"
+
+static NSString * const kTableViewCellId = @"kTableViewCellId";
 
 @interface ViewController ()
+
+@property (nonatomic, strong) NSArray<NSDictionary *> *data;
 
 @end
 
 @implementation ViewController
 
+- (instancetype)initWithStyle:(UITableViewStyle)style {
+  return [super initWithStyle:UITableViewStyleGrouped];
+}
+
 - (void)viewDidLoad {
   [super viewDidLoad];
   self.title = @"Example";
-  
-  self.view.backgroundColor = [UIColor stm_colorWithRGBValue:0xFFFFFF];
+  [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kTableViewCellId];
   STMLogObj(STMDocumentPath());
-    
+  [self example];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+  return [self.data count];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+  return [self.data[section][@"list"] count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+  NSString *title = self.data[indexPath.section][@"list"][indexPath.row];
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kTableViewCellId forIndexPath:indexPath];
+  cell.textLabel.text = title;
+  return cell;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+  NSString *title = self.data[section][@"title"];
+  return title;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+  if (0 == indexPath.section) {
+    [self push];
+  } else if (1 == indexPath.section) {
+    DetailViewController *vc = [[DetailViewController alloc] init];
+    if (0 == indexPath.row) {
+      vc.navigationTransitionStyle = STMNavigationTransitionStyleSystem;
+    }
+    [self.navigationController pushViewController:vc animated:YES];
+  }
+}
+
+- (void)example {
   [self example1];
   [self example2];
   [self example3];
@@ -54,11 +97,7 @@
 }
 
 - (void)example3 {
-  UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
-  btn.frame = CGRectMake(10, 64, 100, 40);
-  btn.backgroundColor = [UIColor yellowColor];
-  [btn addTarget:self action:@selector(push) forControlEvents:UIControlEventTouchUpInside];
-  [self.view addSubview:btn];
+  
 }
 
 - (void)example4 {
@@ -97,6 +136,23 @@
   DetailViewController *vc = [[DetailViewController alloc] init];
   vc.hidesBottomBarWhenPushed = YES;
   [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (NSArray<NSDictionary *> *)data {
+  if (!_data) {
+    _data = @[
+              @{@"title" : @"Navigation transition style",
+                @"list" : @[
+                    @"PUSH"
+                    ]},
+              @{@"title" : @"VC transition style",
+                @"list" : @[
+                    @"System Animator",
+                    @"Resign Left Animator"
+                    ]}
+              ];
+  }
+  return _data;
 }
 
 @end
