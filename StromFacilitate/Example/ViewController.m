@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "DetailViewController.h"
-#import "UIViewController+STMTransition.h"
 
 static NSString * const kTableViewCellId = @"kTableViewCellId";
 
@@ -55,12 +54,6 @@ static NSString * const kTableViewCellId = @"kTableViewCellId";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   if (0 == indexPath.section) {
     [self push];
-  } else if (1 == indexPath.section) {
-    DetailViewController *vc = [[DetailViewController alloc] init];
-    if (0 == indexPath.row) {
-      vc.navigationTransitionStyle = STMNavigationTransitionStyleSystem;
-    }
-    [self.navigationController pushViewController:vc animated:YES];
   }
 }
 
@@ -141,14 +134,9 @@ static NSString * const kTableViewCellId = @"kTableViewCellId";
 - (NSArray<NSDictionary *> *)data {
   if (!_data) {
     _data = @[
-              @{@"title" : @"Navigation transition style",
+              @{@"title" : @"",
                 @"list" : @[
                     @"PUSH"
-                    ]},
-              @{@"title" : @"VC transition style",
-                @"list" : @[
-                    @"System Animator",
-                    @"Resign Left Animator"
                     ]}
               ];
   }
