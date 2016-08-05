@@ -31,6 +31,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (UIColor *)stm_colorWithRGBValue:(NSInteger)rgb alpha:(CGFloat)alpha;
 
+/**
+ *  随机颜色
+ *
+ *  @return UIColor
+ */
++ (UIColor *)stm_randomColor;
+
 @end
 
 NS_ASSUME_NONNULL_END
