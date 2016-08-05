@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A9E202CC02A68FB6D1190FB2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 432F79F15A36EE5E5490C65B /* libPods.a */; };
 		B839EC121CD6F832002667D6 /* UINavigationController+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = B839EC111CD6F832002667D6 /* UINavigationController+STM.m */; };
 		B87169A11CD60CF7009D166A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B87169A01CD60CF7009D166A /* DetailViewController.m */; };
 		B8750B201D3F7D7500048FD3 /* img_goBack_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8750B1E1D3F7D7500048FD3 /* img_goBack_icon@2x.png */; };
@@ -28,12 +27,11 @@
 		B891F8381CAECC9A0043BD59 /* NSString+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8371CAECC9A0043BD59 /* NSString+STM.m */; };
 		B891F8421CAF6C580043BD59 /* STMRSAEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8411CAF6C580043BD59 /* STMRSAEncryptor.m */; };
 		B891F8461CAF6DBC0043BD59 /* NSData+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8451CAF6DBC0043BD59 /* NSData+STM.m */; };
+		BA6B31773B47A5D2FC861294 /* libPods-StromFacilitate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC923321BF177D996C433407 /* libPods-StromFacilitate.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		432F79F15A36EE5E5490C65B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		75E2586A8919587421916D94 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		91B1D6C13E64563B8A00508B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		9D4A9227B3586FF0561078F4 /* Pods-StromFacilitate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StromFacilitate.release.xcconfig"; path = "Pods/Target Support Files/Pods-StromFacilitate/Pods-StromFacilitate.release.xcconfig"; sourceTree = "<group>"; };
 		B839EC101CD6F832002667D6 /* UINavigationController+STM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+STM.h"; sourceTree = "<group>"; };
 		B839EC111CD6F832002667D6 /* UINavigationController+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+STM.m"; sourceTree = "<group>"; };
 		B871699F1CD60CF7009D166A /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -73,6 +71,8 @@
 		B891F8411CAF6C580043BD59 /* STMRSAEncryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMRSAEncryptor.m; sourceTree = "<group>"; };
 		B891F8441CAF6DBC0043BD59 /* NSData+STM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+STM.h"; sourceTree = "<group>"; };
 		B891F8451CAF6DBC0043BD59 /* NSData+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+STM.m"; sourceTree = "<group>"; };
+		BC923321BF177D996C433407 /* libPods-StromFacilitate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StromFacilitate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDADAAA5FBBFAEC10374EDC8 /* Pods-StromFacilitate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StromFacilitate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StromFacilitate/Pods-StromFacilitate.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,26 +80,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9E202CC02A68FB6D1190FB2 /* libPods.a in Frameworks */,
+				BA6B31773B47A5D2FC861294 /* libPods-StromFacilitate.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4DF266538DD445E6C08FDE60 /* Frameworks */ = {
+		4CCF0B7DCEEFBFEE59452B0C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				432F79F15A36EE5E5490C65B /* libPods.a */,
+				BC923321BF177D996C433407 /* libPods-StromFacilitate.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B7C59C53CA6D19C3ADE63F8E /* Pods */ = {
+		6B9A370F0BB6F20079A0C47E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				75E2586A8919587421916D94 /* Pods.debug.xcconfig */,
-				91B1D6C13E64563B8A00508B /* Pods.release.xcconfig */,
+				BDADAAA5FBBFAEC10374EDC8 /* Pods-StromFacilitate.debug.xcconfig */,
+				9D4A9227B3586FF0561078F4 /* Pods-StromFacilitate.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -110,8 +110,8 @@
 				B891F7FB1CAE72590043BD59 /* Strom */,
 				B891F7E31CAE71770043BD59 /* StromFacilitate */,
 				B891F7E21CAE71770043BD59 /* Products */,
-				B7C59C53CA6D19C3ADE63F8E /* Pods */,
-				4DF266538DD445E6C08FDE60 /* Frameworks */,
+				6B9A370F0BB6F20079A0C47E /* Pods */,
+				4CCF0B7DCEEFBFEE59452B0C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -334,12 +334,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B891F7F81CAE71770043BD59 /* Build configuration list for PBXNativeTarget "StromFacilitate" */;
 			buildPhases = (
-				5EFD74F776FB41ED3B0261E7 /* Check Pods Manifest.lock */,
+				CEB3AB4110085A8FB9F1CAF9 /* [CP] Check Pods Manifest.lock */,
 				B891F7DD1CAE71770043BD59 /* Sources */,
 				B891F7DE1CAE71770043BD59 /* Frameworks */,
 				B891F7DF1CAE71770043BD59 /* Resources */,
-				62BFDA496DD44956B5D676E1 /* Embed Pods Frameworks */,
-				3FA15C53E24246156330400F /* Copy Pods Resources */,
+				B62979B1AA908D0F82D1FC7B /* [CP] Embed Pods Frameworks */,
+				821139F7535BB04D323F2364 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -397,49 +397,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3FA15C53E24246156330400F /* Copy Pods Resources */ = {
+		821139F7535BB04D323F2364 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StromFacilitate/Pods-StromFacilitate-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5EFD74F776FB41ED3B0261E7 /* Check Pods Manifest.lock */ = {
+		B62979B1AA908D0F82D1FC7B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StromFacilitate/Pods-StromFacilitate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEB3AB4110085A8FB9F1CAF9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		62BFDA496DD44956B5D676E1 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -566,7 +566,7 @@
 		};
 		B891F7F91CAE71770043BD59 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 75E2586A8919587421916D94 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = BDADAAA5FBBFAEC10374EDC8 /* Pods-StromFacilitate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "StromFacilitate/StromFacilitate-PrefixHeader.pch";
@@ -580,7 +580,7 @@
 		};
 		B891F7FA1CAE71770043BD59 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91B1D6C13E64563B8A00508B /* Pods.release.xcconfig */;
+			baseConfigurationReference = 9D4A9227B3586FF0561078F4 /* Pods-StromFacilitate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "StromFacilitate/StromFacilitate-PrefixHeader.pch";
