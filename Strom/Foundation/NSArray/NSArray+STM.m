@@ -8,6 +8,7 @@
 
 #import "NSArray+STM.h"
 #import "STMObjectRuntime.h"
+#import "STMConfiguration.h"
 
 @implementation NSArray (STM)
 

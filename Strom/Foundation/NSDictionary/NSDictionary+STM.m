@@ -7,6 +7,7 @@
 //
 
 #import "NSDictionary+STM.h"
+#import "STMConfiguration.h"
 
 @implementation NSDictionary (STM)
 
