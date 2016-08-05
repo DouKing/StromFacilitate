@@ -11,7 +11,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
 #ifdef DEBUG
-
 #define STMLog(format, ...) do {                                                                          \
                               fprintf(stderr, "   🐂   \n");                                          \
                               fprintf(stderr, "<%s : %d> %s\n",                                           \
@@ -20,17 +19,13 @@ NS_ASSUME_NONNULL_BEGIN
                               (NSLog)((format), ##__VA_ARGS__);                                           \
                               fprintf(stderr, "-----\n\n");                                               \
                             } while (0)
+#else
+#define STMLog(format, ...) do {} while (0)
+#endif
+
 #define STMLogObj(A) STMLog(@"%@", A)
 #define STMLogMethod() STMLog(@"%s", __func__)
 
-#else
-
-#define STMLog(format, ...)
-#define STMLogObj(A)
-#define STMLogMethod()
-#define NSLog(...)
-
-#endif
 
 #define STMScreenBounds          ([[UIScreen mainScreen] bounds])
 #define STMScreenWidth           (CGRectGetWidth([[UIScreen mainScreen] bounds]))
