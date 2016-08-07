@@ -10,17 +10,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#ifdef DEBUG
-#define STMLog(...) NSLog(__VA_ARGS__)
-#define STMLogObj(A) NSLog(@"%@", A)
-#define STMLogMethod() NSLog(@"%s", __func__)
-#else
-#define STMLog(...)
-#define STMLogMethod()
-#define NSLog(...) {};
-#endif
-
-
 #define STMScreenBounds          ([[UIScreen mainScreen] bounds])
 #define STMScreenWidth           (CGRectGetWidth([[UIScreen mainScreen] bounds]))
 #define STMScreenHeight          (CGRectGetHeight([[UIScreen mainScreen] bounds]))

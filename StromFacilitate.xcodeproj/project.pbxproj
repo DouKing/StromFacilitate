@@ -38,6 +38,7 @@
 		B87169A01CD60CF7009D166A /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		B8750B1E1D3F7D7500048FD3 /* img_goBack_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img_goBack_icon@2x.png"; sourceTree = "<group>"; };
 		B8750B1F1D3F7D7500048FD3 /* img_goBack_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img_goBack_icon@3x.png"; sourceTree = "<group>"; };
+		B8811A1E1D57842200238644 /* GlobalDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalDefine.h; sourceTree = "<group>"; };
 		B891F7E11CAE71770043BD59 /* StromFacilitate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StromFacilitate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B891F7E51CAE71770043BD59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B891F7E71CAE71770043BD59 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -128,6 +129,7 @@
 			children = (
 				B891F7E71CAE71770043BD59 /* AppDelegate.h */,
 				B891F7E81CAE71770043BD59 /* AppDelegate.m */,
+				B8811A1E1D57842200238644 /* GlobalDefine.h */,
 				B891F8231CAE72DB0043BD59 /* Example */,
 				B891F8261CAE72DB0043BD59 /* Venders */,
 				B891F7E41CAE71770043BD59 /* Supporting Files */,
