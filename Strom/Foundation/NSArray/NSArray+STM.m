@@ -8,7 +8,6 @@
 
 #import "NSArray+STM.h"
 #import "STMObjectRuntime.h"
-#import "STMConfiguration.h"
 
 @implementation NSArray (STM)
 
@@ -33,7 +32,7 @@
     if (objects[i]) {
       [objArray addObject:objects[i]];
     } else {
-      STMLog(@"`arrayWithObjects:count:` can't insert nil");
+      NSLog(@"`arrayWithObjects:count:` can't insert nil");
     }
   }
   return [self arrayWithArray:objArray];

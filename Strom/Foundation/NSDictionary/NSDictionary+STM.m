@@ -7,7 +7,6 @@
 //
 
 #import "NSDictionary+STM.h"
-#import "STMConfiguration.h"
 
 @implementation NSDictionary (STM)
 
@@ -37,7 +36,7 @@
       [objArray addObject:objects[i]];
       [keyArray addObject:keys[i]];
     } else {
-      STMLog(@"dictionary can't insert nil object or use nil key");
+      NSLog(@"dictionary can't insert nil object or use nil key");
     }
   }
   
