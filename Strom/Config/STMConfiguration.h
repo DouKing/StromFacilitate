@@ -11,20 +11,14 @@
 NS_ASSUME_NONNULL_BEGIN
 
 #ifdef DEBUG
-#define STMLog(format, ...) do {                                                                          \
-                              fprintf(stderr, "   🐂   \n");                                          \
-                              fprintf(stderr, "<%s : %d> %s\n",                                           \
-                              [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],  \
-                              __LINE__, __func__);                                                        \
-                              (NSLog)((format), ##__VA_ARGS__);                                           \
-                              fprintf(stderr, "-----\n\n");                                               \
-                            } while (0)
+#define STMLog(...) NSLog(__VA_ARGS__)
+#define STMLogObj(A) NSLog(@"%@", A)
+#define STMLogMethod() NSLog(@"%s", __func__)
 #else
-#define STMLog(format, ...) do {} while (0)
+#define STMLog(...)
+#define STMLogMethod()
+#define NSLog(...) {};
 #endif
-
-#define STMLogObj(A) STMLog(@"%@", A)
-#define STMLogMethod() STMLog(@"%s", __func__)
 
 
 #define STMScreenBounds          ([[UIScreen mainScreen] bounds])
