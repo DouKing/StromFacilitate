@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B839EC121CD6F832002667D6 /* UINavigationController+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = B839EC111CD6F832002667D6 /* UINavigationController+STM.m */; };
 		B87169A11CD60CF7009D166A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B87169A01CD60CF7009D166A /* DetailViewController.m */; };
 		B8750B201D3F7D7500048FD3 /* img_goBack_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8750B1E1D3F7D7500048FD3 /* img_goBack_icon@2x.png */; };
 		B8750B211D3F7D7500048FD3 /* img_goBack_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8750B1F1D3F7D7500048FD3 /* img_goBack_icon@3x.png */; };
@@ -19,7 +18,6 @@
 		B891F81B1CAE72590043BD59 /* NSMutableArray+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8031CAE72590043BD59 /* NSMutableArray+STM.m */; };
 		B891F81C1CAE72590043BD59 /* NSDictionary+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8061CAE72590043BD59 /* NSDictionary+STM.m */; };
 		B891F81D1CAE72590043BD59 /* NSMutableDictionary+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8081CAE72590043BD59 /* NSMutableDictionary+STM.m */; };
-		B891F8211CAE72590043BD59 /* UIViewController+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8141CAE72590043BD59 /* UIViewController+STM.m */; };
 		B891F8221CAE72590043BD59 /* STMObjectRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8181CAE72590043BD59 /* STMObjectRuntime.m */; };
 		B891F82E1CAE738F0043BD59 /* UIColor+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F82D1CAE738F0043BD59 /* UIColor+STM.m */; };
 		B891F8321CAE772C0043BD59 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8311CAE772C0043BD59 /* ViewController.m */; };
@@ -32,8 +30,6 @@
 
 /* Begin PBXFileReference section */
 		9D4A9227B3586FF0561078F4 /* Pods-StromFacilitate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StromFacilitate.release.xcconfig"; path = "Pods/Target Support Files/Pods-StromFacilitate/Pods-StromFacilitate.release.xcconfig"; sourceTree = "<group>"; };
-		B839EC101CD6F832002667D6 /* UINavigationController+STM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+STM.h"; sourceTree = "<group>"; };
-		B839EC111CD6F832002667D6 /* UINavigationController+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+STM.m"; sourceTree = "<group>"; };
 		B871699F1CD60CF7009D166A /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		B87169A01CD60CF7009D166A /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		B8750B1E1D3F7D7500048FD3 /* img_goBack_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img_goBack_icon@2x.png"; sourceTree = "<group>"; };
@@ -55,8 +51,6 @@
 		B891F8071CAE72590043BD59 /* NSMutableDictionary+STM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+STM.h"; sourceTree = "<group>"; };
 		B891F8081CAE72590043BD59 /* NSMutableDictionary+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+STM.m"; sourceTree = "<group>"; };
 		B891F80A1CAE72590043BD59 /* Strom-header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Strom-header.h"; sourceTree = "<group>"; };
-		B891F8131CAE72590043BD59 /* UIViewController+STM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+STM.h"; sourceTree = "<group>"; };
-		B891F8141CAE72590043BD59 /* UIViewController+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+STM.m"; sourceTree = "<group>"; };
 		B891F8171CAE72590043BD59 /* STMObjectRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMObjectRuntime.h; sourceTree = "<group>"; };
 		B891F8181CAE72590043BD59 /* STMObjectRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMObjectRuntime.m; sourceTree = "<group>"; };
 		B891F82C1CAE738F0043BD59 /* UIColor+STM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+STM.h"; sourceTree = "<group>"; };
@@ -232,10 +226,6 @@
 		B891F80C1CAE72590043BD59 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B891F8131CAE72590043BD59 /* UIViewController+STM.h */,
-				B891F8141CAE72590043BD59 /* UIViewController+STM.m */,
-				B839EC101CD6F832002667D6 /* UINavigationController+STM.h */,
-				B839EC111CD6F832002667D6 /* UINavigationController+STM.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -459,13 +449,11 @@
 				B891F7E61CAE71770043BD59 /* main.m in Sources */,
 				B891F8321CAE772C0043BD59 /* ViewController.m in Sources */,
 				B891F8381CAECC9A0043BD59 /* NSString+STM.m in Sources */,
-				B891F8211CAE72590043BD59 /* UIViewController+STM.m in Sources */,
 				B891F81A1CAE72590043BD59 /* NSArray+STM.m in Sources */,
 				B891F8351CAE7A080043BD59 /* STMConfiguration.m in Sources */,
 				B891F81B1CAE72590043BD59 /* NSMutableArray+STM.m in Sources */,
 				B891F8421CAF6C580043BD59 /* STMRSAEncryptor.m in Sources */,
 				B891F8461CAF6DBC0043BD59 /* NSData+STM.m in Sources */,
-				B839EC121CD6F832002667D6 /* UINavigationController+STM.m in Sources */,
 				B891F81C1CAE72590043BD59 /* NSDictionary+STM.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
