@@ -10,10 +10,7 @@
 #define Strom_header_h
 
 #import "STMConfiguration.h"
-
 #import "NSDictionary+STM.h"
-
-#import "UINavigationController+STM.h"
 #import "UIColor+STM.h"
 
 #endif /* Strom_header_h */
