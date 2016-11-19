@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (nullable NSDictionary *)stm_dictionaryBySettingObject:(ObjectType)anObject forKey:(KeyType<NSCopying>)aKey;
 - (nullable NSDictionary *)stm_dictionaryByRemovingObjectForKey:(KeyType<NSCopying>)aKey;
+- (nullable NSDictionary *)stm_dictionaryByAppendingDictionary:(NSDictionary<KeyType, ObjectType> *)dictionary;
 
 @end
 

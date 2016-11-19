@@ -90,7 +90,11 @@ static NSString * const kTableViewCellId = @"kTableViewCellId";
 }
 
 - (void)example3 {
-  
+  NSDictionary *dic = @{@"k1" : @"v1"};
+  STMLogMethod();
+  STMLogObj(dic);
+  dic = [dic stm_dictionaryByAppendingDictionary:@{@"key2" : @"value2"}];
+  STMLogObj(dic);
 }
 
 - (void)example4 {

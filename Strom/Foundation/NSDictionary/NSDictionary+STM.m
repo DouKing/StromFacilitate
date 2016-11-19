@@ -28,6 +28,15 @@
   return [NSDictionary dictionaryWithDictionary:dic];
 }
 
+- (NSDictionary *)stm_dictionaryByAppendingDictionary:(NSDictionary *)dictionary {
+  if ([dictionary allKeys].count < 1) { return self; }
+  NSMutableDictionary *temp = [self mutableCopy];
+  [dictionary enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+    temp[key] = obj;
+  }];
+  return [NSDictionary dictionaryWithDictionary:temp];
+}
+
 + (instancetype)dictionaryWithObjects:(const id  _Nonnull __unsafe_unretained *)objects forKeys:(const id<NSCopying>  _Nonnull __unsafe_unretained *)keys count:(NSUInteger)cnt {
   NSMutableArray *objArray = [NSMutableArray array];
   NSMutableArray *keyArray = [NSMutableArray array];
