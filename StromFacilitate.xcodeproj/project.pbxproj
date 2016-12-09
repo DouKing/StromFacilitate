@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0014309E1DFABE6C004E1453 /* UIColor+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 0014309D1DFABE6C004E1453 /* UIColor+STM.m */; };
 		B87169A11CD60CF7009D166A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B87169A01CD60CF7009D166A /* DetailViewController.m */; };
 		B8750B201D3F7D7500048FD3 /* img_goBack_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8750B1E1D3F7D7500048FD3 /* img_goBack_icon@2x.png */; };
 		B8750B211D3F7D7500048FD3 /* img_goBack_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8750B1F1D3F7D7500048FD3 /* img_goBack_icon@3x.png */; };
@@ -19,7 +20,6 @@
 		B891F81C1CAE72590043BD59 /* NSDictionary+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8061CAE72590043BD59 /* NSDictionary+STM.m */; };
 		B891F81D1CAE72590043BD59 /* NSMutableDictionary+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8081CAE72590043BD59 /* NSMutableDictionary+STM.m */; };
 		B891F8221CAE72590043BD59 /* STMObjectRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8181CAE72590043BD59 /* STMObjectRuntime.m */; };
-		B891F82E1CAE738F0043BD59 /* UIColor+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F82D1CAE738F0043BD59 /* UIColor+STM.m */; };
 		B891F8321CAE772C0043BD59 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8311CAE772C0043BD59 /* ViewController.m */; };
 		B891F8351CAE7A080043BD59 /* STMConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8341CAE7A080043BD59 /* STMConfiguration.m */; };
 		B891F8381CAECC9A0043BD59 /* NSString+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8371CAECC9A0043BD59 /* NSString+STM.m */; };
@@ -29,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0014309C1DFABE6C004E1453 /* UIColor+STM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+STM.h"; sourceTree = "<group>"; };
+		0014309D1DFABE6C004E1453 /* UIColor+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+STM.m"; sourceTree = "<group>"; };
 		9D4A9227B3586FF0561078F4 /* Pods-StromFacilitate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StromFacilitate.release.xcconfig"; path = "Pods/Target Support Files/Pods-StromFacilitate/Pods-StromFacilitate.release.xcconfig"; sourceTree = "<group>"; };
 		B871699F1CD60CF7009D166A /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		B87169A01CD60CF7009D166A /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
@@ -53,8 +55,6 @@
 		B891F80A1CAE72590043BD59 /* Strom-header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Strom-header.h"; sourceTree = "<group>"; };
 		B891F8171CAE72590043BD59 /* STMObjectRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMObjectRuntime.h; sourceTree = "<group>"; };
 		B891F8181CAE72590043BD59 /* STMObjectRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMObjectRuntime.m; sourceTree = "<group>"; };
-		B891F82C1CAE738F0043BD59 /* UIColor+STM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+STM.h"; sourceTree = "<group>"; };
-		B891F82D1CAE738F0043BD59 /* UIColor+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+STM.m"; sourceTree = "<group>"; };
 		B891F82F1CAE76AD0043BD59 /* StromFacilitate-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StromFacilitate-PrefixHeader.pch"; sourceTree = "<group>"; };
 		B891F8301CAE772C0043BD59 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B891F8311CAE772C0043BD59 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
@@ -82,6 +82,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0014309A1DFABE6C004E1453 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				0014309B1DFABE6C004E1453 /* Color */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		0014309B1DFABE6C004E1453 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				0014309C1DFABE6C004E1453 /* UIColor+STM.h */,
+				0014309D1DFABE6C004E1453 /* UIColor+STM.m */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
 		4CCF0B7DCEEFBFEE59452B0C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,10 +166,10 @@
 			isa = PBXGroup;
 			children = (
 				B891F80A1CAE72590043BD59 /* Strom-header.h */,
+				0014309A1DFABE6C004E1453 /* Style */,
 				B891F83F1CAF6C2C0043BD59 /* Security */,
 				B891F7FC1CAE72590043BD59 /* Config */,
 				B891F7FE1CAE72590043BD59 /* Foundation */,
-				B891F80B1CAE72590043BD59 /* UI */,
 				B891F8161CAE72590043BD59 /* Utilities */,
 				B891F8191CAE72590043BD59 /* Venders */,
 			);
@@ -210,33 +227,6 @@
 			path = NSString;
 			sourceTree = "<group>";
 		};
-		B891F80B1CAE72590043BD59 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				B891F80C1CAE72590043BD59 /* ViewControllers */,
-				B891F8151CAE72590043BD59 /* Views */,
-				B891F8281CAE736C0043BD59 /* Color */,
-				B891F8291CAE736C0043BD59 /* Control */,
-				B891F82A1CAE736C0043BD59 /* Font */,
-				B891F82B1CAE736C0043BD59 /* Image */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
-		B891F80C1CAE72590043BD59 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		B891F8151CAE72590043BD59 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		B891F8161CAE72590043BD59 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,36 +259,6 @@
 			children = (
 			);
 			path = Venders;
-			sourceTree = "<group>";
-		};
-		B891F8281CAE736C0043BD59 /* Color */ = {
-			isa = PBXGroup;
-			children = (
-				B891F82C1CAE738F0043BD59 /* UIColor+STM.h */,
-				B891F82D1CAE738F0043BD59 /* UIColor+STM.m */,
-			);
-			path = Color;
-			sourceTree = "<group>";
-		};
-		B891F8291CAE736C0043BD59 /* Control */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Control;
-			sourceTree = "<group>";
-		};
-		B891F82A1CAE736C0043BD59 /* Font */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Font;
-			sourceTree = "<group>";
-		};
-		B891F82B1CAE736C0043BD59 /* Image */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Image;
 			sourceTree = "<group>";
 		};
 		B891F83F1CAF6C2C0043BD59 /* Security */ = {
@@ -443,9 +403,9 @@
 			files = (
 				B891F8221CAE72590043BD59 /* STMObjectRuntime.m in Sources */,
 				B891F81D1CAE72590043BD59 /* NSMutableDictionary+STM.m in Sources */,
-				B891F82E1CAE738F0043BD59 /* UIColor+STM.m in Sources */,
 				B87169A11CD60CF7009D166A /* DetailViewController.m in Sources */,
 				B891F7E91CAE71770043BD59 /* AppDelegate.m in Sources */,
+				0014309E1DFABE6C004E1453 /* UIColor+STM.m in Sources */,
 				B891F7E61CAE71770043BD59 /* main.m in Sources */,
 				B891F8321CAE772C0043BD59 /* ViewController.m in Sources */,
 				B891F8381CAECC9A0043BD59 /* NSString+STM.m in Sources */,
