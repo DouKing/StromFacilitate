@@ -1,22 +1,23 @@
-# iOS开发底层框架封装（持续更新。。。）
+## StromFacilitate
 
-## 常用配置
+> 封装了一些iOS开发常用的处理
 
-- NSLog
+### 常用配置
+
 - 版本号
 - 设备信息
 - 文件夹
 
-## Runtime
+### Runtime
 
 - 方法替换
 
-## Foundation
+### Foundation
 
 - 数组、字典安全方法
 - NSString、NSData编码加密
 
-## UI
+### UI
 
 - UIViewController 防止多次push
 - UINavigationController侧滑返回
@@ -24,8 +25,14 @@
 - UIImage
 - UIFont
 
+### 安装
 
-## 结语
+> pod 'StromFacilitate'
 
-- 如果您发现有任何问题或不足，请给我提issue。一定要提啊！
-- 希望与各路英雄共同搭建出强壮的iOS开发底层框架，节约开发时间。
+或
+
+> pod 'StromFacilitate/Foundation'
+> pod 'StromFacilitate/Utilities'
+> pod 'StromFacilitate/Config'
+> pod 'StromFacilitate/Security'
+> pod 'StromFacilitate/Style'
