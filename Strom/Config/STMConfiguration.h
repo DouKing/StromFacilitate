@@ -10,6 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+#define STRINGIFY(S) #S
+#define DEFER_STRINGIFY(S) STRINGIFY(S)
+#define PRAGMA_MESSAGE(MSG) _Pragma(STRINGIFY(message(MSG)))
+#define FORMATTED_MESSAGE(MSG) "[TODO-" DEFER_STRINGIFY(__COUNTER__) "] " MSG " \n" \
+                              DEFER_STRINGIFY(__FILE__) " line " DEFER_STRINGIFY(__LINE__)
+#define TODO(MSG) PRAGMA_MESSAGE(FORMATTED_MESSAGE(MSG))
+
 #define STMScreenBounds          ([[UIScreen mainScreen] bounds])
 #define STMScreenWidth           (CGRectGetWidth([[UIScreen mainScreen] bounds]))
 #define STMScreenHeight          (CGRectGetHeight([[UIScreen mainScreen] bounds]))
