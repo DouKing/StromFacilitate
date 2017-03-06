@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "DetailViewController.h"
+#import "NSString+STM.h"
+#import "NSData+STM.h"
 
 static NSString * const kTableViewCellId = @"kTableViewCellId";
 
@@ -64,6 +66,7 @@ static NSString * const kTableViewCellId = @"kTableViewCellId";
   [self example4];
   [self example5];
   [self example6];
+  [self example7];
 }
 
 - (void)example1 {
@@ -127,6 +130,17 @@ static NSString * const kTableViewCellId = @"kTableViewCellId";
   NSArray *arr = @[@1, @2, @3, @4, obj, @6];
   STMLogMethod();
   STMLogObj(arr);
+}
+
+- (void)example7 {
+  // c0396401f0dcc443cfc7a460cab05d8ab2d366df458a913c40742c619b4a0795
+  NSString *str = @"c0396401f0dcc443cfc7a460cab05d8ab2d366df458a913c40742c619b4a0795";
+  STMLog(@"str: %@", str);
+  NSData *data = [str stm_hexStringToData];
+  STMLog(@"data: %@", data);
+  NSString *str2 = [data stm_hexString];
+  STMLog(@"str2: %@", str2);
+  // <c0396401 f0dcc443 cfc7a460 cab05d8a b2d366df 458a913c 40742c61 9b4a0795>
 }
 
 TODO("测试TODO")
