@@ -19,6 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 使用key解密
 - (nullable NSData *)stm_AES256DecryptWithKey:(NSString *)key;
 
+/// 转十六进制字符串
+- (NSString *)stm_hexString;
+
 @end
 
 

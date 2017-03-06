@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSString (STM)
 
 // md5
-- (NSString *)stm_stringToMD5;
+- (nullable NSString *)stm_stringToMD5;
 
 // string -> base64 string
 - (NSString *)stm_base64EncodeString;
@@ -22,9 +22,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSData *)stm_base64EncodeData;
 
 // base64 string -> data
-- (NSData *)stm_base64DecodeData;
+- (nullable NSData *)stm_base64DecodeData;
 // base64 string -> string
-- (NSString *)stm_base64DecodeString;
+- (nullable NSString *)stm_base64DecodeString;
+
+// 十六进制字符串转data
+- (nullable NSData *)stm_hexStringToData;
 
 @end
 
