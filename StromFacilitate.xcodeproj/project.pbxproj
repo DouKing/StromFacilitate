@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0014309E1DFABE6C004E1453 /* UIColor+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 0014309D1DFABE6C004E1453 /* UIColor+STM.m */; };
+		006443901E6EB4EE0011ED3F /* UIImage+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 0064438F1E6EB4EE0011ED3F /* UIImage+STM.m */; };
 		B87169A11CD60CF7009D166A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B87169A01CD60CF7009D166A /* DetailViewController.m */; };
 		B8750B201D3F7D7500048FD3 /* img_goBack_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8750B1E1D3F7D7500048FD3 /* img_goBack_icon@2x.png */; };
 		B8750B211D3F7D7500048FD3 /* img_goBack_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8750B1F1D3F7D7500048FD3 /* img_goBack_icon@3x.png */; };
@@ -31,6 +32,8 @@
 /* Begin PBXFileReference section */
 		0014309C1DFABE6C004E1453 /* UIColor+STM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+STM.h"; sourceTree = "<group>"; };
 		0014309D1DFABE6C004E1453 /* UIColor+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+STM.m"; sourceTree = "<group>"; };
+		0064438E1E6EB4EE0011ED3F /* UIImage+STM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+STM.h"; sourceTree = "<group>"; };
+		0064438F1E6EB4EE0011ED3F /* UIImage+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+STM.m"; sourceTree = "<group>"; };
 		9D4A9227B3586FF0561078F4 /* Pods-StromFacilitate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StromFacilitate.release.xcconfig"; path = "Pods/Target Support Files/Pods-StromFacilitate/Pods-StromFacilitate.release.xcconfig"; sourceTree = "<group>"; };
 		B871699F1CD60CF7009D166A /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		B87169A01CD60CF7009D166A /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
@@ -95,6 +98,8 @@
 			children = (
 				0014309C1DFABE6C004E1453 /* UIColor+STM.h */,
 				0014309D1DFABE6C004E1453 /* UIColor+STM.m */,
+				0064438E1E6EB4EE0011ED3F /* UIImage+STM.h */,
+				0064438F1E6EB4EE0011ED3F /* UIImage+STM.m */,
 			);
 			path = Color;
 			sourceTree = "<group>";
@@ -413,6 +418,7 @@
 				B891F8351CAE7A080043BD59 /* STMConfiguration.m in Sources */,
 				B891F81B1CAE72590043BD59 /* NSMutableArray+STM.m in Sources */,
 				B891F8421CAF6C580043BD59 /* STMRSAEncryptor.m in Sources */,
+				006443901E6EB4EE0011ED3F /* UIImage+STM.m in Sources */,
 				B891F8461CAF6DBC0043BD59 /* NSData+STM.m in Sources */,
 				B891F81C1CAE72590043BD59 /* NSDictionary+STM.m in Sources */,
 			);
