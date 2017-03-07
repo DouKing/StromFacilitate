@@ -10,8 +10,6 @@
 		0014309E1DFABE6C004E1453 /* UIColor+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 0014309D1DFABE6C004E1453 /* UIColor+STM.m */; };
 		006443901E6EB4EE0011ED3F /* UIImage+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 0064438F1E6EB4EE0011ED3F /* UIImage+STM.m */; };
 		B87169A11CD60CF7009D166A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B87169A01CD60CF7009D166A /* DetailViewController.m */; };
-		B8750B201D3F7D7500048FD3 /* img_goBack_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8750B1E1D3F7D7500048FD3 /* img_goBack_icon@2x.png */; };
-		B8750B211D3F7D7500048FD3 /* img_goBack_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8750B1F1D3F7D7500048FD3 /* img_goBack_icon@3x.png */; };
 		B891F7E61CAE71770043BD59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F7E51CAE71770043BD59 /* main.m */; };
 		B891F7E91CAE71770043BD59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F7E81CAE71770043BD59 /* AppDelegate.m */; };
 		B891F7F11CAE71770043BD59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B891F7F01CAE71770043BD59 /* Assets.xcassets */; };
@@ -37,8 +35,6 @@
 		9D4A9227B3586FF0561078F4 /* Pods-StromFacilitate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StromFacilitate.release.xcconfig"; path = "Pods/Target Support Files/Pods-StromFacilitate/Pods-StromFacilitate.release.xcconfig"; sourceTree = "<group>"; };
 		B871699F1CD60CF7009D166A /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		B87169A01CD60CF7009D166A /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		B8750B1E1D3F7D7500048FD3 /* img_goBack_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img_goBack_icon@2x.png"; sourceTree = "<group>"; };
-		B8750B1F1D3F7D7500048FD3 /* img_goBack_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img_goBack_icon@3x.png"; sourceTree = "<group>"; };
 		B8811A1E1D57842200238644 /* GlobalDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalDefine.h; sourceTree = "<group>"; };
 		B891F7E11CAE71770043BD59 /* StromFacilitate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StromFacilitate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B891F7E51CAE71770043BD59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -156,8 +152,6 @@
 		B891F7E41CAE71770043BD59 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B8750B1E1D3F7D7500048FD3 /* img_goBack_icon@2x.png */,
-				B8750B1F1D3F7D7500048FD3 /* img_goBack_icon@3x.png */,
 				B891F7F01CAE71770043BD59 /* Assets.xcassets */,
 				B891F7F21CAE71770043BD59 /* LaunchScreen.storyboard */,
 				B891F7F51CAE71770043BD59 /* Info.plist */,
@@ -346,8 +340,6 @@
 			files = (
 				B891F7F41CAE71770043BD59 /* LaunchScreen.storyboard in Resources */,
 				B891F7F11CAE71770043BD59 /* Assets.xcassets in Resources */,
-				B8750B201D3F7D7500048FD3 /* img_goBack_icon@2x.png in Resources */,
-				B8750B211D3F7D7500048FD3 /* img_goBack_icon@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
