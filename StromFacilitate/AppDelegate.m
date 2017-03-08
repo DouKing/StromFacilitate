@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,21 +16,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  // Override point for customization after application launch.
-  UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
-  UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:[UIViewController new]];
-  UITabBarController *tabBarController = [[UITabBarController alloc] init];
-  [tabBarController setViewControllers:@[nav1, nav2] animated:YES];
-
-  UITabBarItem *tab1 = tabBarController.tabBar.items[0];
-  UITabBarItem *tab2 = tabBarController.tabBar.items[1];
-  tab1.title = @"测试1";
-  tab2.title = @"测试2";
-  
-  self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-  self.window.backgroundColor = [UIColor whiteColor];
-  self.window.rootViewController = tabBarController;
-  [self.window makeKeyAndVisible];
   
   UIImage *image = [UIImage imageNamed:@"img_goBack_icon"];
   image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];

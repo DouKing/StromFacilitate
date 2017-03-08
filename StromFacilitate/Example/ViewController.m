@@ -7,15 +7,12 @@
 //
 
 #import "ViewController.h"
-#import "DetailViewController.h"
 #import "NSString+STM.h"
 #import "NSData+STM.h"
 
 static NSString * const kTableViewCellId = @"kTableViewCellId";
 
 @interface ViewController ()
-
-@property (nonatomic, strong) NSArray<NSDictionary *> *data;
 
 @end
 
@@ -31,32 +28,6 @@ static NSString * const kTableViewCellId = @"kTableViewCellId";
   [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kTableViewCellId];
   STMLogObj(STMDocumentPath());
   [self example];
-}
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-  return [self.data count];
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-  return [self.data[section][@"list"] count];
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  NSString *title = self.data[indexPath.section][@"list"][indexPath.row];
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kTableViewCellId forIndexPath:indexPath];
-  cell.textLabel.text = title;
-  return cell;
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-  NSString *title = self.data[section][@"title"];
-  return title;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  if (0 == indexPath.section) {
-    [self push];
-  }
 }
 
 - (void)example {
@@ -145,22 +116,7 @@ static NSString * const kTableViewCellId = @"kTableViewCellId";
 
 TODO("测试TODO")
 - (void)push {
-  DetailViewController *vc = [[DetailViewController alloc] init];
-  vc.hidesBottomBarWhenPushed = YES;
-  [self.navigationController pushViewController:vc animated:YES];
-}
-
-TODO("测试TODO")
-- (NSArray<NSDictionary *> *)data {
-  if (!_data) {
-    _data = @[
-              @{@"title" : @"",
-                @"list" : @[
-                    @"PUSH"
-                    ]}
-              ];
-  }
-  return _data;
+  
 }
 
 @end

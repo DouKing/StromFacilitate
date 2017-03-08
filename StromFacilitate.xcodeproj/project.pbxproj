@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		0014309E1DFABE6C004E1453 /* UIColor+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 0014309D1DFABE6C004E1453 /* UIColor+STM.m */; };
 		006443901E6EB4EE0011ED3F /* UIImage+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 0064438F1E6EB4EE0011ED3F /* UIImage+STM.m */; };
-		B87169A11CD60CF7009D166A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B87169A01CD60CF7009D166A /* DetailViewController.m */; };
+		0064439C1E6FD86F0011ED3F /* ImageBlendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0064439B1E6FD86F0011ED3F /* ImageBlendViewController.m */; };
+		0064439E1E6FD93A0011ED3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0064439D1E6FD93A0011ED3F /* Main.storyboard */; };
 		B891F7E61CAE71770043BD59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F7E51CAE71770043BD59 /* main.m */; };
 		B891F7E91CAE71770043BD59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F7E81CAE71770043BD59 /* AppDelegate.m */; };
 		B891F7F11CAE71770043BD59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B891F7F01CAE71770043BD59 /* Assets.xcassets */; };
@@ -32,9 +33,10 @@
 		0014309D1DFABE6C004E1453 /* UIColor+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+STM.m"; sourceTree = "<group>"; };
 		0064438E1E6EB4EE0011ED3F /* UIImage+STM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+STM.h"; sourceTree = "<group>"; };
 		0064438F1E6EB4EE0011ED3F /* UIImage+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+STM.m"; sourceTree = "<group>"; };
+		0064439A1E6FD86F0011ED3F /* ImageBlendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBlendViewController.h; sourceTree = "<group>"; };
+		0064439B1E6FD86F0011ED3F /* ImageBlendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageBlendViewController.m; sourceTree = "<group>"; };
+		0064439D1E6FD93A0011ED3F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9D4A9227B3586FF0561078F4 /* Pods-StromFacilitate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StromFacilitate.release.xcconfig"; path = "Pods/Target Support Files/Pods-StromFacilitate/Pods-StromFacilitate.release.xcconfig"; sourceTree = "<group>"; };
-		B871699F1CD60CF7009D166A /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		B87169A01CD60CF7009D166A /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		B8811A1E1D57842200238644 /* GlobalDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalDefine.h; sourceTree = "<group>"; };
 		B891F7E11CAE71770043BD59 /* StromFacilitate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StromFacilitate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B891F7E51CAE71770043BD59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				B891F7F51CAE71770043BD59 /* Info.plist */,
 				B891F7E51CAE71770043BD59 /* main.m */,
 				B891F82F1CAE76AD0043BD59 /* StromFacilitate-PrefixHeader.pch */,
+				0064439D1E6FD93A0011ED3F /* Main.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -247,8 +250,8 @@
 			children = (
 				B891F8301CAE772C0043BD59 /* ViewController.h */,
 				B891F8311CAE772C0043BD59 /* ViewController.m */,
-				B871699F1CD60CF7009D166A /* DetailViewController.h */,
-				B87169A01CD60CF7009D166A /* DetailViewController.m */,
+				0064439A1E6FD86F0011ED3F /* ImageBlendViewController.h */,
+				0064439B1E6FD86F0011ED3F /* ImageBlendViewController.m */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0064439E1E6FD93A0011ED3F /* Main.storyboard in Resources */,
 				B891F7F41CAE71770043BD59 /* LaunchScreen.storyboard in Resources */,
 				B891F7F11CAE71770043BD59 /* Assets.xcassets in Resources */,
 			);
@@ -400,7 +404,6 @@
 			files = (
 				B891F8221CAE72590043BD59 /* STMObjectRuntime.m in Sources */,
 				B891F81D1CAE72590043BD59 /* NSMutableDictionary+STM.m in Sources */,
-				B87169A11CD60CF7009D166A /* DetailViewController.m in Sources */,
 				B891F7E91CAE71770043BD59 /* AppDelegate.m in Sources */,
 				0014309E1DFABE6C004E1453 /* UIColor+STM.m in Sources */,
 				B891F7E61CAE71770043BD59 /* main.m in Sources */,
@@ -410,6 +413,7 @@
 				B891F8351CAE7A080043BD59 /* STMConfiguration.m in Sources */,
 				B891F81B1CAE72590043BD59 /* NSMutableArray+STM.m in Sources */,
 				B891F8421CAF6C580043BD59 /* STMRSAEncryptor.m in Sources */,
+				0064439C1E6FD86F0011ED3F /* ImageBlendViewController.m in Sources */,
 				006443901E6EB4EE0011ED3F /* UIImage+STM.m in Sources */,
 				B891F8461CAF6DBC0043BD59 /* NSData+STM.m in Sources */,
 				B891F81C1CAE72590043BD59 /* NSDictionary+STM.m in Sources */,
