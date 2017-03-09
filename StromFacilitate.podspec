@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
 
   s.name         = "StromFacilitate"
-  s.version      = "0.1.4"
+  s.version      = "0.1.5"
   s.summary      = "iOS底层常用功能封装"
   s.homepage     = "https://github.com/DouKing/StromFacilitate"
   s.license      = "MIT"
-  s.author       = { "wuyikai" => "wuyikai@secoo.com" }
+  s.author       = { "wuyikai" => "wyk8916@gmail.com" }
   s.platform     = :ios, "7.0"
   s.source       = { :git => "https://github.com/DouKing/StromFacilitate.git", :tag => "#{s.version}" }
   s.source_files = "Strom/Strom-header.h"
@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Style' do |ss|
-    ss.source_files = 'Strom/**/UIColor+STM.{h,m}'
+    ss.source_files = 'Strom/**/UI{Color,Image}+STM.{h,m}'
   end
 
 end
