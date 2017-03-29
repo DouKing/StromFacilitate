@@ -1,16 +1,16 @@
 //
-//  NSMutableDictionary+STM.m
-//  WYPersionalIdentity
+//  NSMutableDictionary+STMSafe.m
+//  StromFacilitate
 //
-//  Created by WuYikai on 16/4/1.
-//  Copyright © 2016年 secoo. All rights reserved.
+//  Created by iosci on 2017/3/29.
+//  Copyright © 2017年 secoo. All rights reserved.
 //
 
-#import "NSMutableDictionary+STM.h"
+#import "NSMutableDictionary+STMSafe.h"
 #import "STMObjectRuntime.h"
 
-@implementation NSMutableDictionary (STM)
-
+@implementation NSMutableDictionary (STMSafe)
+  
 + (void)load {
   static dispatch_once_t onceToken;
   dispatch_once(&onceToken, ^{
@@ -24,7 +24,7 @@
     STMSwizzMethod(aClass, systemSel, swizzSel);
   });
 }
-
+  
 - (void)stm_setObject:(id)anObject forKey:(id<NSCopying>)aKey {
   if (!aKey) {
     return;
@@ -35,7 +35,7 @@
   }
   [self stm_setObject:anObject forKey:aKey];
 }
-
+  
 - (void)stm_removeObjectForKey:(id<NSCopying>)aKey {
   if (!aKey) {
     return;

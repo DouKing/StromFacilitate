@@ -11,14 +11,15 @@
 		006443901E6EB4EE0011ED3F /* UIImage+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 0064438F1E6EB4EE0011ED3F /* UIImage+STM.m */; };
 		0064439C1E6FD86F0011ED3F /* ImageBlendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0064439B1E6FD86F0011ED3F /* ImageBlendViewController.m */; };
 		0064439E1E6FD93A0011ED3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0064439D1E6FD93A0011ED3F /* Main.storyboard */; };
+		00867F281E8BC86D0042BE5A /* NSArray+STMSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 00867F271E8BC86D0042BE5A /* NSArray+STMSafe.m */; };
+		00867F2B1E8BC87D0042BE5A /* NSMutableArray+STMSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 00867F2A1E8BC87D0042BE5A /* NSMutableArray+STMSafe.m */; };
+		00867F2E1E8BC8A90042BE5A /* NSDictionary+STMSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 00867F2D1E8BC8A90042BE5A /* NSDictionary+STMSafe.m */; };
+		00867F311E8BC8BB0042BE5A /* NSMutableDictionary+STMSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 00867F301E8BC8BB0042BE5A /* NSMutableDictionary+STMSafe.m */; };
 		B891F7E61CAE71770043BD59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F7E51CAE71770043BD59 /* main.m */; };
 		B891F7E91CAE71770043BD59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F7E81CAE71770043BD59 /* AppDelegate.m */; };
 		B891F7F11CAE71770043BD59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B891F7F01CAE71770043BD59 /* Assets.xcassets */; };
 		B891F7F41CAE71770043BD59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B891F7F21CAE71770043BD59 /* LaunchScreen.storyboard */; };
-		B891F81A1CAE72590043BD59 /* NSArray+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8011CAE72590043BD59 /* NSArray+STM.m */; };
-		B891F81B1CAE72590043BD59 /* NSMutableArray+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8031CAE72590043BD59 /* NSMutableArray+STM.m */; };
 		B891F81C1CAE72590043BD59 /* NSDictionary+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8061CAE72590043BD59 /* NSDictionary+STM.m */; };
-		B891F81D1CAE72590043BD59 /* NSMutableDictionary+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8081CAE72590043BD59 /* NSMutableDictionary+STM.m */; };
 		B891F8221CAE72590043BD59 /* STMObjectRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8181CAE72590043BD59 /* STMObjectRuntime.m */; };
 		B891F8321CAE772C0043BD59 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8311CAE772C0043BD59 /* ViewController.m */; };
 		B891F8351CAE7A080043BD59 /* STMConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8341CAE7A080043BD59 /* STMConfiguration.m */; };
@@ -36,6 +37,14 @@
 		0064439A1E6FD86F0011ED3F /* ImageBlendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBlendViewController.h; sourceTree = "<group>"; };
 		0064439B1E6FD86F0011ED3F /* ImageBlendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageBlendViewController.m; sourceTree = "<group>"; };
 		0064439D1E6FD93A0011ED3F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		00867F261E8BC86D0042BE5A /* NSArray+STMSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+STMSafe.h"; sourceTree = "<group>"; };
+		00867F271E8BC86D0042BE5A /* NSArray+STMSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+STMSafe.m"; sourceTree = "<group>"; };
+		00867F291E8BC87D0042BE5A /* NSMutableArray+STMSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+STMSafe.h"; sourceTree = "<group>"; };
+		00867F2A1E8BC87D0042BE5A /* NSMutableArray+STMSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+STMSafe.m"; sourceTree = "<group>"; };
+		00867F2C1E8BC8A90042BE5A /* NSDictionary+STMSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+STMSafe.h"; sourceTree = "<group>"; };
+		00867F2D1E8BC8A90042BE5A /* NSDictionary+STMSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+STMSafe.m"; sourceTree = "<group>"; };
+		00867F2F1E8BC8BB0042BE5A /* NSMutableDictionary+STMSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+STMSafe.h"; sourceTree = "<group>"; };
+		00867F301E8BC8BB0042BE5A /* NSMutableDictionary+STMSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+STMSafe.m"; sourceTree = "<group>"; };
 		9D4A9227B3586FF0561078F4 /* Pods-StromFacilitate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StromFacilitate.release.xcconfig"; path = "Pods/Target Support Files/Pods-StromFacilitate/Pods-StromFacilitate.release.xcconfig"; sourceTree = "<group>"; };
 		B8811A1E1D57842200238644 /* GlobalDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalDefine.h; sourceTree = "<group>"; };
 		B891F7E11CAE71770043BD59 /* StromFacilitate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StromFacilitate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,14 +54,8 @@
 		B891F7F01CAE71770043BD59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B891F7F31CAE71770043BD59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B891F7F51CAE71770043BD59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B891F8001CAE72590043BD59 /* NSArray+STM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+STM.h"; sourceTree = "<group>"; };
-		B891F8011CAE72590043BD59 /* NSArray+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+STM.m"; sourceTree = "<group>"; };
-		B891F8021CAE72590043BD59 /* NSMutableArray+STM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+STM.h"; sourceTree = "<group>"; };
-		B891F8031CAE72590043BD59 /* NSMutableArray+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+STM.m"; sourceTree = "<group>"; };
 		B891F8051CAE72590043BD59 /* NSDictionary+STM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+STM.h"; sourceTree = "<group>"; };
 		B891F8061CAE72590043BD59 /* NSDictionary+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+STM.m"; sourceTree = "<group>"; };
-		B891F8071CAE72590043BD59 /* NSMutableDictionary+STM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+STM.h"; sourceTree = "<group>"; };
-		B891F8081CAE72590043BD59 /* NSMutableDictionary+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+STM.m"; sourceTree = "<group>"; };
 		B891F80A1CAE72590043BD59 /* Strom-header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Strom-header.h"; sourceTree = "<group>"; };
 		B891F8171CAE72590043BD59 /* STMObjectRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMObjectRuntime.h; sourceTree = "<group>"; };
 		B891F8181CAE72590043BD59 /* STMObjectRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMObjectRuntime.m; sourceTree = "<group>"; };
@@ -100,6 +103,37 @@
 				0064438F1E6EB4EE0011ED3F /* UIImage+STM.m */,
 			);
 			path = Color;
+			sourceTree = "<group>";
+		};
+		00867F231E8BC7C60042BE5A /* Swizz */ = {
+			isa = PBXGroup;
+			children = (
+				00867F241E8BC83C0042BE5A /* NSArray */,
+				00867F251E8BC83C0042BE5A /* NSDictionary */,
+			);
+			path = Swizz;
+			sourceTree = "<group>";
+		};
+		00867F241E8BC83C0042BE5A /* NSArray */ = {
+			isa = PBXGroup;
+			children = (
+				00867F261E8BC86D0042BE5A /* NSArray+STMSafe.h */,
+				00867F271E8BC86D0042BE5A /* NSArray+STMSafe.m */,
+				00867F291E8BC87D0042BE5A /* NSMutableArray+STMSafe.h */,
+				00867F2A1E8BC87D0042BE5A /* NSMutableArray+STMSafe.m */,
+			);
+			path = NSArray;
+			sourceTree = "<group>";
+		};
+		00867F251E8BC83C0042BE5A /* NSDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				00867F2C1E8BC8A90042BE5A /* NSDictionary+STMSafe.h */,
+				00867F2D1E8BC8A90042BE5A /* NSDictionary+STMSafe.m */,
+				00867F2F1E8BC8BB0042BE5A /* NSMutableDictionary+STMSafe.h */,
+				00867F301E8BC8BB0042BE5A /* NSMutableDictionary+STMSafe.m */,
+			);
+			path = NSDictionary;
 			sourceTree = "<group>";
 		};
 		4CCF0B7DCEEFBFEE59452B0C /* Frameworks */ = {
@@ -168,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				B891F80A1CAE72590043BD59 /* Strom-header.h */,
+				00867F231E8BC7C60042BE5A /* Swizz */,
 				0014309A1DFABE6C004E1453 /* Style */,
 				B891F83F1CAF6C2C0043BD59 /* Security */,
 				B891F7FC1CAE72590043BD59 /* Config */,
@@ -191,22 +226,10 @@
 			isa = PBXGroup;
 			children = (
 				B891F8431CAF6DAD0043BD59 /* NSData */,
-				B891F7FF1CAE72590043BD59 /* NSArray */,
 				B891F8041CAE72590043BD59 /* NSDictionary */,
 				B891F8091CAE72590043BD59 /* NSString */,
 			);
 			path = Foundation;
-			sourceTree = "<group>";
-		};
-		B891F7FF1CAE72590043BD59 /* NSArray */ = {
-			isa = PBXGroup;
-			children = (
-				B891F8001CAE72590043BD59 /* NSArray+STM.h */,
-				B891F8011CAE72590043BD59 /* NSArray+STM.m */,
-				B891F8021CAE72590043BD59 /* NSMutableArray+STM.h */,
-				B891F8031CAE72590043BD59 /* NSMutableArray+STM.m */,
-			);
-			path = NSArray;
 			sourceTree = "<group>";
 		};
 		B891F8041CAE72590043BD59 /* NSDictionary */ = {
@@ -214,8 +237,6 @@
 			children = (
 				B891F8051CAE72590043BD59 /* NSDictionary+STM.h */,
 				B891F8061CAE72590043BD59 /* NSDictionary+STM.m */,
-				B891F8071CAE72590043BD59 /* NSMutableDictionary+STM.h */,
-				B891F8081CAE72590043BD59 /* NSMutableDictionary+STM.m */,
 			);
 			path = NSDictionary;
 			sourceTree = "<group>";
@@ -403,17 +424,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				B891F8221CAE72590043BD59 /* STMObjectRuntime.m in Sources */,
-				B891F81D1CAE72590043BD59 /* NSMutableDictionary+STM.m in Sources */,
+				00867F2B1E8BC87D0042BE5A /* NSMutableArray+STMSafe.m in Sources */,
 				B891F7E91CAE71770043BD59 /* AppDelegate.m in Sources */,
 				0014309E1DFABE6C004E1453 /* UIColor+STM.m in Sources */,
 				B891F7E61CAE71770043BD59 /* main.m in Sources */,
 				B891F8321CAE772C0043BD59 /* ViewController.m in Sources */,
 				B891F8381CAECC9A0043BD59 /* NSString+STM.m in Sources */,
-				B891F81A1CAE72590043BD59 /* NSArray+STM.m in Sources */,
 				B891F8351CAE7A080043BD59 /* STMConfiguration.m in Sources */,
-				B891F81B1CAE72590043BD59 /* NSMutableArray+STM.m in Sources */,
+				00867F2E1E8BC8A90042BE5A /* NSDictionary+STMSafe.m in Sources */,
+				00867F281E8BC86D0042BE5A /* NSArray+STMSafe.m in Sources */,
 				B891F8421CAF6C580043BD59 /* STMRSAEncryptor.m in Sources */,
 				0064439C1E6FD86F0011ED3F /* ImageBlendViewController.m in Sources */,
+				00867F311E8BC8BB0042BE5A /* NSMutableDictionary+STMSafe.m in Sources */,
 				006443901E6EB4EE0011ED3F /* UIImage+STM.m in Sources */,
 				B891F8461CAF6DBC0043BD59 /* NSData+STM.m in Sources */,
 				B891F81C1CAE72590043BD59 /* NSDictionary+STM.m in Sources */,
