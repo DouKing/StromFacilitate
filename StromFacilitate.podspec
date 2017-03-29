@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "StromFacilitate"
-  s.version      = "0.1.5"
+  s.version      = "1.0.0"
   s.summary      = "iOS底层常用功能封装"
   s.homepage     = "https://github.com/DouKing/StromFacilitate"
   s.license      = "MIT"
@@ -15,7 +15,11 @@ Pod::Spec.new do |s|
 
 
   s.subspec 'Foundation' do |ss|
-    ss.source_files = 'Strom/**/NS{String,Data,Array,MutableArray,Dictionary,MutableDictionary}+STM.{h,m}', 'Strom/**/STMObjectRuntime.{h,m}'
+    ss.source_files = 'Strom/**/NS{String,Data,Dictionary}+STM.{h,m}'
+  end
+
+  s.subspec 'Swizz' do |ss|
+    ss.source_files = 'Strom/**/NS{Array,MutableArray,Dictionary,MutableDictionary}+STM.{h,m}', 'Strom/**/STMObjectRuntime.{h,m}'
   end
 
   s.subspec 'Utilities' do |ss|
