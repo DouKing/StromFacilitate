@@ -179,7 +179,6 @@
 				B891F7E81CAE71770043BD59 /* AppDelegate.m */,
 				B8811A1E1D57842200238644 /* GlobalDefine.h */,
 				B891F8231CAE72DB0043BD59 /* Example */,
-				B891F8261CAE72DB0043BD59 /* Venders */,
 				B891F7E41CAE71770043BD59 /* Supporting Files */,
 			);
 			path = StromFacilitate;
@@ -208,7 +207,6 @@
 				B891F7FC1CAE72590043BD59 /* Config */,
 				B891F7FE1CAE72590043BD59 /* Foundation */,
 				B891F8161CAE72590043BD59 /* Utilities */,
-				B891F8191CAE72590043BD59 /* Venders */,
 			);
 			path = Strom;
 			sourceTree = "<group>";
@@ -259,13 +257,6 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		B891F8191CAE72590043BD59 /* Venders */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Venders;
-			sourceTree = "<group>";
-		};
 		B891F8231CAE72DB0043BD59 /* Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,13 +266,6 @@
 				0064439B1E6FD86F0011ED3F /* ImageBlendViewController.m */,
 			);
 			path = Example;
-			sourceTree = "<group>";
-		};
-		B891F8261CAE72DB0043BD59 /* Venders */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Venders;
 			sourceTree = "<group>";
 		};
 		B891F83F1CAF6C2C0043BD59 /* Security */ = {

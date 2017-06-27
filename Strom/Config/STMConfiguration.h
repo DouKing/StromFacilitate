@@ -17,6 +17,10 @@ NS_ASSUME_NONNULL_BEGIN
                               DEFER_STRINGIFY(__FILE__) " line " DEFER_STRINGIFY(__LINE__)
 #define TODO(MSG) PRAGMA_MESSAGE(FORMATTED_MESSAGE(MSG))
 
+#define STMFinalClass            __attribute__((objc_subclassing_restricted))
+#define STMNSValueEnable         __attribute__((objc_boxable))
+#define STMRename(s)             __attribute__((objc_runtime_name(s)))
+
 #define STMScreenBounds          ([[UIScreen mainScreen] bounds])
 #define STMScreenWidth           (CGRectGetWidth([[UIScreen mainScreen] bounds]))
 #define STMScreenHeight          (CGRectGetHeight([[UIScreen mainScreen] bounds]))
@@ -25,6 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 #define STMStatusBarHeight       (CGRectGetHeight([[UIApplication sharedApplication] statusBarFrame]))
 #define STMNavigationBarHeight   (64)
 #define STMTabBarHeight          (49)
+
 
 FOUNDATION_EXPORT NSString * const STMDocumentPath();
 
