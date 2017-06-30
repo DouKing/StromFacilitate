@@ -15,6 +15,8 @@
 		00867F2B1E8BC87D0042BE5A /* NSMutableArray+STMSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 00867F2A1E8BC87D0042BE5A /* NSMutableArray+STMSafe.m */; };
 		00867F2E1E8BC8A90042BE5A /* NSDictionary+STMSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 00867F2D1E8BC8A90042BE5A /* NSDictionary+STMSafe.m */; };
 		00867F311E8BC8BB0042BE5A /* NSMutableDictionary+STMSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 00867F301E8BC8BB0042BE5A /* NSMutableDictionary+STMSafe.m */; };
+		00A6688C1F05FD46002751F6 /* UITextField+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A6688B1F05FD46002751F6 /* UITextField+STM.m */; };
+		00B9BFC41F062A770012E482 /* TextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B9BFC31F062A770012E482 /* TextFieldViewController.m */; };
 		B891F7E61CAE71770043BD59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F7E51CAE71770043BD59 /* main.m */; };
 		B891F7E91CAE71770043BD59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F7E81CAE71770043BD59 /* AppDelegate.m */; };
 		B891F7F11CAE71770043BD59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B891F7F01CAE71770043BD59 /* Assets.xcassets */; };
@@ -45,6 +47,10 @@
 		00867F2D1E8BC8A90042BE5A /* NSDictionary+STMSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+STMSafe.m"; sourceTree = "<group>"; };
 		00867F2F1E8BC8BB0042BE5A /* NSMutableDictionary+STMSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+STMSafe.h"; sourceTree = "<group>"; };
 		00867F301E8BC8BB0042BE5A /* NSMutableDictionary+STMSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+STMSafe.m"; sourceTree = "<group>"; };
+		00A6688A1F05FD46002751F6 /* UITextField+STM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+STM.h"; sourceTree = "<group>"; };
+		00A6688B1F05FD46002751F6 /* UITextField+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+STM.m"; sourceTree = "<group>"; };
+		00B9BFC21F062A770012E482 /* TextFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldViewController.h; sourceTree = "<group>"; };
+		00B9BFC31F062A770012E482 /* TextFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldViewController.m; sourceTree = "<group>"; };
 		9D4A9227B3586FF0561078F4 /* Pods-StromFacilitate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StromFacilitate.release.xcconfig"; path = "Pods/Target Support Files/Pods-StromFacilitate/Pods-StromFacilitate.release.xcconfig"; sourceTree = "<group>"; };
 		B8811A1E1D57842200238644 /* GlobalDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalDefine.h; sourceTree = "<group>"; };
 		B891F7E11CAE71770043BD59 /* StromFacilitate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StromFacilitate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +142,15 @@
 			path = NSDictionary;
 			sourceTree = "<group>";
 		};
+		00A668891F05FD22002751F6 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				00A6688A1F05FD46002751F6 /* UITextField+STM.h */,
+				00A6688B1F05FD46002751F6 /* UITextField+STM.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		4CCF0B7DCEEFBFEE59452B0C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +218,7 @@
 				B891F80A1CAE72590043BD59 /* Strom-header.h */,
 				00867F231E8BC7C60042BE5A /* Swizz */,
 				0014309A1DFABE6C004E1453 /* Style */,
+				00A668891F05FD22002751F6 /* UI */,
 				B891F83F1CAF6C2C0043BD59 /* Security */,
 				B891F7FC1CAE72590043BD59 /* Config */,
 				B891F7FE1CAE72590043BD59 /* Foundation */,
@@ -264,6 +280,8 @@
 				B891F8311CAE772C0043BD59 /* ViewController.m */,
 				0064439A1E6FD86F0011ED3F /* ImageBlendViewController.h */,
 				0064439B1E6FD86F0011ED3F /* ImageBlendViewController.m */,
+				00B9BFC21F062A770012E482 /* TextFieldViewController.h */,
+				00B9BFC31F062A770012E482 /* TextFieldViewController.m */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -407,6 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00B9BFC41F062A770012E482 /* TextFieldViewController.m in Sources */,
 				B891F8221CAE72590043BD59 /* STMObjectRuntime.m in Sources */,
 				00867F2B1E8BC87D0042BE5A /* NSMutableArray+STMSafe.m in Sources */,
 				B891F7E91CAE71770043BD59 /* AppDelegate.m in Sources */,
@@ -415,6 +434,7 @@
 				B891F8321CAE772C0043BD59 /* ViewController.m in Sources */,
 				B891F8381CAECC9A0043BD59 /* NSString+STM.m in Sources */,
 				B891F8351CAE7A080043BD59 /* STMConfiguration.m in Sources */,
+				00A6688C1F05FD46002751F6 /* UITextField+STM.m in Sources */,
 				00867F2E1E8BC8A90042BE5A /* NSDictionary+STMSafe.m in Sources */,
 				00867F281E8BC86D0042BE5A /* NSArray+STMSafe.m in Sources */,
 				B891F8421CAF6C580043BD59 /* STMRSAEncryptor.m in Sources */,
