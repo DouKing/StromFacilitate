@@ -1,5 +1,7 @@
 .DS_Store
+package.json
 *.xcodeproj/project.xcworkspace/
 *.xcodeproj/xcuserdata/
 *.xcworkspace/xcuserdata/
 Pods/
+node_modules/
