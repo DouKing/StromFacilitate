@@ -28,6 +28,9 @@
 		B891F8381CAECC9A0043BD59 /* NSString+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8371CAECC9A0043BD59 /* NSString+STM.m */; };
 		B891F8421CAF6C580043BD59 /* STMRSAEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8411CAF6C580043BD59 /* STMRSAEncryptor.m */; };
 		B891F8461CAF6DBC0043BD59 /* NSData+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F8451CAF6DBC0043BD59 /* NSData+STM.m */; };
+		B8B324101F40384E00AC2AAF /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B3240F1F40384E00AC2AAF /* NSString+Hash.m */; };
+		B8B324131F4039E400AC2AAF /* EncryptionTools.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B324121F4039E400AC2AAF /* EncryptionTools.m */; };
+		B8B324161F4039F100AC2AAF /* RSACryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B324151F4039F100AC2AAF /* RSACryptor.m */; };
 		BA6B31773B47A5D2FC861294 /* libPods-StromFacilitate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC923321BF177D996C433407 /* libPods-StromFacilitate.a */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +79,12 @@
 		B891F8411CAF6C580043BD59 /* STMRSAEncryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMRSAEncryptor.m; sourceTree = "<group>"; };
 		B891F8441CAF6DBC0043BD59 /* NSData+STM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+STM.h"; sourceTree = "<group>"; };
 		B891F8451CAF6DBC0043BD59 /* NSData+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+STM.m"; sourceTree = "<group>"; };
+		B8B3240E1F40384E00AC2AAF /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
+		B8B3240F1F40384E00AC2AAF /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
+		B8B324111F4039E400AC2AAF /* EncryptionTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncryptionTools.h; sourceTree = "<group>"; };
+		B8B324121F4039E400AC2AAF /* EncryptionTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncryptionTools.m; sourceTree = "<group>"; };
+		B8B324141F4039F100AC2AAF /* RSACryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSACryptor.h; sourceTree = "<group>"; };
+		B8B324151F4039F100AC2AAF /* RSACryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSACryptor.m; sourceTree = "<group>"; };
 		BC923321BF177D996C433407 /* libPods-StromFacilitate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StromFacilitate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDADAAA5FBBFAEC10374EDC8 /* Pods-StromFacilitate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StromFacilitate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StromFacilitate/Pods-StromFacilitate.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -260,6 +269,8 @@
 			children = (
 				B891F8361CAECC9A0043BD59 /* NSString+STM.h */,
 				B891F8371CAECC9A0043BD59 /* NSString+STM.m */,
+				B8B3240E1F40384E00AC2AAF /* NSString+Hash.h */,
+				B8B3240F1F40384E00AC2AAF /* NSString+Hash.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -291,6 +302,10 @@
 			children = (
 				B891F8401CAF6C580043BD59 /* STMRSAEncryptor.h */,
 				B891F8411CAF6C580043BD59 /* STMRSAEncryptor.m */,
+				B8B324111F4039E400AC2AAF /* EncryptionTools.h */,
+				B8B324121F4039E400AC2AAF /* EncryptionTools.m */,
+				B8B324141F4039F100AC2AAF /* RSACryptor.h */,
+				B8B324151F4039F100AC2AAF /* RSACryptor.m */,
 			);
 			path = Security;
 			sourceTree = "<group>";
@@ -437,11 +452,14 @@
 				00A6688C1F05FD46002751F6 /* UITextField+STM.m in Sources */,
 				00867F2E1E8BC8A90042BE5A /* NSDictionary+STMSafe.m in Sources */,
 				00867F281E8BC86D0042BE5A /* NSArray+STMSafe.m in Sources */,
+				B8B324161F4039F100AC2AAF /* RSACryptor.m in Sources */,
+				B8B324131F4039E400AC2AAF /* EncryptionTools.m in Sources */,
 				B891F8421CAF6C580043BD59 /* STMRSAEncryptor.m in Sources */,
 				0064439C1E6FD86F0011ED3F /* ImageBlendViewController.m in Sources */,
 				00867F311E8BC8BB0042BE5A /* NSMutableDictionary+STMSafe.m in Sources */,
 				006443901E6EB4EE0011ED3F /* UIImage+STM.m in Sources */,
 				B891F8461CAF6DBC0043BD59 /* NSData+STM.m in Sources */,
+				B8B324101F40384E00AC2AAF /* NSString+Hash.m in Sources */,
 				B891F81C1CAE72590043BD59 /* NSDictionary+STM.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
