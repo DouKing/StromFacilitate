@@ -3,5 +3,6 @@ package.json
 *.xcodeproj/project.xcworkspace/
 *.xcodeproj/xcuserdata/
 *.xcworkspace/xcuserdata/
+node_modules/
 Pods/
 node_modules/
