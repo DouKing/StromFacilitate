@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Security' do |ss|
-    ss.source_files = 'Strom/**/STMRSAEncryptor.{h,m}', 'Strom/**/EncryptionTools.{h,m}', 'Strom/**/RSACryptor.{h,m}'
+    ss.source_files = 'Strom/**/STMRSAEncryptor.{h,m}', 'Strom/**/NSString+STM.{h,m}', 'Strom/**/EncryptionTools.{h,m}', 'Strom/**/RSACryptor.{h,m}'
   end
 
   s.subspec 'Style' do |ss|
