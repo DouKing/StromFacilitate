@@ -9,6 +9,7 @@
 //
 
 #import "EncryptionTools.h"
+#import <CommonCrypto/CommonCrypto.h>
 
 @interface EncryptionTools()
 @property (nonatomic, assign) int keySize;
