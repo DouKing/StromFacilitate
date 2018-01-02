@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0014309E1DFABE6C004E1453 /* UIColor+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 0014309D1DFABE6C004E1453 /* UIColor+STM.m */; };
+		002FEDCF1FF370EA00EDA602 /* UIView+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 002FEDCE1FF370EA00EDA602 /* UIView+STM.m */; };
+		002FEE1B1FF4CD0400EDA602 /* CornerRadiusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002FEE1A1FF4CD0400EDA602 /* CornerRadiusViewController.m */; };
 		006443901E6EB4EE0011ED3F /* UIImage+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 0064438F1E6EB4EE0011ED3F /* UIImage+STM.m */; };
 		0064439C1E6FD86F0011ED3F /* ImageBlendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0064439B1E6FD86F0011ED3F /* ImageBlendViewController.m */; };
 		0064439E1E6FD93A0011ED3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0064439D1E6FD93A0011ED3F /* Main.storyboard */; };
@@ -38,6 +40,10 @@
 /* Begin PBXFileReference section */
 		0014309C1DFABE6C004E1453 /* UIColor+STM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+STM.h"; sourceTree = "<group>"; };
 		0014309D1DFABE6C004E1453 /* UIColor+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+STM.m"; sourceTree = "<group>"; };
+		002FEDCD1FF370EA00EDA602 /* UIView+STM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+STM.h"; sourceTree = "<group>"; };
+		002FEDCE1FF370EA00EDA602 /* UIView+STM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+STM.m"; sourceTree = "<group>"; };
+		002FEE191FF4CD0400EDA602 /* CornerRadiusViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CornerRadiusViewController.h; sourceTree = "<group>"; };
+		002FEE1A1FF4CD0400EDA602 /* CornerRadiusViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CornerRadiusViewController.m; sourceTree = "<group>"; };
 		0064438E1E6EB4EE0011ED3F /* UIImage+STM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+STM.h"; sourceTree = "<group>"; };
 		0064438F1E6EB4EE0011ED3F /* UIImage+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+STM.m"; sourceTree = "<group>"; };
 		0064439A1E6FD86F0011ED3F /* ImageBlendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBlendViewController.h; sourceTree = "<group>"; };
@@ -157,6 +163,8 @@
 		00A668891F05FD22002751F6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				002FEDCD1FF370EA00EDA602 /* UIView+STM.h */,
+				002FEDCE1FF370EA00EDA602 /* UIView+STM.m */,
 				00A6688A1F05FD46002751F6 /* UITextField+STM.h */,
 				00A6688B1F05FD46002751F6 /* UITextField+STM.m */,
 			);
@@ -306,6 +314,8 @@
 				0064439B1E6FD86F0011ED3F /* ImageBlendViewController.m */,
 				00B9BFC21F062A770012E482 /* TextFieldViewController.h */,
 				00B9BFC31F062A770012E482 /* TextFieldViewController.m */,
+				002FEE191FF4CD0400EDA602 /* CornerRadiusViewController.h */,
+				002FEE1A1FF4CD0400EDA602 /* CornerRadiusViewController.m */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -366,6 +376,7 @@
 				TargetAttributes = {
 					B891F7E01CAE71770043BD59 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = RME4TFY984;
 					};
 				};
 			};
@@ -475,9 +486,11 @@
 				0064439C1E6FD86F0011ED3F /* ImageBlendViewController.m in Sources */,
 				00867F311E8BC8BB0042BE5A /* NSMutableDictionary+STMSafe.m in Sources */,
 				006443901E6EB4EE0011ED3F /* UIImage+STM.m in Sources */,
+				002FEE1B1FF4CD0400EDA602 /* CornerRadiusViewController.m in Sources */,
 				B891F8461CAF6DBC0043BD59 /* NSData+STM.m in Sources */,
 				B8B324101F40384E00AC2AAF /* NSString+Hash.m in Sources */,
 				B891F81C1CAE72590043BD59 /* NSDictionary+STM.m in Sources */,
+				002FEDCF1FF370EA00EDA602 /* UIView+STM.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +595,7 @@
 			baseConfigurationReference = BDADAAA5FBBFAEC10374EDC8 /* Pods-StromFacilitate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RME4TFY984;
 				GCC_PREFIX_HEADER = "StromFacilitate/StromFacilitate-PrefixHeader.pch";
 				INFOPLIST_FILE = StromFacilitate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -596,6 +610,7 @@
 			baseConfigurationReference = 9D4A9227B3586FF0561078F4 /* Pods-StromFacilitate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RME4TFY984;
 				GCC_PREFIX_HEADER = "StromFacilitate/StromFacilitate-PrefixHeader.pch";
 				INFOPLIST_FILE = StromFacilitate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
