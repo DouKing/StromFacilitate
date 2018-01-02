@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0014309E1DFABE6C004E1453 /* UIColor+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 0014309D1DFABE6C004E1453 /* UIColor+STM.m */; };
 		002FEDCF1FF370EA00EDA602 /* UIView+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 002FEDCE1FF370EA00EDA602 /* UIView+STM.m */; };
 		002FEE1B1FF4CD0400EDA602 /* CornerRadiusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002FEE1A1FF4CD0400EDA602 /* CornerRadiusViewController.m */; };
-		006443901E6EB4EE0011ED3F /* UIImage+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 0064438F1E6EB4EE0011ED3F /* UIImage+STM.m */; };
 		0064439C1E6FD86F0011ED3F /* ImageBlendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0064439B1E6FD86F0011ED3F /* ImageBlendViewController.m */; };
 		0064439E1E6FD93A0011ED3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0064439D1E6FD93A0011ED3F /* Main.storyboard */; };
 		00867F281E8BC86D0042BE5A /* NSArray+STMSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 00867F271E8BC86D0042BE5A /* NSArray+STMSafe.m */; };
 		00867F2B1E8BC87D0042BE5A /* NSMutableArray+STMSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 00867F2A1E8BC87D0042BE5A /* NSMutableArray+STMSafe.m */; };
 		00867F2E1E8BC8A90042BE5A /* NSDictionary+STMSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 00867F2D1E8BC8A90042BE5A /* NSDictionary+STMSafe.m */; };
 		00867F311E8BC8BB0042BE5A /* NSMutableDictionary+STMSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 00867F301E8BC8BB0042BE5A /* NSMutableDictionary+STMSafe.m */; };
+		009D4E5F1FFB977A0095F44A /* UIImage+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 009D4E5B1FFB977A0095F44A /* UIImage+STM.m */; };
+		009D4E601FFB977A0095F44A /* UIColor+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 009D4E5D1FFB977A0095F44A /* UIColor+STM.m */; };
 		00A6688C1F05FD46002751F6 /* UITextField+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A6688B1F05FD46002751F6 /* UITextField+STM.m */; };
 		00B9BFC41F062A770012E482 /* TextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B9BFC31F062A770012E482 /* TextFieldViewController.m */; };
 		00FA6E961FCC2A070050E72C /* NSBundle+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FA6E951FCC2A070050E72C /* NSBundle+STM.m */; };
@@ -38,14 +38,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0014309C1DFABE6C004E1453 /* UIColor+STM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+STM.h"; sourceTree = "<group>"; };
-		0014309D1DFABE6C004E1453 /* UIColor+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+STM.m"; sourceTree = "<group>"; };
 		002FEDCD1FF370EA00EDA602 /* UIView+STM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+STM.h"; sourceTree = "<group>"; };
 		002FEDCE1FF370EA00EDA602 /* UIView+STM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+STM.m"; sourceTree = "<group>"; };
 		002FEE191FF4CD0400EDA602 /* CornerRadiusViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CornerRadiusViewController.h; sourceTree = "<group>"; };
 		002FEE1A1FF4CD0400EDA602 /* CornerRadiusViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CornerRadiusViewController.m; sourceTree = "<group>"; };
-		0064438E1E6EB4EE0011ED3F /* UIImage+STM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+STM.h"; sourceTree = "<group>"; };
-		0064438F1E6EB4EE0011ED3F /* UIImage+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+STM.m"; sourceTree = "<group>"; };
 		0064439A1E6FD86F0011ED3F /* ImageBlendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBlendViewController.h; sourceTree = "<group>"; };
 		0064439B1E6FD86F0011ED3F /* ImageBlendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageBlendViewController.m; sourceTree = "<group>"; };
 		0064439D1E6FD93A0011ED3F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -57,6 +53,10 @@
 		00867F2D1E8BC8A90042BE5A /* NSDictionary+STMSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+STMSafe.m"; sourceTree = "<group>"; };
 		00867F2F1E8BC8BB0042BE5A /* NSMutableDictionary+STMSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+STMSafe.h"; sourceTree = "<group>"; };
 		00867F301E8BC8BB0042BE5A /* NSMutableDictionary+STMSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+STMSafe.m"; sourceTree = "<group>"; };
+		009D4E5B1FFB977A0095F44A /* UIImage+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+STM.m"; sourceTree = "<group>"; };
+		009D4E5C1FFB977A0095F44A /* UIColor+STM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+STM.h"; sourceTree = "<group>"; };
+		009D4E5D1FFB977A0095F44A /* UIColor+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+STM.m"; sourceTree = "<group>"; };
+		009D4E5E1FFB977A0095F44A /* UIImage+STM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+STM.h"; sourceTree = "<group>"; };
 		00A6688A1F05FD46002751F6 /* UITextField+STM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+STM.h"; sourceTree = "<group>"; };
 		00A6688B1F05FD46002751F6 /* UITextField+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+STM.m"; sourceTree = "<group>"; };
 		00B9BFC21F062A770012E482 /* TextFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldViewController.h; sourceTree = "<group>"; };
@@ -113,20 +113,12 @@
 		0014309A1DFABE6C004E1453 /* Style */ = {
 			isa = PBXGroup;
 			children = (
-				0014309B1DFABE6C004E1453 /* Color */,
+				009D4E5C1FFB977A0095F44A /* UIColor+STM.h */,
+				009D4E5D1FFB977A0095F44A /* UIColor+STM.m */,
+				009D4E5E1FFB977A0095F44A /* UIImage+STM.h */,
+				009D4E5B1FFB977A0095F44A /* UIImage+STM.m */,
 			);
 			path = Style;
-			sourceTree = "<group>";
-		};
-		0014309B1DFABE6C004E1453 /* Color */ = {
-			isa = PBXGroup;
-			children = (
-				0014309C1DFABE6C004E1453 /* UIColor+STM.h */,
-				0014309D1DFABE6C004E1453 /* UIColor+STM.m */,
-				0064438E1E6EB4EE0011ED3F /* UIImage+STM.h */,
-				0064438F1E6EB4EE0011ED3F /* UIImage+STM.m */,
-			);
-			path = Color;
 			sourceTree = "<group>";
 		};
 		00867F231E8BC7C60042BE5A /* Swizz */ = {
@@ -471,8 +463,8 @@
 				B891F8221CAE72590043BD59 /* STMObjectRuntime.m in Sources */,
 				00867F2B1E8BC87D0042BE5A /* NSMutableArray+STMSafe.m in Sources */,
 				00FA6E961FCC2A070050E72C /* NSBundle+STM.m in Sources */,
+				009D4E601FFB977A0095F44A /* UIColor+STM.m in Sources */,
 				B891F7E91CAE71770043BD59 /* AppDelegate.m in Sources */,
-				0014309E1DFABE6C004E1453 /* UIColor+STM.m in Sources */,
 				B891F7E61CAE71770043BD59 /* main.m in Sources */,
 				B891F8321CAE772C0043BD59 /* ViewController.m in Sources */,
 				B891F8381CAECC9A0043BD59 /* NSString+STM.m in Sources */,
@@ -485,10 +477,10 @@
 				B891F8421CAF6C580043BD59 /* STMRSAEncryptor.m in Sources */,
 				0064439C1E6FD86F0011ED3F /* ImageBlendViewController.m in Sources */,
 				00867F311E8BC8BB0042BE5A /* NSMutableDictionary+STMSafe.m in Sources */,
-				006443901E6EB4EE0011ED3F /* UIImage+STM.m in Sources */,
 				002FEE1B1FF4CD0400EDA602 /* CornerRadiusViewController.m in Sources */,
 				B891F8461CAF6DBC0043BD59 /* NSData+STM.m in Sources */,
 				B8B324101F40384E00AC2AAF /* NSString+Hash.m in Sources */,
+				009D4E5F1FFB977A0095F44A /* UIImage+STM.m in Sources */,
 				B891F81C1CAE72590043BD59 /* NSDictionary+STM.m in Sources */,
 				002FEDCF1FF370EA00EDA602 /* UIView+STM.m in Sources */,
 			);
