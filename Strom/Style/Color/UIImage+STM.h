@@ -31,6 +31,25 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (UIImage *)stm_imageWithTintColor:(nullable UIColor *)tintColor blendMode:(CGBlendMode)blendMode;
 
+/**
+ 添加圆角
+
+ @param radius 圆角半径
+ @param size 绘制区域
+ @return UIImage
+ */
+- (UIImage *)stm_addCornerRadius:(CGFloat)radius withSize:(CGSize)size;
+
+/**
+ 添加圆角
+
+ @param radii 圆角半径
+ @param corners 需要绘制的角
+ @param size 绘制区域
+ @return UIImage
+ */
+- (UIImage *)stm_addCornerRadii:(CGSize)radii byRoundingCorners:(UIRectCorner)corners withSize:(CGSize)size;
+
 @end
 
 

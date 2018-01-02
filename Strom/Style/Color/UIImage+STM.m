@@ -39,4 +39,24 @@
   return tintedImage;
 }
 
+- (UIImage *)stm_addCornerRadius:(CGFloat)radius withSize:(CGSize)size {
+  return [self stm_addCornerRadii:CGSizeMake(radius, radius) byRoundingCorners:UIRectCornerAllCorners withSize:size];
+}
+
+- (UIImage *)stm_addCornerRadii:(CGSize)radii byRoundingCorners:(UIRectCorner)corners withSize:(CGSize)size {
+  @autoreleasepool {
+    CGRect rect = (CGRect){CGPointZero, size};
+    UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:corners cornerRadii:radii];
+    CGContextAddPath(ctx, path.CGPath);
+    CGContextClip(ctx);
+    [self drawInRect:rect];
+    CGContextDrawPath(ctx, kCGPathFillStroke);
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+  }
+}
+
 @end
