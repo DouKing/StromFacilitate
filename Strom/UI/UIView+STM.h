@@ -11,8 +11,17 @@
 - (UIImage *)stm_snapshotImage;
 - (UIView *)stm_snapshotView;
 
-- (void)stm_drawCornerRadius:(CGFloat)radius;
-- (void)stm_drawCornerRadius:(CGFloat)radius fillColor:(UIColor *)color;
-- (void)stm_drawCornerRadius:(CGFloat)radius rectSize:(CGSize)size fillColor:(UIColor *)color;
+//- (void)stm_drawCornerRadius:(CGFloat)radius;
+//- (void)stm_drawCornerRadius:(CGFloat)radius fillColor:(UIColor *)color;
+//- (void)stm_drawCornerRadius:(CGFloat)radius rectSize:(CGSize)size fillColor:(UIColor *)color;
+
+- (void)stm_drawCornerRadii:(CGSize)radii;
+- (void)stm_drawCornerRadii:(CGSize)radii fillColor:(UIColor *)color;
+- (void)stm_drawCornerRadii:(CGSize)radii byRoundingCorners:(UIRectCorner)corners;
+
+- (void)stm_drawCornerRadii:(CGSize)radii
+          byRoundingCorners:(UIRectCorner)corners
+                   rectSize:(CGSize)size
+                  fillColor:(UIColor *)color;
 
 @end

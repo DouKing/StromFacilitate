@@ -56,16 +56,23 @@
 
 #pragma mark -
 
-- (void)stm_drawCornerRadius:(CGFloat)radius {
-  [self stm_drawCornerRadius:radius fillColor:[UIColor whiteColor]];
+- (void)stm_drawCornerRadii:(CGSize)radii {
+  [self stm_drawCornerRadii:radii fillColor:[UIColor whiteColor]];
 }
 
-- (void)stm_drawCornerRadius:(CGFloat)radius fillColor:(UIColor *)color {
-  [self stm_drawCornerRadius:radius rectSize:self.bounds.size fillColor:color];
+- (void)stm_drawCornerRadii:(CGSize)radii fillColor:(UIColor *)color {
+  [self stm_drawCornerRadii:radii byRoundingCorners:UIRectCornerAllCorners rectSize:self.bounds.size fillColor:color];
 }
 
-- (void)stm_drawCornerRadius:(CGFloat)radius rectSize:(CGSize)size fillColor:(UIColor *)color {
-  UIImage *image = [self _drawCornerRadius:radius rectSize:size fillColor:color];
+- (void)stm_drawCornerRadii:(CGSize)radii byRoundingCorners:(UIRectCorner)corners {
+  [self stm_drawCornerRadii:radii byRoundingCorners:corners rectSize:self.bounds.size fillColor:[UIColor whiteColor]];
+}
+
+- (void)stm_drawCornerRadii:(CGSize)radii
+          byRoundingCorners:(UIRectCorner)corners
+                   rectSize:(CGSize)size
+                  fillColor:(UIColor *)color {
+  UIImage *image = [self _drawCornerRadii:radii byRoundingCorners:corners rectSize:size fillColor:color];
   if (!image) { return; }
   if (!self.cornerImageView) {
     self.cornerImageView = [[UIImageView alloc] initWithFrame:self.bounds];
@@ -74,36 +81,17 @@
   self.cornerImageView.image = image;
 }
 
-- (UIImage *)_drawCornerRadius:(CGFloat)radius rectSize:(CGSize)size fillColor:(UIColor *)color {
+- (UIImage *)_drawCornerRadii:(CGSize)radii
+            byRoundingCorners:(UIRectCorner)corners
+                     rectSize:(CGSize)size
+                    fillColor:(UIColor *)color {
   if (size.width < 1 && size.height < 1) { return nil; }
   @autoreleasepool {
     UIGraphicsBeginImageContextWithOptions(size, false, [UIScreen mainScreen].scale);
     CGContextRef ctx = UIGraphicsGetCurrentContext();
 
-    CGPoint hLeftUpPoint = CGPointMake(radius, 0);
-    CGPoint hRightUpPoint = CGPointMake(size.width - radius, 0);
-    CGPoint hLeftDownPoint = CGPointMake(radius, size.height);
-    CGPoint vLeftUpPoint = CGPointMake(0, radius);
-    CGPoint vRightDownPoint = CGPointMake(size.width, size.height - radius);
-    CGPoint centerLeftUp = CGPointMake(radius, radius);
-    CGPoint centerRightUp = CGPointMake(size.width - radius, radius);
-    CGPoint centerLeftDown = CGPointMake(radius, size.height - radius);
-    CGPoint centerRightDown = CGPointMake(size.width - radius, size.height - radius);
-
-    UIBezierPath *path = [UIBezierPath bezierPath];
-
-    [path moveToPoint:hLeftUpPoint];
-    [path addLineToPoint:hRightUpPoint];
-    [path addArcWithCenter:centerRightUp radius:radius startAngle:M_PI * 3 / 2 endAngle:M_PI * 2 clockwise:YES];
-    [path addLineToPoint:vRightDownPoint];
-    [path addArcWithCenter:centerRightDown radius:radius startAngle:0 endAngle:M_PI / 2 clockwise:YES];
-    [path addLineToPoint:hLeftDownPoint];
-    [path addArcWithCenter:centerLeftDown radius:radius startAngle:M_PI / 2 endAngle:M_PI clockwise:YES];
-    [path addLineToPoint:vLeftUpPoint];
-    [path addArcWithCenter:centerLeftUp radius:radius startAngle:M_PI endAngle:M_PI * 3 / 2 clockwise:YES];
-    [path addLineToPoint:hLeftUpPoint];
-    [path closePath];
-
+    CGRect rect = (CGRect){CGPointZero, size};
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:corners cornerRadii:radii];
     [path moveToPoint:CGPointZero];
     [path addLineToPoint:CGPointMake(0, size.height)];
     [path addLineToPoint:CGPointMake(size.width, size.height)];

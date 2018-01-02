@@ -18,8 +18,8 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  [self.imageView stm_drawCornerRadius:10];
-  [self.v stm_drawCornerRadius:10];
+  [self.imageView stm_drawCornerRadii:CGSizeMake(10, 10)];
+  [self.v stm_drawCornerRadii:CGSizeMake(10, 10) fillColor:self.view.backgroundColor];
 }
 
 - (void)didReceiveMemoryWarning {
