@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "StromFacilitate"
-  s.version      = "1.1.1"
+  s.version      = "1.1.2"
   s.summary      = "iOS底层常用功能封装"
   s.homepage     = "https://github.com/DouKing/StromFacilitate"
   s.license      = "MIT"
@@ -15,31 +15,27 @@ Pod::Spec.new do |s|
 
 
   s.subspec 'Foundation' do |ss|
-    ss.source_files = 'Strom/**/NS{String,Data,Dictionary}+STM.{h,m}', 'Strom/**/NSString+Hash.{h,m}'
+    ss.source_files = 'Strom/Foundation/**/*.{h,m}'
   end
 
   s.subspec 'Swizz' do |ss|
-    ss.source_files = 'Strom/**/NS{Array,MutableArray,Dictionary,MutableDictionary}+STMSafe.{h,m}', 'Strom/**/STMObjectRuntime.{h,m}'
+    ss.source_files = 'Strom/Swizz/**/*.{h,m}', 'Strom/**/STMObjectRuntime.{h,m}'
   end
 
   s.subspec 'Utilities' do |ss|
-    ss.source_files = 'Strom/**/STMObjectRuntime.{h,m}'
+    ss.source_files = 'Strom/Utilities/*.{h,m}'
   end
 
   s.subspec 'Config' do |ss|
-    ss.source_files = 'Strom/**/STMConfiguration.{h,m}'
+    ss.source_files = 'Strom/Config/*.{h,m}'
   end
 
   s.subspec 'Security' do |ss|
-    ss.source_files = 'Strom/**/STMRSAEncryptor.{h,m}', 'Strom/**/NSString+STM.{h,m}', 'Strom/**/EncryptionTools.{h,m}', 'Strom/**/RSACryptor.{h,m}'
-  end
-
-  s.subspec 'Style' do |ss|
-    ss.source_files = 'Strom/**/UI{Color,Image}+STM.{h,m}'
+    ss.source_files = 'Strom/Security/*.{h,m}', 'Strom/**/NSString+STM.{h,m}', 'Strom/**/NSString+Hash.{h,m}'
   end
 
   s.subspec 'UI' do |ss|
-    ss.source_files = 'Strom/**/UI{TextField}+STM.{h,m}', 'Strom/**/STMObjectRuntime.{h,m}'
+    ss.source_files = 'Strom/UI/*.{h,m}', 'Strom/Style/*.{h,m}', 'Strom/**/STMObjectRuntime.{h,m}'
   end
 
 end
