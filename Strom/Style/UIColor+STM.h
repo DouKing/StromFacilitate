@@ -10,6 +10,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+#ifndef RGBColor
+#define RGBColor(rgb) [UIColor stm_colorWithRGBValue:rgb]
+#endif
+
+#ifndef RGBAColor
+#define RGBAColor(rgb, a) [UIColor stm_colorWithRGBValue:rgb alpha:a]
+#endif
+
 @interface UIColor (STM)
 
 /**

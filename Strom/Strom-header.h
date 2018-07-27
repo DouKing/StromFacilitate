@@ -12,5 +12,6 @@
 #import "STMConfiguration.h"
 #import "NSDictionary+STM.h"
 #import "UIColor+STM.h"
+#import "NSBundle+STM.h"
 
 #endif /* Strom_header_h */

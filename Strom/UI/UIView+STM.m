@@ -122,3 +122,36 @@
 }
 
 @end
+
+
+@implementation UIView (Storyboard)
+
+- (void)setBorderColor:(UIColor *)borderColor {
+  self.layer.borderColor = borderColor.CGColor;
+}
+
+- (void)setBorderWidth:(CGFloat)borderWidth {
+  self.layer.borderWidth = borderWidth;
+}
+
+- (void)setCornerRadius:(CGFloat)cornerRadius {
+  self.layer.cornerRadius = cornerRadius;
+}
+
+- (UIColor *)borderColor {
+  if (!self.layer.borderColor) {
+    return nil;
+  }
+  return [UIColor colorWithCGColor:self.layer.borderColor];
+}
+
+- (CGFloat)borderWidth {
+  return self.layer.borderWidth;
+}
+
+- (CGFloat)cornerRadius {
+  return self.layer.cornerRadius;
+}
+
+@end
+

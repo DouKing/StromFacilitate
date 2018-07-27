@@ -25,3 +25,18 @@
                   fillColor:(UIColor *)color;
 
 @end
+
+NS_ASSUME_NONNULL_BEGIN
+
+
+IB_DESIGNABLE
+@interface UIView (Storyboard)
+
+@property (nullable, nonatomic, strong)IBInspectable UIColor *borderColor;
+@property (nonatomic, assign) IBInspectable CGFloat borderWidth;
+@property (nonatomic, assign) IBInspectable CGFloat cornerRadius;
+
+@end
+
+
+NS_ASSUME_NONNULL_END
