@@ -20,6 +20,7 @@
 		009D4E601FFB977A0095F44A /* UIColor+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 009D4E5D1FFB977A0095F44A /* UIColor+STM.m */; };
 		00A6688C1F05FD46002751F6 /* UITextField+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A6688B1F05FD46002751F6 /* UITextField+STM.m */; };
 		00B9BFC41F062A770012E482 /* TextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B9BFC31F062A770012E482 /* TextFieldViewController.m */; };
+		00DCE8EF216B5C9900F08BAF /* NSArray+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DCE8EE216B5C9900F08BAF /* NSArray+STM.m */; };
 		00FA6E961FCC2A070050E72C /* NSBundle+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FA6E951FCC2A070050E72C /* NSBundle+STM.m */; };
 		B891F7E61CAE71770043BD59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F7E51CAE71770043BD59 /* main.m */; };
 		B891F7E91CAE71770043BD59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B891F7E81CAE71770043BD59 /* AppDelegate.m */; };
@@ -64,6 +65,8 @@
 		00A6688B1F05FD46002751F6 /* UITextField+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+STM.m"; sourceTree = "<group>"; };
 		00B9BFC21F062A770012E482 /* TextFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldViewController.h; sourceTree = "<group>"; };
 		00B9BFC31F062A770012E482 /* TextFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldViewController.m; sourceTree = "<group>"; };
+		00DCE8ED216B5C9900F08BAF /* NSArray+STM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+STM.h"; sourceTree = "<group>"; };
+		00DCE8EE216B5C9900F08BAF /* NSArray+STM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+STM.m"; sourceTree = "<group>"; };
 		00FA6E941FCC2A070050E72C /* NSBundle+STM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSBundle+STM.h"; sourceTree = "<group>"; };
 		00FA6E951FCC2A070050E72C /* NSBundle+STM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+STM.m"; sourceTree = "<group>"; };
 		9D4A9227B3586FF0561078F4 /* Pods-StromFacilitate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StromFacilitate.release.xcconfig"; path = "Pods/Target Support Files/Pods-StromFacilitate/Pods-StromFacilitate.release.xcconfig"; sourceTree = "<group>"; };
@@ -278,6 +281,8 @@
 			children = (
 				B891F8051CAE72590043BD59 /* NSDictionary+STM.h */,
 				B891F8061CAE72590043BD59 /* NSDictionary+STM.m */,
+				00DCE8ED216B5C9900F08BAF /* NSArray+STM.h */,
+				00DCE8EE216B5C9900F08BAF /* NSArray+STM.m */,
 			);
 			path = NSDictionary;
 			sourceTree = "<group>";
@@ -485,6 +490,7 @@
 				00867F311E8BC8BB0042BE5A /* NSMutableDictionary+STMSafe.m in Sources */,
 				002FEE1B1FF4CD0400EDA602 /* CornerRadiusViewController.m in Sources */,
 				B891F8461CAF6DBC0043BD59 /* NSData+STM.m in Sources */,
+				00DCE8EF216B5C9900F08BAF /* NSArray+STM.m in Sources */,
 				B8B324101F40384E00AC2AAF /* NSString+Hash.m in Sources */,
 				009D4E5F1FFB977A0095F44A /* UIImage+STM.m in Sources */,
 				B891F81C1CAE72590043BD59 /* NSDictionary+STM.m in Sources */,
