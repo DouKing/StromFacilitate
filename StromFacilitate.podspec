@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "StromFacilitate"
-  s.version      = "1.1.2"
+  s.version      = "1.1.3"
   s.summary      = "iOS底层常用功能封装"
   s.homepage     = "https://github.com/DouKing/StromFacilitate"
   s.license      = "MIT"
