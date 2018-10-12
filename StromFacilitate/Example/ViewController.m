@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "NSString+STM.h"
 #import "NSData+STM.h"
+#import "UINavigationBar+STM.h"
 
 static NSString * const kTableViewCellId = @"kTableViewCellId";
 
@@ -28,6 +29,11 @@ static NSString * const kTableViewCellId = @"kTableViewCellId";
   [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kTableViewCellId];
   STMLogObj(STMDocumentPath());
   [self example];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+  [super viewDidAppear:animated];
+  self.navigationController.navigationBar.stm_hideBottomLine = YES;
 }
 
 - (void)example {

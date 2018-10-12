@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		002FEDCF1FF370EA00EDA602 /* UIView+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 002FEDCE1FF370EA00EDA602 /* UIView+STM.m */; };
 		002FEE1B1FF4CD0400EDA602 /* CornerRadiusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002FEE1A1FF4CD0400EDA602 /* CornerRadiusViewController.m */; };
+		0062A28C21706FBA00B46F55 /* UINavigationBar+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 0062A28B21706FBA00B46F55 /* UINavigationBar+STM.m */; };
 		0064439C1E6FD86F0011ED3F /* ImageBlendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0064439B1E6FD86F0011ED3F /* ImageBlendViewController.m */; };
 		0064439E1E6FD93A0011ED3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0064439D1E6FD93A0011ED3F /* Main.storyboard */; };
 		00867F281E8BC86D0042BE5A /* NSArray+STMSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 00867F271E8BC86D0042BE5A /* NSArray+STMSafe.m */; };
@@ -44,6 +45,8 @@
 		002FEDCE1FF370EA00EDA602 /* UIView+STM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+STM.m"; sourceTree = "<group>"; };
 		002FEE191FF4CD0400EDA602 /* CornerRadiusViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CornerRadiusViewController.h; sourceTree = "<group>"; };
 		002FEE1A1FF4CD0400EDA602 /* CornerRadiusViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CornerRadiusViewController.m; sourceTree = "<group>"; };
+		0062A28A21706FBA00B46F55 /* UINavigationBar+STM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+STM.h"; sourceTree = "<group>"; };
+		0062A28B21706FBA00B46F55 /* UINavigationBar+STM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+STM.m"; sourceTree = "<group>"; };
 		0064439A1E6FD86F0011ED3F /* ImageBlendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBlendViewController.h; sourceTree = "<group>"; };
 		0064439B1E6FD86F0011ED3F /* ImageBlendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageBlendViewController.m; sourceTree = "<group>"; };
 		0064439D1E6FD93A0011ED3F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -165,6 +168,8 @@
 				002FEDCE1FF370EA00EDA602 /* UIView+STM.m */,
 				00A6688A1F05FD46002751F6 /* UITextField+STM.h */,
 				00A6688B1F05FD46002751F6 /* UITextField+STM.m */,
+				0062A28A21706FBA00B46F55 /* UINavigationBar+STM.h */,
+				0062A28B21706FBA00B46F55 /* UINavigationBar+STM.m */,
 				008C0998210AF24500086B43 /* NSLayoutConstraint+STM.h */,
 				008C0999210AF24500086B43 /* NSLayoutConstraint+STM.m */,
 			);
@@ -493,6 +498,7 @@
 				00DCE8EF216B5C9900F08BAF /* NSArray+STM.m in Sources */,
 				B8B324101F40384E00AC2AAF /* NSString+Hash.m in Sources */,
 				009D4E5F1FFB977A0095F44A /* UIImage+STM.m in Sources */,
+				0062A28C21706FBA00B46F55 /* UINavigationBar+STM.m in Sources */,
 				B891F81C1CAE72590043BD59 /* NSDictionary+STM.m in Sources */,
 				002FEDCF1FF370EA00EDA602 /* UIView+STM.m in Sources */,
 			);
