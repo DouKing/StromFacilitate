@@ -27,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 #define STMScreenScale           ([UIScreen mainScreen].scale)
 #define STMSingleHeight          (1 / STMScreenScale)
 #define STMStatusBarHeight       (CGRectGetHeight([[UIApplication sharedApplication] statusBarFrame]))
-#define STMNavigationBarHeight   (64)
+#define STMNavigationBarHeight   (44)
 #define STMTabBarHeight          (49)
 
 

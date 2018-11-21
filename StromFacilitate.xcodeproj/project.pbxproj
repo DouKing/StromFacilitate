@@ -12,6 +12,9 @@
 		0062A28C21706FBA00B46F55 /* UINavigationBar+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 0062A28B21706FBA00B46F55 /* UINavigationBar+STM.m */; };
 		0064439C1E6FD86F0011ED3F /* ImageBlendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0064439B1E6FD86F0011ED3F /* ImageBlendViewController.m */; };
 		0064439E1E6FD93A0011ED3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0064439D1E6FD93A0011ED3F /* Main.storyboard */; };
+		006C57D821A3F78B0040A7BC /* UIApplication+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 006C57D721A3F78B0040A7BC /* UIApplication+STM.m */; };
+		006C57DB21A3FC630040A7BC /* UIDevice+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 006C57DA21A3FC630040A7BC /* UIDevice+STM.m */; };
+		006C57DE21A403270040A7BC /* STMDeviceInfo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 006C57DD21A403270040A7BC /* STMDeviceInfo.bundle */; };
 		00867F281E8BC86D0042BE5A /* NSArray+STMSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 00867F271E8BC86D0042BE5A /* NSArray+STMSafe.m */; };
 		00867F2B1E8BC87D0042BE5A /* NSMutableArray+STMSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 00867F2A1E8BC87D0042BE5A /* NSMutableArray+STMSafe.m */; };
 		00867F2E1E8BC8A90042BE5A /* NSDictionary+STMSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 00867F2D1E8BC8A90042BE5A /* NSDictionary+STMSafe.m */; };
@@ -50,6 +53,11 @@
 		0064439A1E6FD86F0011ED3F /* ImageBlendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBlendViewController.h; sourceTree = "<group>"; };
 		0064439B1E6FD86F0011ED3F /* ImageBlendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageBlendViewController.m; sourceTree = "<group>"; };
 		0064439D1E6FD93A0011ED3F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		006C57D621A3F78B0040A7BC /* UIApplication+STM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+STM.h"; sourceTree = "<group>"; };
+		006C57D721A3F78B0040A7BC /* UIApplication+STM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+STM.m"; sourceTree = "<group>"; };
+		006C57D921A3FC630040A7BC /* UIDevice+STM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+STM.h"; sourceTree = "<group>"; };
+		006C57DA21A3FC630040A7BC /* UIDevice+STM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+STM.m"; sourceTree = "<group>"; };
+		006C57DD21A403270040A7BC /* STMDeviceInfo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = STMDeviceInfo.bundle; sourceTree = "<group>"; };
 		00867F261E8BC86D0042BE5A /* NSArray+STMSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+STMSafe.h"; sourceTree = "<group>"; };
 		00867F271E8BC86D0042BE5A /* NSArray+STMSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+STMSafe.m"; sourceTree = "<group>"; };
 		00867F291E8BC87D0042BE5A /* NSMutableArray+STMSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+STMSafe.h"; sourceTree = "<group>"; };
@@ -128,6 +136,25 @@
 				009D4E5B1FFB977A0095F44A /* UIImage+STM.m */,
 			);
 			path = Style;
+			sourceTree = "<group>";
+		};
+		006C57DC21A4011A0040A7BC /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				006C57DD21A403270040A7BC /* STMDeviceInfo.bundle */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		006C57DF21A4048C0040A7BC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				006C57D621A3F78B0040A7BC /* UIApplication+STM.h */,
+				006C57D721A3F78B0040A7BC /* UIApplication+STM.m */,
+				006C57D921A3FC630040A7BC /* UIDevice+STM.h */,
+				006C57DA21A3FC630040A7BC /* UIDevice+STM.m */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		00867F231E8BC7C60042BE5A /* Swizz */ = {
@@ -253,10 +280,12 @@
 				00867F231E8BC7C60042BE5A /* Swizz */,
 				0014309A1DFABE6C004E1453 /* Style */,
 				00A668891F05FD22002751F6 /* UI */,
+				006C57DF21A4048C0040A7BC /* App */,
 				B891F83F1CAF6C2C0043BD59 /* Security */,
 				B891F7FC1CAE72590043BD59 /* Config */,
 				B891F7FE1CAE72590043BD59 /* Foundation */,
 				B891F8161CAE72590043BD59 /* Utilities */,
+				006C57DC21A4011A0040A7BC /* Resource */,
 			);
 			path = Strom;
 			sourceTree = "<group>";
@@ -410,6 +439,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				006C57DE21A403270040A7BC /* STMDeviceInfo.bundle in Resources */,
 				0064439E1E6FD93A0011ED3F /* Main.storyboard in Resources */,
 				B891F7F41CAE71770043BD59 /* LaunchScreen.storyboard in Resources */,
 				B891F7F11CAE71770043BD59 /* Assets.xcassets in Resources */,
@@ -480,6 +510,7 @@
 				00FA6E961FCC2A070050E72C /* NSBundle+STM.m in Sources */,
 				009D4E601FFB977A0095F44A /* UIColor+STM.m in Sources */,
 				B891F7E91CAE71770043BD59 /* AppDelegate.m in Sources */,
+				006C57DB21A3FC630040A7BC /* UIDevice+STM.m in Sources */,
 				B891F7E61CAE71770043BD59 /* main.m in Sources */,
 				B891F8321CAE772C0043BD59 /* ViewController.m in Sources */,
 				B891F8381CAECC9A0043BD59 /* NSString+STM.m in Sources */,
@@ -501,6 +532,7 @@
 				0062A28C21706FBA00B46F55 /* UINavigationBar+STM.m in Sources */,
 				B891F81C1CAE72590043BD59 /* NSDictionary+STM.m in Sources */,
 				002FEDCF1FF370EA00EDA602 /* UIView+STM.m in Sources */,
+				006C57D821A3F78B0040A7BC /* UIApplication+STM.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

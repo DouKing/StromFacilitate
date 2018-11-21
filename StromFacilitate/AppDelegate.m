@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "UIDevice+STM.h"
 
 @interface AppDelegate ()
 
@@ -25,7 +26,8 @@
   UIBarButtonItem *buttonItem = [UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil];
   UIOffset offset = UIOffsetMake(-5, 2);
   [buttonItem setBackButtonTitlePositionAdjustment:offset forBarMetrics:UIBarMetricsDefault];
-  
+
+  STMLog(@"device platform: %@", [[UIDevice currentDevice] stm_platform]);
   return YES;
 }
 
