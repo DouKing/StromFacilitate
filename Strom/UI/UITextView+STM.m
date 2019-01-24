@@ -1,15 +1,15 @@
 //
-//  UITextField+STM.m
+//  UITextView+STM.m
 //  StromFacilitate
 //
-//  Created by WuYikai on 2017/6/30.
-//  Copyright © 2017年 DouKing. All rights reserved.
+//  Created by DouKing on 2019/1/24.
+//  Copyright © 2019 DouKing. All rights reserved.
 //
 
-#import "UITextField+STM.h"
+#import "UITextView+STM.h"
 #import "STMObjectRuntime.h"
 
-@implementation UITextField (STM)
+@implementation UITextView (STM)
 
 + (void)load {
   static dispatch_once_t onceToken;
@@ -39,7 +39,7 @@
 }
 
 - (instancetype)stm_initWithFrame:(CGRect)frame {
-  UITextField *tf = [self stm_initWithFrame:frame];
+  UITextView *tf = [self stm_initWithFrame:frame];
   [tf _initial];
   return tf;
 }
@@ -54,19 +54,19 @@
 }
 
 - (void)_stm_handleTextChangeNotification:(NSNotification *)note {
-  UITextField *tf = note.object;
+  UITextView *tf = note.object;
   if (tf != self) { return; }
   [self _stm_tfTextDidChange:self];
 }
 
-- (void)_stm_tfTextDidChange:(UITextField *)textField {
+- (void)_stm_tfTextDidChange:(UITextView *)textView {
   switch (self.limitType) {
-    case STMTextFieldInputLenthLimitTypeCharacter: {
+    case STMTextViewInputLenthLimitTypeCharacter: {
       [self _stm_limitCharacterLength:self.limitLength];
       break;
     }
 
-    case STMTextFieldInputLenthLimitTypeByte: {
+    case STMTextViewInputLenthLimitTypeByte: {
       [self _stm_limitByteLength:self.limitLength];
       break;
     }
@@ -77,10 +77,10 @@
   if (0 == maxLength) {
     return;
   }
-  UITextField *textField = self;
-  NSString *text = textField.text;
-  UITextRange *selectedRange = [textField markedTextRange];
-  UITextPosition *position = [textField positionFromPosition:selectedRange.start offset:0];
+  UITextView *textView = self;
+  NSString *text = textView.text;
+  UITextRange *selectedRange = [textView markedTextRange];
+  UITextPosition *position = [textView positionFromPosition:selectedRange.start offset:0];
   // 没有高亮选择的字，则对已输入的文字进行字数统计和限制,防止中文被截断
   if (!position){
     // 字符处理
@@ -89,11 +89,11 @@
       NSRange range;
       NSUInteger inputLength = 0;
       for(int i = 0; i < text.length && inputLength <= maxLength; i += range.length) {
-        range = [textField.text rangeOfComposedCharacterSequenceAtIndex:i];
+        range = [textView.text rangeOfComposedCharacterSequenceAtIndex:i];
         inputLength += [text substringWithRange:range].length;
         if (inputLength > maxLength) {
           NSString *resultText = [text substringWithRange:NSMakeRange(0, range.location)];
-          textField.text = resultText;
+          textView.text = resultText;
         }
       }
     }
@@ -104,24 +104,24 @@
   if (0 == maxBytesLength) {
     return;
   }
-  UITextField *textField = self;
-  NSString *text = textField.text;
-  UITextRange *selectedRange = [textField markedTextRange];
-  UITextPosition *position = [textField positionFromPosition:selectedRange.start offset:0];
+  UITextView *textView = self;
+  NSString *text = textView.text;
+  UITextRange *selectedRange = [textView markedTextRange];
+  UITextPosition *position = [textView positionFromPosition:selectedRange.start offset:0];
   // 没有高亮选择的字，则对已输入的文字进行字数统计和限制,防止中文被截断
   if (!position){
     // 字节处理
     // Limit
-    NSUInteger textBytesLength = [textField.text lengthOfBytesUsingEncoding:NSUTF8StringEncoding];
+    NSUInteger textBytesLength = [textView.text lengthOfBytesUsingEncoding:NSUTF8StringEncoding];
     if (textBytesLength > maxBytesLength) {
       NSRange range;
       NSUInteger byteLength = 0;
       for(int i = 0; i < text.length && byteLength <= maxBytesLength; i += range.length) {
-        range = [textField.text rangeOfComposedCharacterSequenceAtIndex:i];
+        range = [textView.text rangeOfComposedCharacterSequenceAtIndex:i];
         byteLength += strlen([[text substringWithRange:range] UTF8String]);
         if (byteLength > maxBytesLength) {
           NSString *resultText = [text substringWithRange:NSMakeRange(0, range.location)];
-          textField.text = resultText;
+          textView.text = resultText;
         }
       }
     }
@@ -130,11 +130,11 @@
 
 #pragma mark - setter & getter
 
-- (void)setLimitType:(STMTextFieldInputLenthLimitType)limitType {
+- (void)setLimitType:(STMTextViewInputLenthLimitType)limitType {
   objc_setAssociatedObject(self, @selector(limitType), @(limitType), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (STMTextFieldInputLenthLimitType)limitType {
+- (STMTextViewInputLenthLimitType)limitType {
   return [objc_getAssociatedObject(self, _cmd) integerValue];
 }
 
@@ -143,7 +143,7 @@
 }
 
 - (NSUInteger)limitLength {
-  return [objc_getAssociatedObject(self, _cmd) unsignedIntegerValue];
+  return [objc_getAssociatedObject(self, _cmd) integerValue];
 }
 
 @end

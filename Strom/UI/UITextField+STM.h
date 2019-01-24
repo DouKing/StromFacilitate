@@ -10,7 +10,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-
 typedef NS_ENUM(NSInteger, STMTextFieldInputLenthLimitType) {
   STMTextFieldInputLenthLimitTypeCharacter,
   STMTextFieldInputLenthLimitTypeByte
@@ -19,7 +18,11 @@ typedef NS_ENUM(NSInteger, STMTextFieldInputLenthLimitType) {
 IB_DESIGNABLE
 @interface UITextField (STM)
 
+#if TARGET_INTERFACE_BUILDER
+@property (nonatomic, assign) IBInspectable NSInteger limitType;
+#else
 @property (nonatomic, assign) STMTextFieldInputLenthLimitType limitType;
+#endif
 
 /**
  0 means no limit. default is 0
