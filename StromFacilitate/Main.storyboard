@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xgE-BB-k1u">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xgE-BB-k1u">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14278.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -239,9 +239,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="limitTypeAdapter">
-                                        <integer key="value" value="0"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="limitLength">
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
@@ -256,9 +253,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="limitTypeAdapter">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="limitLength">
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
@@ -308,11 +302,28 @@
                                     </constraint>
                                 </constraints>
                             </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tzB-Pg-glZ">
+                                <rect key="frame" x="16" y="196" width="343" height="148"/>
+                                <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="148" id="txe-e6-sm2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.42745098040000001" green="0.80784313730000001" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="占位符"/>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xKW-yU-OJF" firstAttribute="leading" secondItem="dbW-C9-wXb" secondAttribute="leadingMargin" id="3s3-Kt-eBM"/>
                             <constraint firstItem="Aq0-Ye-6kY" firstAttribute="top" secondItem="dcN-EA-QX5" secondAttribute="bottom" constant="8" id="6AW-vl-mIh"/>
+                            <constraint firstItem="tzB-Pg-glZ" firstAttribute="trailing" secondItem="dbW-C9-wXb" secondAttribute="trailingMargin" id="9RK-Pg-qTD"/>
+                            <constraint firstItem="tzB-Pg-glZ" firstAttribute="leading" secondItem="dbW-C9-wXb" secondAttribute="leadingMargin" id="CX4-yB-GUX"/>
                             <constraint firstItem="NMD-Go-ms1" firstAttribute="top" secondItem="Aq0-Ye-6kY" secondAttribute="bottom" constant="20" id="Gqs-pK-nBJ"/>
                             <constraint firstItem="dcN-EA-QX5" firstAttribute="leading" secondItem="dbW-C9-wXb" secondAttribute="leadingMargin" id="I9b-wy-KbU"/>
                             <constraint firstItem="C4o-TA-Snd" firstAttribute="leading" secondItem="dbW-C9-wXb" secondAttribute="leadingMargin" id="JES-g3-x2Z"/>
@@ -326,6 +337,7 @@
                             <constraint firstItem="Aq0-Ye-6kY" firstAttribute="trailing" secondItem="dbW-C9-wXb" secondAttribute="trailingMargin" id="nHm-xv-bu3"/>
                             <constraint firstItem="C4o-TA-Snd" firstAttribute="top" secondItem="Aib-8P-s2X" secondAttribute="bottom" constant="8" id="qly-Rx-sdf"/>
                             <constraint firstItem="C4o-TA-Snd" firstAttribute="trailing" secondItem="dbW-C9-wXb" secondAttribute="trailingMargin" id="wfg-ZQ-VYE"/>
+                            <constraint firstItem="tzB-Pg-glZ" firstAttribute="top" secondItem="xKW-yU-OJF" secondAttribute="bottom" constant="21" id="wl2-Ro-A5j"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TextField" id="my1-GW-HNp"/>
