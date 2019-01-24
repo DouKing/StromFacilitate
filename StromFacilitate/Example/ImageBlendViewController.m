@@ -3,7 +3,7 @@
 //  StromFacilitate
 //
 //  Created by iosci on 2017/3/8.
-//  Copyright © 2017年 secoo. All rights reserved.
+//  Copyright © 2017年 DouKing. All rights reserved.
 //
 
 #import "ImageBlendViewController.h"

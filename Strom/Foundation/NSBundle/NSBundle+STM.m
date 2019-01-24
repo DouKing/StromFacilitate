@@ -2,7 +2,7 @@
 // StromFacilitate
 // NSBundle+STM.m
 // Created by DouKing (https://github.com/DouKing) on 2017/11/27.
-// Copyright © 2017年 secoo. All rights reserved.
+// Copyright © 2017年 DouKing. All rights reserved.
 
 #import "NSBundle+STM.h"
 

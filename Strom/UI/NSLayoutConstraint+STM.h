@@ -3,7 +3,7 @@
 //  StromFacilitate
 //
 //  Created by DouKing on 2018/7/27.
-//  Copyright © 2018 secoo. All rights reserved.
+//  Copyright © 2018 DouKing. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

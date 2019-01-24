@@ -3,7 +3,7 @@
 //  StromFacilitate
 //
 //  Created by WuYikai on 2017/6/30.
-//  Copyright © 2017年 secoo. All rights reserved.
+//  Copyright © 2017年 DouKing. All rights reserved.
 //
 
 #import "UITextField+STM.h"

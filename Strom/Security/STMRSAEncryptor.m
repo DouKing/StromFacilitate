@@ -3,7 +3,7 @@
 //  StromFacilitate
 //
 //  Created by WuYikai on 16/4/2.
-//  Copyright © 2016年 secoo. All rights reserved.
+//  Copyright © 2016年 DouKing. All rights reserved.
 //
 
 #import "STMRSAEncryptor.h"
