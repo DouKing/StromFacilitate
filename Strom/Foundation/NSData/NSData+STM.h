@@ -22,6 +22,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// 转十六进制字符串
 - (NSString *)stm_hexString;
 
+- (nullable NSData *)gzippedDataWithCompressionLevel:(float)level;
+- (nullable NSData *)gzippedData;
+- (nullable NSData *)gunzippedData;
+- (BOOL)isGzippedData;
+
 @end
 
 
