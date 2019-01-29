@@ -50,6 +50,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (UIImage *)stm_addCornerRadii:(CGSize)radii byRoundingCorners:(UIRectCorner)corners withSize:(CGSize)size;
 
+/// 图像模糊
+- (UIImage *)stm_blurredImageWithRadius:(CGFloat)radius;
+
 @end
 
 

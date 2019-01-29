@@ -29,6 +29,8 @@ IB_DESIGNABLE
  */
 @property (nonatomic, assign) IBInspectable NSUInteger limitLength;
 
+@property (nullable, nonatomic, strong) IBInspectable UIColor *placeholderColor;
+
 @end
 
 

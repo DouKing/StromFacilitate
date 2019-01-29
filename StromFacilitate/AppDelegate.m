@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "UIDevice+STM.h"
+#import "UIApplication+STM.h"
 
 @interface AppDelegate ()
 
@@ -27,6 +28,8 @@
   UIOffset offset = UIOffsetMake(-5, 2);
   [buttonItem setBackButtonTitlePositionAdjustment:offset forBarMetrics:UIBarMetricsDefault];
 
+  application.stm_statusBarColor = [UIColor redColor];
+  STMLog(@"status bar color: %@", application.stm_statusBarColor);
   STMLog(@"device platform: %@", [[UIDevice currentDevice] stm_platform]);
   return YES;
 }

@@ -24,6 +24,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 打电话
 - (void)stm_telTo:(NSString *)phoneNumber completionHandler:(void (^ __nullable)(BOOL success))completion;
 
+///状态栏背景色
+@property (nullable, nonatomic, strong) UIColor *stm_statusBarColor;
+
 @end
 
 NS_ASSUME_NONNULL_END

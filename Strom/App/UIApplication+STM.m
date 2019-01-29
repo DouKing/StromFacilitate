@@ -52,4 +52,23 @@
   }
 }
 
+- (UIView *)_statusBarView {
+  return [[self valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
+}
+
+- (void)setStm_statusBarColor:(UIColor *)stm_statusBarColor {
+  UIView *statusBar = [self _statusBarView];
+  if ([statusBar respondsToSelector:@selector(setBackgroundColor:)]) {
+    [statusBar setBackgroundColor:stm_statusBarColor];
+  }
+}
+
+- (UIColor *)stm_statusBarColor {
+  UIView *statusBar = [self _statusBarView];
+  if ([statusBar respondsToSelector:@selector(backgroundColor)]) {
+    return [statusBar backgroundColor];
+  }
+  return nil;
+}
+
 @end

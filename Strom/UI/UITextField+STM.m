@@ -146,4 +146,12 @@
   return [objc_getAssociatedObject(self, _cmd) unsignedIntegerValue];
 }
 
+- (void)setPlaceholderColor:(UIColor *)placeholderColor {
+  [self setValue:placeholderColor forKeyPath:@"_placeholderLabel.textColor"];
+}
+
+- (UIColor *)placeholderColor {
+  return [self valueForKeyPath:@"_placeholderLabel.textColor"];
+}
+
 @end
