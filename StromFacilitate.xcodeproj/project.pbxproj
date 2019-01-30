@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		002FEDCF1FF370EA00EDA602 /* UIView+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 002FEDCE1FF370EA00EDA602 /* UIView+STM.m */; };
 		002FEE1B1FF4CD0400EDA602 /* CornerRadiusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002FEE1A1FF4CD0400EDA602 /* CornerRadiusViewController.m */; };
+		003F80B4220189E7006169DA /* STMHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 003F80B3220189E7006169DA /* STMHTTPRequest.m */; };
+		003F80BB2201B355006169DA /* STMProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 003F80BA2201B355006169DA /* STMProxy.m */; };
 		0062A28C21706FBA00B46F55 /* UINavigationBar+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 0062A28B21706FBA00B46F55 /* UINavigationBar+STM.m */; };
 		0064439C1E6FD86F0011ED3F /* ImageBlendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0064439B1E6FD86F0011ED3F /* ImageBlendViewController.m */; };
 		0064439E1E6FD93A0011ED3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0064439D1E6FD93A0011ED3F /* Main.storyboard */; };
@@ -49,6 +51,11 @@
 		002FEDCE1FF370EA00EDA602 /* UIView+STM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+STM.m"; sourceTree = "<group>"; };
 		002FEE191FF4CD0400EDA602 /* CornerRadiusViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CornerRadiusViewController.h; sourceTree = "<group>"; };
 		002FEE1A1FF4CD0400EDA602 /* CornerRadiusViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CornerRadiusViewController.m; sourceTree = "<group>"; };
+		003F80B2220189E7006169DA /* STMHTTPRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STMHTTPRequest.h; sourceTree = "<group>"; };
+		003F80B3220189E7006169DA /* STMHTTPRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STMHTTPRequest.m; sourceTree = "<group>"; };
+		003F80B522018D54006169DA /* STMNetworkDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STMNetworkDefines.h; sourceTree = "<group>"; };
+		003F80B92201B355006169DA /* STMProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMProxy.h; sourceTree = "<group>"; };
+		003F80BA2201B355006169DA /* STMProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMProxy.m; sourceTree = "<group>"; };
 		0062A28A21706FBA00B46F55 /* UINavigationBar+STM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+STM.h"; sourceTree = "<group>"; };
 		0062A28B21706FBA00B46F55 /* UINavigationBar+STM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+STM.m"; sourceTree = "<group>"; };
 		0064439A1E6FD86F0011ED3F /* ImageBlendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBlendViewController.h; sourceTree = "<group>"; };
@@ -139,6 +146,16 @@
 				009D4E5B1FFB977A0095F44A /* UIImage+STM.m */,
 			);
 			path = Style;
+			sourceTree = "<group>";
+		};
+		003F80B1220189A9006169DA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				003F80B2220189E7006169DA /* STMHTTPRequest.h */,
+				003F80B3220189E7006169DA /* STMHTTPRequest.m */,
+				003F80B522018D54006169DA /* STMNetworkDefines.h */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		006C57DC21A4011A0040A7BC /* Resource */ = {
@@ -289,6 +306,7 @@
 				B891F83F1CAF6C2C0043BD59 /* Security */,
 				B891F7FC1CAE72590043BD59 /* Config */,
 				B891F7FE1CAE72590043BD59 /* Foundation */,
+				003F80B1220189A9006169DA /* Network */,
 				B891F8161CAE72590043BD59 /* Utilities */,
 				006C57DC21A4011A0040A7BC /* Resource */,
 			);
@@ -342,6 +360,8 @@
 			children = (
 				B891F8171CAE72590043BD59 /* STMObjectRuntime.h */,
 				B891F8181CAE72590043BD59 /* STMObjectRuntime.m */,
+				003F80B92201B355006169DA /* STMProxy.h */,
+				003F80BA2201B355006169DA /* STMProxy.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -394,8 +414,6 @@
 				B891F7DD1CAE71770043BD59 /* Sources */,
 				B891F7DE1CAE71770043BD59 /* Frameworks */,
 				B891F7DF1CAE71770043BD59 /* Resources */,
-				B62979B1AA908D0F82D1FC7B /* [CP] Embed Pods Frameworks */,
-				821139F7535BB04D323F2364 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -454,36 +472,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		821139F7535BB04D323F2364 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StromFacilitate/Pods-StromFacilitate-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B62979B1AA908D0F82D1FC7B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StromFacilitate/Pods-StromFacilitate-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		CEB3AB4110085A8FB9F1CAF9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -536,6 +524,8 @@
 				B8B324101F40384E00AC2AAF /* NSString+Hash.m in Sources */,
 				009D4E5F1FFB977A0095F44A /* UIImage+STM.m in Sources */,
 				0062A28C21706FBA00B46F55 /* UINavigationBar+STM.m in Sources */,
+				003F80BB2201B355006169DA /* STMProxy.m in Sources */,
+				003F80B4220189E7006169DA /* STMHTTPRequest.m in Sources */,
 				B891F81C1CAE72590043BD59 /* NSDictionary+STM.m in Sources */,
 				002FEDCF1FF370EA00EDA602 /* UIView+STM.m in Sources */,
 				006C57D821A3F78B0040A7BC /* UIApplication+STM.m in Sources */,
