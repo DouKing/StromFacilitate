@@ -17,18 +17,18 @@
 @implementation AFHTTPSessionManager (STMHTTPRequest)
 
 + (instancetype)sharedManager {
-  static AFHTTPSessionManager *_sharedInstance = nil;
-  static dispatch_once_t oncePredicate;
-  dispatch_once(&oncePredicate, ^{
-    _sharedInstance = [AFHTTPSessionManager manager];
-    [_sharedInstance _configure];
-  });
-  return _sharedInstance;
+    static AFHTTPSessionManager *_sharedInstance = nil;
+    static dispatch_once_t oncePredicate;
+    dispatch_once(&oncePredicate, ^{
+        _sharedInstance = [AFHTTPSessionManager manager];
+        [_sharedInstance _configure];
+    });
+    return _sharedInstance;
 }
 
 - (void)_configure {
-  self.responseSerializer.acceptableContentTypes =
-  [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/plain", @"text/html", nil];
+    self.responseSerializer.acceptableContentTypes =
+    [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/plain", @"text/html", nil];
 }
 
 @end
@@ -65,12 +65,6 @@
 #pragma mark - Public
 
 - (void)start {
-    NSURL *baseURL = [NSURL URLWithString:self.baseURL ?: @""];
-    NSURL *URL = [NSURL URLWithString:self.requestPath ?: @"" relativeToURL:baseURL];
-    if (!URL) {
-        return;
-    }
-
     __weak typeof(self) __weak_self__ = self;
     void (^downloadProgress)(NSProgress *) = ^(NSProgress *downloadProgress) {
         __strong typeof(__weak_self__) self = __weak_self__;
@@ -109,6 +103,15 @@
     };
 
     [self stop];
+
+    NSURL *baseURL = [NSURL URLWithString:self.baseURL ?: @""];
+    NSURL *URL = [NSURL URLWithString:self.requestPath ?: @"" relativeToURL:baseURL];
+    if (!URL) {
+        failure(nil, [NSError errorWithDomain:@"无效的 URL" code:0 userInfo:nil]);
+        return;
+    }
+
+    [self _setupHTTPHeaders:self.requestHeaders];
     NSString *URLString = URL.absoluteString;
     NSDictionary *parameters = self.requestParameters;
     switch (self.requestMethod) {
@@ -160,12 +163,24 @@
     return nil;
 }
 
+- (NSDictionary *)requestHeaders {
+    return nil;
+}
+
 - (STMHTTPRequestMethod)requestMethod {
     return STMHTTPRequestMethodGET;
 }
 
 - (void (^ _Nullable)(id<STMMultipartFormData> formData))constructingBodyBlock {
     return nil;
+}
+
+#pragma mark - Private
+
+- (void)_setupHTTPHeaders:(NSDictionary<NSString *, NSString *> *)headers {
+    [headers enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, NSString * _Nonnull obj, BOOL * _Nonnull stop) {
+        [self.httpSessionManager.requestSerializer setValue:obj forHTTPHeaderField:key];
+    }];
 }
 
 #pragma mark - setter & getter

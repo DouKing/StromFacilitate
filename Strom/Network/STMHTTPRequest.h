@@ -27,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString *)baseURL;
 - (NSString *)requestPath;
 - (nullable NSDictionary *)requestParameters;
+- (nullable NSDictionary<NSString *, NSString *> *)requestHeaders;
 - (STMHTTPRequestMethod)requestMethod;
 - (void (^ _Nullable)(id<STMMultipartFormData> formData))constructingBodyBlock;
 //}
