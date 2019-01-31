@@ -10,14 +10,65 @@
 #import <Security/Security.h>
 #import "NSString+STM.h"
 
+// 公钥/私钥标签
+#define kSTMPublicKeyTag  "com.douking.rsa.publickey"
+#define kSTMPrivateKeyTag "com.douking.rsa.privatekey"
+
+static const uint8_t publicKeyIdentifier[]  = kSTMPublicKeyTag;
+static const uint8_t privateKeyIdentifier[] = kSTMPrivateKeyTag;
+
 @implementation STMRSAEncryptor {
   SecKeyRef _publicKey;
   SecKeyRef _privateKey;
+  NSData *_publicTag;        // 公钥标签
+  NSData *_privateTag;       // 私钥标签
 }
 
 - (void)dealloc {
-  CFRelease(_publicKey);
-  CFRelease(_privateKey);
+  if (_publicKey) { CFRelease(_publicKey); _publicKey = NULL; }
+  if (_privateKey) { CFRelease(_privateKey); _privateKey = NULL; }
+}
+
+- (instancetype)init {
+  if (self = [super init]) {
+    _publicTag = [NSData dataWithBytes:publicKeyIdentifier length:sizeof(publicKeyIdentifier)];
+    _privateTag = [NSData dataWithBytes:privateKeyIdentifier length:sizeof(privateKeyIdentifier)];
+  }
+  return self;
+}
+
+- (void)generateKeyPair:(STMRSASecretKeySize)keySize {
+  OSStatus sanityCheck = noErr;
+  _publicKey = NULL;
+  _privateKey = NULL;
+
+  // 删除当前密钥对
+  [self _deleteAsymmetricKeys];
+
+  // 容器字典
+  NSMutableDictionary *privateKeyAttr = [[NSMutableDictionary alloc] init];
+  NSMutableDictionary *publicKeyAttr = [[NSMutableDictionary alloc] init];
+  NSMutableDictionary *keyPairAttr = [[NSMutableDictionary alloc] init];
+
+  // 设置密钥对的顶级字典
+  [keyPairAttr setObject:(__bridge id)kSecAttrKeyTypeRSA forKey:(__bridge id)kSecAttrKeyType];
+  [keyPairAttr setObject:[NSNumber numberWithUnsignedInteger:keySize] forKey:(__bridge id)kSecAttrKeySizeInBits];
+
+  // 设置私钥字典
+  [privateKeyAttr setObject:[NSNumber numberWithBool:YES] forKey:(__bridge id)kSecAttrIsPermanent];
+  [privateKeyAttr setObject:_privateTag forKey:(__bridge id)kSecAttrApplicationTag];
+
+  // 设置公钥字典
+  [publicKeyAttr setObject:[NSNumber numberWithBool:YES] forKey:(__bridge id)kSecAttrIsPermanent];
+  [publicKeyAttr setObject:_publicTag forKey:(__bridge id)kSecAttrApplicationTag];
+
+  // 设置顶级字典属性
+  [keyPairAttr setObject:privateKeyAttr forKey:(__bridge id)kSecPrivateKeyAttrs];
+  [keyPairAttr setObject:publicKeyAttr forKey:(__bridge id)kSecPublicKeyAttrs];
+
+  // SecKeyGeneratePair 返回密钥对引用
+  sanityCheck = SecKeyGeneratePair((__bridge CFDictionaryRef)keyPairAttr, &_publicKey, &_privateKey);
+  NSAssert((sanityCheck == noErr && _publicKey != NULL && _privateKey != NULL), @"生成密钥对失败");
 }
 
 - (void)loadPublicKeyFromFilePath:(NSString *)path {
@@ -99,6 +150,33 @@
 }
 
 #pragma mark - Private Methods -
+
+- (void)_deleteAsymmetricKeys {
+  OSStatus sanityCheck = noErr;
+  NSMutableDictionary *queryPublicKey = [[NSMutableDictionary alloc] init];
+  NSMutableDictionary *queryPrivateKey = [[NSMutableDictionary alloc] init];
+
+  // 设置公钥查询字典
+  [queryPublicKey setObject:(__bridge id)kSecClassKey forKey:(__bridge id)kSecClass];
+  [queryPublicKey setObject:_publicTag forKey:(__bridge id)kSecAttrApplicationTag];
+  [queryPublicKey setObject:(__bridge id)kSecAttrKeyTypeRSA forKey:(__bridge id)kSecAttrKeyType];
+
+  // 设置私钥查询字典
+  [queryPrivateKey setObject:(__bridge id)kSecClassKey forKey:(__bridge id)kSecClass];
+  [queryPrivateKey setObject:_privateTag forKey:(__bridge id)kSecAttrApplicationTag];
+  [queryPrivateKey setObject:(__bridge id)kSecAttrKeyTypeRSA forKey:(__bridge id)kSecAttrKeyType];
+
+  // 删除私钥
+  sanityCheck = SecItemDelete((__bridge CFDictionaryRef)queryPrivateKey);
+  NSAssert1((sanityCheck == noErr || sanityCheck == errSecItemNotFound), @"删除私钥错误，OSStatus == %d", sanityCheck);
+
+  // 删除公钥
+  sanityCheck = SecItemDelete((__bridge CFDictionaryRef)queryPublicKey);
+  NSAssert1((sanityCheck == noErr || sanityCheck == errSecItemNotFound), @"删除公钥错误，OSStatus == %d", sanityCheck);
+
+  if (_publicKey) CFRelease(_publicKey);
+  if (_privateKey) CFRelease(_privateKey);
+}
 
 - (SecKeyRef)_publicKeyRefrenceFromData:(NSData *)pubData {
   SecCertificateRef myCertificate = SecCertificateCreateWithData(kCFAllocatorDefault, (__bridge CFDataRef)pubData);

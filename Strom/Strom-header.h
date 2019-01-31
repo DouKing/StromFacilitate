@@ -14,7 +14,7 @@
 #import "NSArray+STM.h"
 #import "NSData+STM.h"
 #import "NSString+STM.h"
-#import "NSString+Hash.h"
+#import "NSString+STMHash.h"
 #import "NSBundle+STM.h"
 #import "UIColor+STM.h"
 

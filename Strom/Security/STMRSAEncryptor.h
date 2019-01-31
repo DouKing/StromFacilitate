@@ -10,10 +10,23 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSUInteger, STMRSASecretKeySize) {
+    STMRSASecretKeySize512          = 512,
+    STMRSASecretKeySize1024         = 1024,
+    STMRSASecretKeySize2048         = 2048,
+};
+
 /**
  *  初始化后，请先加载公钥或私钥，然后调用相应方法加密或解密
  */
 @interface STMRSAEncryptor : NSObject
+
+/**
+ 生成密钥对
+
+ @param keySize 密钥尺寸
+ */
+- (void)generateKeyPair:(STMRSASecretKeySize)keySize;
 
 /// 加载公钥
 - (void)loadPublicKeyFromFilePath:(NSString *)path;
