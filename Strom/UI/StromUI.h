@@ -9,6 +9,8 @@
 #ifndef StromUI_h
 #define StromUI_h
 
+#import "UIApplication+STM.h"
+#import "UIDevice+STM.h"
 #import "UIView+STM.h"
 #import "UITextField+STM.h"
 #import "UITextView+STM.h"

@@ -9,8 +9,6 @@
 #ifndef StromCore_h
 #define StromCore_h
 
-#import "UIApplication+STM.h"
-#import "UIDevice+STM.h"
 #import "NSBundle+STM.h"
 #import "NSData+STM.h"
 #import "NSDictionary+STM.h"

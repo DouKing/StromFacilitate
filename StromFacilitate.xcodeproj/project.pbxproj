@@ -134,21 +134,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0014309A1DFABE6C004E1453 /* Style */ = {
-			isa = PBXGroup;
-			children = (
-				009D4E5C1FFB977A0095F44A /* UIColor+STM.h */,
-				009D4E5D1FFB977A0095F44A /* UIColor+STM.m */,
-				009D4E5E1FFB977A0095F44A /* UIImage+STM.h */,
-				009D4E5B1FFB977A0095F44A /* UIImage+STM.m */,
-			);
-			path = Style;
-			sourceTree = "<group>";
-		};
 		001581AC221122510008E21A /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				006C57DF21A4048C0040A7BC /* App */,
 				B891F7FE1CAE72590043BD59 /* Foundation */,
 				B891F8161CAE72590043BD59 /* Utilities */,
 				B891F7FC1CAE72590043BD59 /* Config */,
@@ -175,17 +163,6 @@
 				006C57DD21A403270040A7BC /* STMDeviceInfo.bundle */,
 			);
 			path = Resource;
-			sourceTree = "<group>";
-		};
-		006C57DF21A4048C0040A7BC /* App */ = {
-			isa = PBXGroup;
-			children = (
-				006C57D621A3F78B0040A7BC /* UIApplication+STM.h */,
-				006C57D721A3F78B0040A7BC /* UIApplication+STM.m */,
-				006C57D921A3FC630040A7BC /* UIDevice+STM.h */,
-				006C57DA21A3FC630040A7BC /* UIDevice+STM.m */,
-			);
-			path = App;
 			sourceTree = "<group>";
 		};
 		00867F231E8BC7C60042BE5A /* Swizz */ = {
@@ -223,6 +200,10 @@
 			isa = PBXGroup;
 			children = (
 				001581AE221123700008E21A /* StromUI.h */,
+				006C57D621A3F78B0040A7BC /* UIApplication+STM.h */,
+				006C57D721A3F78B0040A7BC /* UIApplication+STM.m */,
+				006C57D921A3FC630040A7BC /* UIDevice+STM.h */,
+				006C57DA21A3FC630040A7BC /* UIDevice+STM.m */,
 				002FEDCD1FF370EA00EDA602 /* UIView+STM.h */,
 				002FEDCE1FF370EA00EDA602 /* UIView+STM.m */,
 				00A6688A1F05FD46002751F6 /* UITextField+STM.h */,
@@ -233,18 +214,12 @@
 				0062A28B21706FBA00B46F55 /* UINavigationBar+STM.m */,
 				008C0998210AF24500086B43 /* NSLayoutConstraint+STM.h */,
 				008C0999210AF24500086B43 /* NSLayoutConstraint+STM.m */,
-				0014309A1DFABE6C004E1453 /* Style */,
+				009D4E5C1FFB977A0095F44A /* UIColor+STM.h */,
+				009D4E5D1FFB977A0095F44A /* UIColor+STM.m */,
+				009D4E5E1FFB977A0095F44A /* UIImage+STM.h */,
+				009D4E5B1FFB977A0095F44A /* UIImage+STM.m */,
 			);
 			path = UI;
-			sourceTree = "<group>";
-		};
-		00FA6E931FCC29F20050E72C /* NSBundle */ = {
-			isa = PBXGroup;
-			children = (
-				00FA6E941FCC2A070050E72C /* NSBundle+STM.h */,
-				00FA6E951FCC2A070050E72C /* NSBundle+STM.m */,
-			);
-			path = NSBundle;
 			sourceTree = "<group>";
 		};
 		4CCF0B7DCEEFBFEE59452B0C /* Frameworks */ = {
@@ -333,32 +308,18 @@
 		B891F7FE1CAE72590043BD59 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				00FA6E931FCC29F20050E72C /* NSBundle */,
-				B891F8431CAF6DAD0043BD59 /* NSData */,
-				B891F8041CAE72590043BD59 /* NSDictionary */,
-				B891F8091CAE72590043BD59 /* NSString */,
-			);
-			path = Foundation;
-			sourceTree = "<group>";
-		};
-		B891F8041CAE72590043BD59 /* NSDictionary */ = {
-			isa = PBXGroup;
-			children = (
+				00FA6E941FCC2A070050E72C /* NSBundle+STM.h */,
+				00FA6E951FCC2A070050E72C /* NSBundle+STM.m */,
+				B891F8441CAF6DBC0043BD59 /* NSData+STM.h */,
+				B891F8451CAF6DBC0043BD59 /* NSData+STM.m */,
 				B891F8051CAE72590043BD59 /* NSDictionary+STM.h */,
 				B891F8061CAE72590043BD59 /* NSDictionary+STM.m */,
 				00DCE8ED216B5C9900F08BAF /* NSArray+STM.h */,
 				00DCE8EE216B5C9900F08BAF /* NSArray+STM.m */,
-			);
-			path = NSDictionary;
-			sourceTree = "<group>";
-		};
-		B891F8091CAE72590043BD59 /* NSString */ = {
-			isa = PBXGroup;
-			children = (
 				B891F8361CAECC9A0043BD59 /* NSString+STM.h */,
 				B891F8371CAECC9A0043BD59 /* NSString+STM.m */,
 			);
-			path = NSString;
+			path = Foundation;
 			sourceTree = "<group>";
 		};
 		B891F8161CAE72590043BD59 /* Utilities */ = {
@@ -398,15 +359,6 @@
 			path = Security;
 			sourceTree = "<group>";
 		};
-		B891F8431CAF6DAD0043BD59 /* NSData */ = {
-			isa = PBXGroup;
-			children = (
-				B891F8441CAF6DBC0043BD59 /* NSData+STM.h */,
-				B891F8451CAF6DBC0043BD59 /* NSData+STM.m */,
-			);
-			path = NSData;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -439,7 +391,7 @@
 				TargetAttributes = {
 					B891F7E01CAE71770043BD59 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = RME4TFY984;
+						DevelopmentTeam = K2VBE95LX6;
 					};
 				};
 			};
@@ -635,10 +587,10 @@
 			baseConfigurationReference = BDADAAA5FBBFAEC10374EDC8 /* Pods-StromFacilitate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = RME4TFY984;
+				DEVELOPMENT_TEAM = K2VBE95LX6;
 				GCC_PREFIX_HEADER = "StromFacilitate/StromFacilitate-PrefixHeader.pch";
 				INFOPLIST_FILE = StromFacilitate/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.secoo.www.StromFacilitate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -650,10 +602,10 @@
 			baseConfigurationReference = 9D4A9227B3586FF0561078F4 /* Pods-StromFacilitate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = RME4TFY984;
+				DEVELOPMENT_TEAM = K2VBE95LX6;
 				GCC_PREFIX_HEADER = "StromFacilitate/StromFacilitate-PrefixHeader.pch";
 				INFOPLIST_FILE = StromFacilitate/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.secoo.www.StromFacilitate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
