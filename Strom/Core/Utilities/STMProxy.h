@@ -3,7 +3,7 @@
 //  StromFacilitate
 //
 //  Created by DouKing on 2019/1/30.
-//  Copyright © 2019 secoo. All rights reserved.
+//  Copyright © 2019 DouKing. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

@@ -9,13 +9,9 @@
 #ifndef Strom_header_h
 #define Strom_header_h
 
-#import "STMConfiguration.h"
-#import "NSDictionary+STM.h"
-#import "NSArray+STM.h"
-#import "NSData+STM.h"
-#import "NSString+STM.h"
-#import "NSString+STMHash.h"
-#import "NSBundle+STM.h"
-#import "UIColor+STM.h"
+#import "StromCore.h"
+#import "StromUI.h"
+#import "StromNetwork.h"
+
 
 #endif /* Strom_header_h */

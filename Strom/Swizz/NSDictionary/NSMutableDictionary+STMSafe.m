@@ -2,7 +2,7 @@
 //  NSMutableDictionary+STMSafe.m
 //  StromFacilitate
 //
-//  Created by iosci on 2017/3/29.
+//  Created by DouKing on 2017/3/29.
 //  Copyright © 2017年 DouKing. All rights reserved.
 //
 

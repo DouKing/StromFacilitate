@@ -45,6 +45,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		001581AD221123600008E21A /* StromCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StromCore.h; sourceTree = "<group>"; };
+		001581AE221123700008E21A /* StromUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StromUI.h; sourceTree = "<group>"; };
+		001581AF221123AB0008E21A /* StromNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StromNetwork.h; sourceTree = "<group>"; };
 		002FEDCD1FF370EA00EDA602 /* UIView+STM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+STM.h"; sourceTree = "<group>"; };
 		002FEDCE1FF370EA00EDA602 /* UIView+STM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+STM.m"; sourceTree = "<group>"; };
 		002FEE191FF4CD0400EDA602 /* CornerRadiusViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CornerRadiusViewController.h; sourceTree = "<group>"; };
@@ -142,9 +145,23 @@
 			path = Style;
 			sourceTree = "<group>";
 		};
+		001581AC221122510008E21A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				006C57DF21A4048C0040A7BC /* App */,
+				B891F7FE1CAE72590043BD59 /* Foundation */,
+				B891F8161CAE72590043BD59 /* Utilities */,
+				B891F7FC1CAE72590043BD59 /* Config */,
+				B891F83F1CAF6C2C0043BD59 /* Security */,
+				001581AD221123600008E21A /* StromCore.h */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		003F80B1220189A9006169DA /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				001581AF221123AB0008E21A /* StromNetwork.h */,
 				003F80B2220189E7006169DA /* STMHTTPRequest.h */,
 				003F80B3220189E7006169DA /* STMHTTPRequest.m */,
 				003F80B522018D54006169DA /* STMNetworkDefines.h */,
@@ -205,6 +222,7 @@
 		00A668891F05FD22002751F6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				001581AE221123700008E21A /* StromUI.h */,
 				002FEDCD1FF370EA00EDA602 /* UIView+STM.h */,
 				002FEDCE1FF370EA00EDA602 /* UIView+STM.m */,
 				00A6688A1F05FD46002751F6 /* UITextField+STM.h */,
@@ -215,6 +233,7 @@
 				0062A28B21706FBA00B46F55 /* UINavigationBar+STM.m */,
 				008C0998210AF24500086B43 /* NSLayoutConstraint+STM.h */,
 				008C0999210AF24500086B43 /* NSLayoutConstraint+STM.m */,
+				0014309A1DFABE6C004E1453 /* Style */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -293,15 +312,10 @@
 			isa = PBXGroup;
 			children = (
 				B891F80A1CAE72590043BD59 /* Strom-header.h */,
+				001581AC221122510008E21A /* Core */,
 				00867F231E8BC7C60042BE5A /* Swizz */,
-				0014309A1DFABE6C004E1453 /* Style */,
 				00A668891F05FD22002751F6 /* UI */,
-				006C57DF21A4048C0040A7BC /* App */,
-				B891F83F1CAF6C2C0043BD59 /* Security */,
-				B891F7FC1CAE72590043BD59 /* Config */,
-				B891F7FE1CAE72590043BD59 /* Foundation */,
 				003F80B1220189A9006169DA /* Network */,
-				B891F8161CAE72590043BD59 /* Utilities */,
 				006C57DC21A4011A0040A7BC /* Resource */,
 			);
 			path = Strom;
