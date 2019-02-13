@@ -10,6 +10,11 @@
 
 @implementation UIApplication (STM)
 
+- (UIViewController *)stm_topViewController {
+  UIViewController *rootVC = self.keyWindow.rootViewController;
+  return [self _stm_topViewControllerOnViewController:rootVC];
+}
+
 - (void)stm_openSettingNotificationWithCompletionHandler:(void (^)(BOOL))completion {
   [self _stm_openURL:UIApplicationOpenSettingsURLString completionHandler:completion];
 }
@@ -50,6 +55,22 @@
       if (handler) { handler(NO); }
     }
   }
+}
+
+- (__kindof UIViewController *)_stm_topViewControllerOnViewController:(UIViewController *)rootVC {
+  if ([rootVC isKindOfClass:UINavigationController.class]) {
+    UINavigationController *nav = (UINavigationController *)rootVC;
+    return [self _stm_topViewControllerOnViewController:nav.visibleViewController];
+  }
+  else if ([rootVC isKindOfClass:UITabBarController.class]) {
+    UITabBarController *tabBarController = (UITabBarController *)rootVC;
+    return [self _stm_topViewControllerOnViewController:tabBarController.selectedViewController];
+  }
+  else if (rootVC.presentedViewController) {
+    return [self _stm_topViewControllerOnViewController:rootVC.presentedViewController];
+  }
+
+  return rootVC;
 }
 
 - (UIView *)_statusBarView {

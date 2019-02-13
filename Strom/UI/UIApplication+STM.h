@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIApplication (STM)
 
+- (__kindof UIViewController *)stm_topViewController;
+
 /// 打开设置页
 - (void)stm_openSettingNotificationWithCompletionHandler:(void (^ __nullable)(BOOL success))completion;
 
