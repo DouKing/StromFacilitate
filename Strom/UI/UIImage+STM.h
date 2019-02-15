@@ -14,6 +14,17 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIImage (STM)
 
 /**
+ 生成指定色值的图片
+
+ @param color 指定的色值
+ @param size 图片z尺寸
+ @param alpha 图片透明度
+ @return UIImage
+ */
++ (UIImage *)stm_imageWithColor:(UIColor *)color size:(CGSize)size alpha:(CGFloat)alpha;
++ (UIImage *)stm_imageWithColor:(UIColor *)color size:(CGSize)size;
+
+/**
  改变图片颜色，不保留灰度信息，只保留透明度信息
 
  @param tintColor 将图片改变为该色

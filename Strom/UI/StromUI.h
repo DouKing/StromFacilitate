@@ -15,6 +15,7 @@
 #import "UITextField+STM.h"
 #import "UITextView+STM.h"
 #import "UINavigationBar+STM.h"
+#import "UIAlertController+STM.h"
 #import "NSLayoutConstraint+STM.h"
 #import "UIColor+STM.h"
 #import "UIImage+STM.h"

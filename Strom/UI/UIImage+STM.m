@@ -11,6 +11,24 @@
 
 @implementation UIImage (STM)
 
++ (UIImage *)stm_imageWithColor:(UIColor *)color size:(CGSize)size alpha:(CGFloat)alpha {
+  @autoreleasepool {
+    CGRect rect = CGRectMake(0, 0, size.width, size.height);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetAlpha(context, alpha);
+    CGContextSetFillColorWithColor(context, color.CGColor);
+    CGContextFillRect(context, rect);
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+  }
+}
+
++ (UIImage *)stm_imageWithColor:(UIColor *)color size:(CGSize)size {
+  return [self stm_imageWithColor:color size:size alpha:1];
+}
+
 - (UIImage *)stm_imageWithTintColor:(UIColor *)tintColor {
   return [self stm_imageWithTintColor:tintColor blendMode:kCGBlendModeDestinationIn];
 }
