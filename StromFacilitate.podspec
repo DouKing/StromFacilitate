@@ -16,7 +16,6 @@ Pod::Spec.new do |s|
 
   s.subspec 'Core' do |ss|
     ss.source_files = 'Strom/Core/StromCore.h', 'Strom/Core/**/*.{h,m}', 'Strom/Resource/*.bundle'
-    ss.public_header_files = 'Strom/Core/StromCore.h'
   end
 
   s.subspec 'Safe' do |ss|
@@ -25,13 +24,11 @@ Pod::Spec.new do |s|
 
   s.subspec 'Network' do |ss|
     ss.source_files = 'Strom/Network/*.{h,m}', 'Strom/**/STMProxy.{h,m}'
-    ss.public_header_files = 'Strom/Network/StromNetwork.h'
     ss.dependency 'AFNetworking', '~> 3.2.1'
   end
 
   s.subspec 'UI' do |ss|
     ss.source_files = 'Strom/UI/*.{h,m}'
-    ss.public_header_files = 'Strom/UI/StromUI.h'
     ss.dependency 'StromFacilitate/Core'
   end
 
