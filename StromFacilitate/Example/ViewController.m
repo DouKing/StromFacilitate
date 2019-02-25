@@ -7,9 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "NSString+STM.h"
-#import "NSData+STM.h"
-#import "UINavigationBar+STM.h"
+#import "Strom-header.h"
 
 static NSString * const kTableViewCellId = @"kTableViewCellId";
 
@@ -27,6 +25,21 @@ static NSString * const kTableViewCellId = @"kTableViewCellId";
   [super viewDidLoad];
   self.title = @"Example";
   [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kTableViewCellId];
+
+  UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+  button.frame = CGRectMake(0, 0, 22, 22);
+  button.backgroundColor = [self.navigationController.navigationBar tintColor];
+  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+  [button stm_addEventHandlerForControlEvents:UIControlEventTouchUpInside :^(id  _Nonnull sender) {
+    STMLog(@"handle tap button 1");
+  }];
+  [button stm_addEventHandlerForControlEvents:UIControlEventTouchUpInside :^(id  _Nonnull sender) {
+    STMLog(@"handle tap button 2");
+  }];
+  [button stm_addEventHandlerForControlEvents:UIControlEventTouchDown :^(id  _Nonnull sender) {
+    STMLog(@"handle touch down");
+  }];
+
   STMLogObj(STMDocumentPath());
   [self example];
 }
