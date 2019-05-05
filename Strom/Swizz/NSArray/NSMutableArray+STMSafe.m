@@ -14,7 +14,7 @@
 + (void)load {
   static dispatch_once_t onceToken;
   dispatch_once(&onceToken, ^{
-    Class aClass = [[self new] class];
+    Class aClass = objc_getClass("__NSArrayM");
     SEL systemSel = @selector(addObject:);
     SEL swizzSel = @selector(stm_addObject:);
     STMSwizzMethod(aClass, systemSel, swizzSel);
