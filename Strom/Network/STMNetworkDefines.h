@@ -9,6 +9,8 @@
 #ifndef STMNetworkDefines_h
 #define STMNetworkDefines_h
 
+NS_ASSUME_NONNULL_BEGIN
+
 @class STMHTTPRequest;
 
 typedef NS_ENUM(NSInteger, STMHTTPRequestMethod) {
@@ -63,4 +65,5 @@ typedef NS_ENUM(NSInteger, STMHTTPRequestMethod) {
 
 @end
 
+NS_ASSUME_NONNULL_END
 #endif /* STMNetworkDefines_h */
