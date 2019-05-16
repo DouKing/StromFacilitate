@@ -6,8 +6,6 @@
 //  Copyright © 2016年 DouKing. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 NS_ASSUME_NONNULL_BEGIN
 
 #define STRINGIFY(S) #S
@@ -25,10 +23,10 @@ NS_ASSUME_NONNULL_BEGIN
 #define STMScreenWidth           (CGRectGetWidth([[UIScreen mainScreen] bounds]))
 #define STMScreenHeight          (CGRectGetHeight([[UIScreen mainScreen] bounds]))
 #define STMScreenScale           ([UIScreen mainScreen].scale)
-#define STMSingleHeight          (1 / STMScreenScale)
 #define STMStatusBarHeight       (CGRectGetHeight([[UIApplication sharedApplication] statusBarFrame]))
 #define STMNavigationBarHeight   (44)
 #define STMTabBarHeight          (49)
+#define STMOnePixel              (1 / STMScreenScale)
 
 
 FOUNDATION_EXPORT NSString * const STMDocumentPath();
@@ -42,12 +40,5 @@ FOUNDATION_EXPORT BOOL STMSystemVersionGreaterThanOrEqualTo(NSString *version);
 FOUNDATION_EXPORT BOOL STMSystemVersionLessThan(NSString *version);
 FOUNDATION_EXPORT BOOL STMSystemVersionLessThanOrEqualTo(NSString *version);
 
-FOUNDATION_EXPORT BOOL STMSystemVersionIOS7Later();
-FOUNDATION_EXPORT BOOL STMSystemVersionIOS8Later();
-FOUNDATION_EXPORT BOOL STMSystemVersionIOS9Later();
-
-
-@interface STMConfiguration : NSObject
-@end
 
 NS_ASSUME_NONNULL_END

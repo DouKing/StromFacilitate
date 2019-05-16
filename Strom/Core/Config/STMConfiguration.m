@@ -6,8 +6,6 @@
 //  Copyright © 2016年 DouKing. All rights reserved.
 //
 
-#import "STMConfiguration.h"
-
 NSString * const STMDocumentPath() {
   return NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject;
 }
@@ -40,18 +38,3 @@ BOOL STMSystemVersionLessThanOrEqualTo(NSString *version) {
   return [STMSystemVersion() compare:version options:NSNumericSearch] != NSOrderedDescending;
 }
 
-BOOL STMSystemVersionIOS7Later() {
-  return STMSystemVersionGreaterThanOrEqualTo(@"7.0");
-}
-
-BOOL STMSystemVersionIOS8Later() {
-  return STMSystemVersionGreaterThanOrEqualTo(@"8.0");
-}
-
-BOOL STMSystemVersionIOS9Later() {
-  return STMSystemVersionGreaterThanOrEqualTo(@"9.0");
-  
-}
-
-@implementation STMConfiguration
-@end

@@ -6,9 +6,11 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface UIView (STM)
 
-- (UIImage *)stm_snapshotImage;
+- (nullable UIImage *)stm_snapshotImage;
 - (UIView *)stm_snapshotView;
 
 //- (void)stm_drawCornerRadius:(CGFloat)radius;
@@ -25,9 +27,6 @@
                   fillColor:(UIColor *)color;
 
 @end
-
-NS_ASSUME_NONNULL_BEGIN
-
 
 IB_DESIGNABLE
 @interface UIView (Storyboard)

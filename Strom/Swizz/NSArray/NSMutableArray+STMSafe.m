@@ -53,6 +53,7 @@
   if (index >= self.count) { return; }
   if (!anObject) {
     [self removeObjectAtIndex:index];
+    return;
   }
   [self stm_replaceObjectAtIndex:index withObject:anObject];
 }
