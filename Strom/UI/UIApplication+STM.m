@@ -37,7 +37,7 @@
   });
 }
 
-- (void)_stm_openURL:(NSString *)URLString completionHandler:(void (^)(BOOL success))completion {
+- (void)_stm_openURL:(NSString *)URLString completionHandler:(void (^)(BOOL success))completion NS_EXTENSION_UNAVAILABLE_IOS("") {
   NSURL *URL = [NSURL URLWithString:URLString];
   void(^handler)(BOOL succeed) = ^(BOOL succeed) {
     if (!completion) { return; }

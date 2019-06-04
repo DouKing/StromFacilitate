@@ -15,16 +15,16 @@ NS_ASSUME_NONNULL_BEGIN
 - (__kindof UIViewController *)stm_topViewController;
 
 /// 打开设置页
-- (void)stm_openSettingNotificationWithCompletionHandler:(void (^ __nullable)(BOOL success))completion;
+- (void)stm_openSettingNotificationWithCompletionHandler:(void (^ __nullable)(BOOL success))completion NS_EXTENSION_UNAVAILABLE_IOS("");
 
 /// 打开app在appStore的主页面
-- (void)stm_openAppStoreWithAppId:(NSString *)appId completionHandler:(void (^ __nullable)(BOOL success))completion;
+- (void)stm_openAppStoreWithAppId:(NSString *)appId completionHandler:(void (^ __nullable)(BOOL success))completion NS_EXTENSION_UNAVAILABLE_IOS("");
 
 /// 打开app在appStore的评价页面
-- (void)stm_openAppStoreReviewsWithAppId:(NSString *)appId completionHandler:(void (^ __nullable)(BOOL success))completion;
+- (void)stm_openAppStoreReviewsWithAppId:(NSString *)appId completionHandler:(void (^ __nullable)(BOOL success))completion NS_EXTENSION_UNAVAILABLE_IOS("");
 
 /// 打电话
-- (void)stm_telTo:(NSString *)phoneNumber completionHandler:(void (^ __nullable)(BOOL success))completion;
+- (void)stm_telTo:(NSString *)phoneNumber completionHandler:(void (^ __nullable)(BOOL success))completion NS_EXTENSION_UNAVAILABLE_IOS("");
 
 ///状态栏背景色
 @property (nullable, nonatomic, strong) UIColor *stm_statusBarColor;
