@@ -18,10 +18,6 @@ Pod::Spec.new do |s|
     ss.source_files = 'Strom/Core/StromCore.h', 'Strom/Core/**/*.{h,m}', 'Strom/Resource/*.bundle'
   end
 
-  s.subspec 'Safe' do |ss|
-    ss.source_files = 'Strom/Swizz/**/*.{h,m}', 'Strom/**/STMObjectRuntime.{h,m}'
-  end
-
   s.subspec 'Network' do |ss|
     ss.source_files = 'Strom/Network/*.{h,m}', 'Strom/**/STMProxy.{h,m}'
     ss.dependency 'AFNetworking', '~> 3.2.1'
