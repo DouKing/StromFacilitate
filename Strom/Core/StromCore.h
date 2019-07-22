@@ -17,5 +17,6 @@
 #import "STMConfiguration.h"
 #import "STMObjectRuntime.h"
 #import "STMProxy.h"
+#import "NSObject+STM.h"
 
 #endif /* StromCore_h */

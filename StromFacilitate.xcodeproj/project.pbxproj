@@ -10,6 +10,7 @@
 		002FEDCF1FF370EA00EDA602 /* UIView+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 002FEDCE1FF370EA00EDA602 /* UIView+STM.m */; };
 		002FEE1B1FF4CD0400EDA602 /* CornerRadiusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002FEE1A1FF4CD0400EDA602 /* CornerRadiusViewController.m */; };
 		003F80BB2201B355006169DA /* STMProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 003F80BA2201B355006169DA /* STMProxy.m */; };
+		0049F30122E5A9220064D2CB /* NSObject+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 0049F2FF22E5A9210064D2CB /* NSObject+STM.m */; };
 		005B580F2223D636003D42D3 /* UIViewController+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 005B580E2223D636003D42D3 /* UIViewController+STM.m */; };
 		005B58122223D7FC003D42D3 /* UIBarButtonItem+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 005B58112223D7FC003D42D3 /* UIBarButtonItem+STM.m */; };
 		005B58152223E510003D42D3 /* UIControl+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 005B58142223E510003D42D3 /* UIControl+STM.m */; };
@@ -53,6 +54,8 @@
 		002FEE1A1FF4CD0400EDA602 /* CornerRadiusViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CornerRadiusViewController.m; sourceTree = "<group>"; };
 		003F80B92201B355006169DA /* STMProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMProxy.h; sourceTree = "<group>"; };
 		003F80BA2201B355006169DA /* STMProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMProxy.m; sourceTree = "<group>"; };
+		0049F2FF22E5A9210064D2CB /* NSObject+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+STM.m"; sourceTree = "<group>"; };
+		0049F30022E5A9210064D2CB /* NSObject+STM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+STM.h"; sourceTree = "<group>"; };
 		005B580D2223D636003D42D3 /* UIViewController+STM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+STM.h"; sourceTree = "<group>"; };
 		005B580E2223D636003D42D3 /* UIViewController+STM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+STM.m"; sourceTree = "<group>"; };
 		005B58102223D7FC003D42D3 /* UIBarButtonItem+STM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+STM.h"; sourceTree = "<group>"; };
@@ -139,9 +142,19 @@
 				B891F8161CAE72590043BD59 /* Utilities */,
 				B891F7FC1CAE72590043BD59 /* Config */,
 				B891F83F1CAF6C2C0043BD59 /* Security */,
+				0049F2FE22E5A9210064D2CB /* Extension */,
 				001581AD221123600008E21A /* StromCore.h */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		0049F2FE22E5A9210064D2CB /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0049F30022E5A9210064D2CB /* NSObject+STM.h */,
+				0049F2FF22E5A9210064D2CB /* NSObject+STM.m */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		006C57DC21A4011A0040A7BC /* Resource */ = {
@@ -426,6 +439,7 @@
 				009D4E601FFB977A0095F44A /* UIColor+STM.m in Sources */,
 				B891F7E91CAE71770043BD59 /* AppDelegate.m in Sources */,
 				006C57DB21A3FC630040A7BC /* UIDevice+STM.m in Sources */,
+				0049F30122E5A9220064D2CB /* NSObject+STM.m in Sources */,
 				B891F7E61CAE71770043BD59 /* main.m in Sources */,
 				B891F8321CAE772C0043BD59 /* ViewController.m in Sources */,
 				B891F8381CAECC9A0043BD59 /* NSString+STM.m in Sources */,
