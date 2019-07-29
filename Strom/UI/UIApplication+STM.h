@@ -26,6 +26,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 打电话
 - (void)stm_telTo:(NSString *)phoneNumber completionHandler:(void (^ __nullable)(BOOL success))completion NS_EXTENSION_UNAVAILABLE_IOS("");
 
+- (void)stm_openURL:(NSString *)URLString completionHandler:(void (^ __nullable)(BOOL success))completion NS_EXTENSION_UNAVAILABLE_IOS("");
+
 ///状态栏背景色
 @property (nullable, nonatomic, strong) UIColor *stm_statusBarColor;
 

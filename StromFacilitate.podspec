@@ -15,11 +15,12 @@ Pod::Spec.new do |s|
 
 
   s.subspec 'Core' do |ss|
-    ss.source_files = 'Strom/Core/StromCore.h', 'Strom/Core/**/*.{h,m}', 'Strom/Resource/*.bundle'
+    ss.source_files = 'Strom/Core/StromCore.h', 'Strom/Core/**/*.{h,m}'
   end
 
   s.subspec 'UI' do |ss|
     ss.source_files = 'Strom/UI/*.{h,m}'
+    ss.resource = 'Strom/UI/STMDeviceInfo.bundle'
     ss.dependency 'StromFacilitate/Core'
   end
 

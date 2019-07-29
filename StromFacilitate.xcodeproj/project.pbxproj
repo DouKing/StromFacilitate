@@ -157,14 +157,6 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		006C57DC21A4011A0040A7BC /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				006C57DD21A403270040A7BC /* STMDeviceInfo.bundle */,
-			);
-			path = Resource;
-			sourceTree = "<group>";
-		};
 		00A668891F05FD22002751F6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +187,7 @@
 				009D4E5D1FFB977A0095F44A /* UIColor+STM.m */,
 				009D4E5E1FFB977A0095F44A /* UIImage+STM.h */,
 				009D4E5B1FFB977A0095F44A /* UIImage+STM.m */,
+				006C57DD21A403270040A7BC /* STMDeviceInfo.bundle */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -266,7 +259,6 @@
 				B891F80A1CAE72590043BD59 /* Strom-header.h */,
 				001581AC221122510008E21A /* Core */,
 				00A668891F05FD22002751F6 /* UI */,
-				006C57DC21A4011A0040A7BC /* Resource */,
 			);
 			path = Strom;
 			sourceTree = "<group>";

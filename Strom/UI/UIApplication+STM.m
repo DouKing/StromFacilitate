@@ -16,28 +16,28 @@
 }
 
 - (void)stm_openSettingNotificationWithCompletionHandler:(void (^)(BOOL))completion {
-  [self _stm_openURL:UIApplicationOpenSettingsURLString completionHandler:completion];
+  [self stm_openURL:UIApplicationOpenSettingsURLString completionHandler:completion];
 }
 
 - (void)stm_openAppStoreWithAppId:(NSString *)appId completionHandler:(void (^ _Nullable)(BOOL))completion {
   NSString *appStoreString = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/app/id%@", appId];
-  [self _stm_openURL:appStoreString completionHandler:completion];
+  [self stm_openURL:appStoreString completionHandler:completion];
 }
 
 - (void)stm_openAppStoreReviewsWithAppId:(NSString *)appId completionHandler:(void (^ _Nullable)(BOOL))completion {
   NSString *str = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@", appId];
-  [self _stm_openURL:str completionHandler:completion];
+  [self stm_openURL:str completionHandler:completion];
 }
 
 - (void)stm_telTo:(NSString *)phoneNumber completionHandler:(void (^ _Nullable)(BOOL))completion {
   phoneNumber = [phoneNumber stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
   NSString *str = [NSString stringWithFormat:@"telprompt://%@", phoneNumber];
   dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-    [self _stm_openURL:str completionHandler:completion];
+    [self stm_openURL:str completionHandler:completion];
   });
 }
 
-- (void)_stm_openURL:(NSString *)URLString completionHandler:(void (^)(BOOL success))completion NS_EXTENSION_UNAVAILABLE_IOS("") {
+- (void)stm_openURL:(NSString *)URLString completionHandler:(void (^)(BOOL success))completion {
   NSURL *URL = [NSURL URLWithString:URLString];
   void(^handler)(BOOL succeed) = ^(BOOL succeed) {
     if (!completion) { return; }
@@ -45,15 +45,15 @@
       completion(succeed);
     });
   };
-  if (@available(iOS 10.0, *)) {
-    [self openURL:URL options:@{} completionHandler:handler];
-  } else {
-    if ([self canOpenURL:URL]) {
+  if (URL && [self canOpenURL:URL]) {
+    if (@available(iOS 10.0, *)) {
+      [self openURL:URL options:@{} completionHandler:handler];
+    } else {
       [self openURL:URL];
       if (handler) { handler(YES); }
-    } else {
-      if (handler) { handler(NO); }
     }
+  } else {
+    if (handler) { handler(NO); }
   }
 }
 
