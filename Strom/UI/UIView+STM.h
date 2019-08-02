@@ -37,5 +37,11 @@ IB_DESIGNABLE
 
 @end
 
+@interface UIView (Nib)
+
++ (instancetype)stm_viewFromNib;
++ (instancetype)stm_viewFromNibWithOwner:(nullable id)ownerOrNil options:(nullable NSDictionary *)optionsOrNil;
+
+@end
 
 NS_ASSUME_NONNULL_END

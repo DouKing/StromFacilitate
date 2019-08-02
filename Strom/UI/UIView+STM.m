@@ -155,3 +155,15 @@
 
 @end
 
+@implementation UIView (Nib)
+
++ (instancetype)stm_viewFromNib {
+    return [self stm_viewFromNibWithOwner:nil options:nil];
+}
+
++ (instancetype)stm_viewFromNibWithOwner:(id)ownerOrNil options:(NSDictionary *)optionsOrNil {
+    return [[UINib nibWithNibName:NSStringFromClass(self) bundle:nil]
+            instantiateWithOwner:ownerOrNil options:optionsOrNil].firstObject;
+}
+
+@end
