@@ -11,6 +11,14 @@
 #include <libkern/OSAtomic.h>
 #import <pthread.h>
 
+NSHashTable<NSString *> *KVOHashTable() {
+    static NSHashTable *hashTable = nil;
+    if (!hashTable) {
+        hashTable = [NSHashTable hashTableWithOptions:NSPointerFunctionsStrongMemory];
+    }
+    return hashTable;
+}
+
 @implementation NSObject (STM)
 
 + (void)load {
@@ -37,8 +45,8 @@
     if (!observer || !keyPath || keyPath.length == 0) { return; }
     @synchronized (self) {
         NSString *kvoHash = [self _stm_Hash:observer :keyPath];
-        if (![self.KVOHashTable containsObject:kvoHash]) {
-            [self.KVOHashTable addObject:kvoHash];
+        if (![KVOHashTable() containsObject:kvoHash]) {
+            [KVOHashTable() addObject:kvoHash];
             [self stm_addObserver:observer forKeyPath:keyPath options:options context:context];
             [self stm_addDeallocExecutor:^(__unsafe_unretained id  _Nonnull observedOwner, NSUInteger identifier) {
                 [observedOwner stm_removeObserver:observer forKeyPath:keyPath context:context];
@@ -51,7 +59,7 @@
     if (!observer || !keyPath || keyPath.length == 0) { return; }
     @synchronized (self) {
         NSString *kvoHash = [self _stm_Hash:observer :keyPath];
-        NSHashTable *hashTable = [self KVOHashTable];
+        NSHashTable *hashTable = KVOHashTable();
         if (!hashTable) { return; }
         if ([hashTable containsObject:kvoHash]) {
             [self stm_removeObserver:observer forKeyPath:keyPath context:context];
@@ -64,7 +72,7 @@
     if (!observer || !keyPath || keyPath.length == 0) { return; }
     @synchronized (self) {
         NSString *kvoHash = [self _stm_Hash:observer :keyPath];
-        NSHashTable *hashTable = [self KVOHashTable];
+        NSHashTable *hashTable = KVOHashTable();
         if (!hashTable) { return; }
         if ([hashTable containsObject:kvoHash]) {
             [self stm_removeObserver:observer forKeyPath:keyPath];
@@ -74,16 +82,7 @@
 }
 
 - (NSString *)_stm_Hash:(id)observer :(NSString *)keypath {
-    return [NSString stringWithFormat:@"kvo_%p_%@", observer, keypath];
-}
-
-- (NSHashTable<NSString *> *)KVOHashTable {
-    NSHashTable *hashTable = objc_getAssociatedObject(self, _cmd);
-    if (!hashTable) {
-        hashTable = [NSHashTable hashTableWithOptions:NSPointerFunctionsStrongMemory];
-        objc_setAssociatedObject(self, _cmd, hashTable, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    }
-    return hashTable;
+    return [NSString stringWithFormat:@"kvo_%p_%p_%@", self, observer, keypath];
 }
 
 @end
