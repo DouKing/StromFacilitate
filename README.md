@@ -18,8 +18,6 @@ pod 'StromFacilitate'
 ```ruby
 pod 'StromFacilitate/Core'
 pod 'StromFacilitate/UI'
-pod 'StromFacilitate/Safe'
-pod 'StromFacilitate/Network'
 ```
 
 ## License
