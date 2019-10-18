@@ -8,12 +8,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+#ifndef StromFacilitate
+
 #define STRINGIFY(S) #S
 #define DEFER_STRINGIFY(S) STRINGIFY(S)
 #define PRAGMA_MESSAGE(MSG) _Pragma(STRINGIFY(message(MSG)))
 #define FORMATTED_MESSAGE(MSG) "[TODO-" DEFER_STRINGIFY(__COUNTER__) "] " MSG " \n" \
                               DEFER_STRINGIFY(__FILE__) " line " DEFER_STRINGIFY(__LINE__)
 #define TODO(MSG) PRAGMA_MESSAGE(FORMATTED_MESSAGE(MSG))
+
+#define STMKeypath(OBJ, PATH) (((void)(NO && ((void)OBJ.PATH, NO)), # PATH))
 
 #define STMFinalClass            __attribute__((objc_subclassing_restricted))
 #define STMNSValueEnable         __attribute__((objc_boxable))
@@ -28,6 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 #define STMTabBarHeight          (49)
 #define STMOnePixel              (1 / STMScreenScale)
 
+#endif /*end StromFacilitate*/
 
 FOUNDATION_EXPORT NSString * const STMDocumentPath();
 

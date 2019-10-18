@@ -8,6 +8,7 @@
 
 #import "UITextView+STM.h"
 #import "STMObjectRuntime.h"
+#import "UIColor+STM.h"
 
 @implementation UITextView (STM)
 
@@ -140,6 +141,9 @@
 }
 
 + (UIColor *)defaultPlaceholderColor {
+  if (@available(iOS 13.0, *)) {
+    return RGBColor(0xf5f5f5);
+  }
   static UIColor *color = nil;
   static dispatch_once_t onceToken;
   dispatch_once(&onceToken, ^{

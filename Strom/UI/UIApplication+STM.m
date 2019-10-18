@@ -74,7 +74,11 @@
 }
 
 - (UIView *)_statusBarView {
-  return [[self valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
+  if (@available(iOS 13.0, *)) {
+    return nil;
+  } else {
+    return [[self valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
+  }
 }
 
 - (void)setStm_statusBarColor:(UIColor *)stm_statusBarColor {

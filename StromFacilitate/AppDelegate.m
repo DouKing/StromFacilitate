@@ -31,6 +31,7 @@
   application.stm_statusBarColor = [UIColor redColor];
   STMLog(@"status bar color: %@", application.stm_statusBarColor);
   STMLog(@"device platform: %@", [[UIDevice currentDevice] stm_platform]);
+  STMLog(@"system version: %@", [[UIDevice currentDevice] systemVersion]);
   return YES;
 }
 

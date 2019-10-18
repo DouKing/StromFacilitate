@@ -60,14 +60,14 @@
 }
 
 - (void)_stm_tfTextDidChange:(UITextField *)textField {
-  switch (self.limitType) {
+  switch (self.stm_limitType) {
     case STMTextFieldInputLenthLimitTypeCharacter: {
-      [self _stm_limitCharacterLength:self.limitLength];
+      [self _stm_limitCharacterLength:self.stm_limitLength];
       break;
     }
 
     case STMTextFieldInputLenthLimitTypeByte: {
-      [self _stm_limitByteLength:self.limitLength];
+      [self _stm_limitByteLength:self.stm_limitLength];
       break;
     }
   }
@@ -130,28 +130,37 @@
 
 #pragma mark - setter & getter
 
-- (void)setLimitType:(STMTextFieldInputLenthLimitType)limitType {
-  objc_setAssociatedObject(self, @selector(limitType), @(limitType), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (void)setStm_limitType:(STMTextFieldInputLenthLimitType)stm_limitType {
+  objc_setAssociatedObject(self, @selector(stm_limitType), @(stm_limitType), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (STMTextFieldInputLenthLimitType)limitType {
+- (STMTextFieldInputLenthLimitType)stm_limitType {
   return [objc_getAssociatedObject(self, _cmd) integerValue];
 }
 
-- (void)setLimitLength:(NSUInteger)limitLength {
-  objc_setAssociatedObject(self, @selector(limitLength), @(limitLength), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (void)setStm_limitLength:(NSUInteger)stm_limitLength {
+  objc_setAssociatedObject(self, @selector(stm_limitLength), @(stm_limitLength), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (NSUInteger)limitLength {
+- (NSUInteger)stm_limitLength {
   return [objc_getAssociatedObject(self, _cmd) unsignedIntegerValue];
 }
 
-- (void)setPlaceholderColor:(UIColor *)placeholderColor {
-  [self setValue:placeholderColor forKeyPath:@"_placeholderLabel.textColor"];
+- (void)setStm_placeholderColor:(UIColor *)stm_placeholderColor {
+  if (@available(iOS 13.0, *)) {
+    NSLog(@"Please use attributedPlaceholder yourself!");
+  } else {
+    [self setValue:stm_placeholderColor forKeyPath:@"_placeholderLabel.textColor"];
+  }
 }
 
-- (UIColor *)placeholderColor {
-  return [self valueForKeyPath:@"_placeholderLabel.textColor"];
+- (UIColor *)stm_placeholderColor {
+  if (@available(iOS 13.0, *)) {
+    NSLog(@"Please acquire placeholderColor use attributedPlaceholder yourself!");
+    return nil;
+  } else {
+    return [self valueForKeyPath:@"_placeholderLabel.textColor"];
+  }
 }
 
 @end
