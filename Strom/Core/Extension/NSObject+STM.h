@@ -10,6 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+// 在 info.plist 中配置是否开启 KVO 自释放
+static NSString * const kSTMAutoRemoveKVOObserverKey = @"STMAutoRemoveKVOObserver";
+
 @interface NSObject (STM)
 
 @end

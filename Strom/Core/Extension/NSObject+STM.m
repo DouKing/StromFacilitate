@@ -11,19 +11,17 @@
 #include <libkern/OSAtomic.h>
 #import <pthread.h>
 
-NSHashTable<NSString *> *KVOHashTable() {
-    static NSHashTable *hashTable = nil;
-    if (!hashTable) {
-        hashTable = [NSHashTable hashTableWithOptions:NSPointerFunctionsStrongMemory];
-    }
-    return hashTable;
-}
+static BOOL autoRemoveKVOObserver = NO;
+static NSHashTable *KVOHashTable = nil;
 
 @implementation NSObject (STM)
 
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
+        autoRemoveKVOObserver = [[[NSBundle mainBundle] infoDictionary][kSTMAutoRemoveKVOObserverKey] boolValue];
+        if (autoRemoveKVOObserver) { KVOHashTable = [NSHashTable hashTableWithOptions:NSPointerFunctionsStrongMemory]; }
+
         SEL systemSel = @selector(addObserver:forKeyPath:options:context:);
         SEL swizzSel = @selector(stm_addObserver:forKeyPath:options:context:);
         STMSwizzMethod(self, systemSel, swizzSel);
@@ -42,11 +40,16 @@ NSHashTable<NSString *> *KVOHashTable() {
              forKeyPath:(NSString *)keyPath
                 options:(NSKeyValueObservingOptions)options
                 context:(nullable void *)context {
+    if (!autoRemoveKVOObserver) {
+        [self stm_addObserver:observer forKeyPath:keyPath options:options context:context];
+        return;
+    }
+
     if (!observer || !keyPath || keyPath.length == 0) { return; }
     @synchronized (self) {
         NSString *kvoHash = [self _stm_Hash:observer :keyPath];
-        if (![KVOHashTable() containsObject:kvoHash]) {
-            [KVOHashTable() addObject:kvoHash];
+        if (![KVOHashTable containsObject:kvoHash]) {
+            [KVOHashTable addObject:kvoHash];
             [self stm_addObserver:observer forKeyPath:keyPath options:options context:context];
             __weak typeof(self) __weak_self__ = self;
             [observer stm_addDeallocExecutor:^(__unsafe_unretained id  _Nonnull observedOwner, NSUInteger identifier) {
@@ -57,10 +60,15 @@ NSHashTable<NSString *> *KVOHashTable() {
 }
 
 - (void)stm_removeObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath context:(void *)context {
+    if (!autoRemoveKVOObserver) {
+        [self stm_removeObserver:observer forKeyPath:keyPath context:context];
+        return;
+    }
+
     if (!observer || !keyPath || keyPath.length == 0) { return; }
     @synchronized (self) {
         NSString *kvoHash = [self _stm_Hash:observer :keyPath];
-        NSHashTable *hashTable = KVOHashTable();
+        NSHashTable *hashTable = KVOHashTable;
         if (!hashTable) { return; }
         if ([hashTable containsObject:kvoHash]) {
             #if DEBUG
@@ -73,10 +81,15 @@ NSHashTable<NSString *> *KVOHashTable() {
 }
 
 - (void)stm_removeObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath {
+    if (!autoRemoveKVOObserver) {
+        [self stm_removeObserver:observer forKeyPath:keyPath];
+        return;
+    }
+
     if (!observer || !keyPath || keyPath.length == 0) { return; }
     @synchronized (self) {
         NSString *kvoHash = [self _stm_Hash:observer :keyPath];
-        NSHashTable *hashTable = KVOHashTable();
+        NSHashTable *hashTable = KVOHashTable;
         if (!hashTable) { return; }
         if ([hashTable containsObject:kvoHash]) {
             #if DEBUG
