@@ -7,12 +7,18 @@
 //
 
 #import "ViewController.h"
+#import "TextFieldViewController.h"
 #import "Strom-header.h"
+
+@interface Person : NSObject
+@property (nonatomic, assign) int age;
+@end
 
 static NSString * const kTableViewCellId = @"kTableViewCellId";
 
 @interface ViewController ()
-
+@property (nullable, nonatomic, strong) Person *person;
+@property (nullable, nonatomic, weak) NSTimer *timer;
 @end
 
 @implementation ViewController
@@ -49,6 +55,23 @@ static NSString * const kTableViewCellId = @"kTableViewCellId";
   self.navigationController.navigationBar.stm_hideBottomLine = YES;
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  TextFieldViewController *vc = [segue destinationViewController];
+  if ([vc isKindOfClass:NSClassFromString(@"TextFieldViewController")]) {
+    self.person = [[Person alloc] init];
+    self.person.age = 10;
+    [self.person addObserver:vc forKeyPath:@"age" options:NSKeyValueObservingOptionNew context:nil];
+    vc->testPerson = self.person;
+    [self.timer invalidate];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+      self.person.age += 1;
+      if (self.person.age > 20) {
+        [self.timer invalidate];
+      }
+    }];
+  }
+}
+
 - (void)example {
     [self example:@"stm_dictionaryByAppendingDictionary:" :^{
         NSDictionary *dic = @{@"k1" : @"v1"};
@@ -64,5 +87,9 @@ TODO("测试TODO")
     STMLogObj(name);
     block();
 }
+
+@end
+
+@implementation Person
 
 @end

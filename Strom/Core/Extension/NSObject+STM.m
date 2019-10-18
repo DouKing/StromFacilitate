@@ -48,8 +48,9 @@ NSHashTable<NSString *> *KVOHashTable() {
         if (![KVOHashTable() containsObject:kvoHash]) {
             [KVOHashTable() addObject:kvoHash];
             [self stm_addObserver:observer forKeyPath:keyPath options:options context:context];
-            [self stm_addDeallocExecutor:^(__unsafe_unretained id  _Nonnull observedOwner, NSUInteger identifier) {
-                [observedOwner stm_removeObserver:observer forKeyPath:keyPath context:context];
+            __weak typeof(self) __weak_self__ = self;
+            [observer stm_addDeallocExecutor:^(__unsafe_unretained id  _Nonnull observedOwner, NSUInteger identifier) {
+                [__weak_self__ stm_removeObserver:observedOwner forKeyPath:keyPath context:context];
             }];
         }
     }
@@ -62,6 +63,9 @@ NSHashTable<NSString *> *KVOHashTable() {
         NSHashTable *hashTable = KVOHashTable();
         if (!hashTable) { return; }
         if ([hashTable containsObject:kvoHash]) {
+            #if DEBUG
+            NSLog(@"[StromFacilitate] %@ remove observer %@ keypath %@", self, observer, keyPath);
+            #endif
             [self stm_removeObserver:observer forKeyPath:keyPath context:context];
             [hashTable removeObject:kvoHash];
         }
@@ -75,6 +79,9 @@ NSHashTable<NSString *> *KVOHashTable() {
         NSHashTable *hashTable = KVOHashTable();
         if (!hashTable) { return; }
         if ([hashTable containsObject:kvoHash]) {
+            #if DEBUG
+            NSLog(@"[StromFacilitate] %@ remove observer %@ keypath %@", self, observer, keyPath);
+            #endif
             [self stm_removeObserver:observer forKeyPath:keyPath];
             [hashTable removeObject:kvoHash];
         }

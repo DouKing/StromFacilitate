@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TextFieldViewController : UIViewController
+@interface TextFieldViewController : UIViewController {
+  @public
+  id testPerson;
+}
 
 @end

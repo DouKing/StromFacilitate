@@ -14,8 +14,21 @@
 
 @implementation TextFieldViewController
 
+- (void)dealloc {
+  NSLog(@"%s", __func__);
+  [self->testPerson removeObserver:self forKeyPath:@"age"];
+  [self->testPerson removeObserver:self forKeyPath:@"age"];
+  [self->testPerson removeObserver:self forKeyPath:@"age"];
+}
+
 - (void)viewDidLoad {
   [super viewDidLoad];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+  if ([keyPath isEqualToString:@"age"]) {
+    NSLog(@"person age change: %@", change);
+  }
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
