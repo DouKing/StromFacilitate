@@ -13,10 +13,13 @@
 #import <AdSupport/AdSupport.h>
 #import "NSBundle+STM.h"
 
+@interface _STMDeviceBundleClass : NSObject @end
+@implementation _STMDeviceBundleClass @end
+
 @implementation UIDevice (STM)
 
 - (NSString *)stm_platform {
-  NSString *bundlePath = [[NSBundle stm_containerAppMainBundle] pathForResource:@"STMDeviceInfo" ofType:@"bundle"];
+  NSString *bundlePath = [[NSBundle bundleForClass:_STMDeviceBundleClass.class] pathForResource:@"STMDeviceInfo" ofType:@"bundle"];
   NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
   NSString *infoPath = [bundle pathForResource:@"device" ofType:@"plist"];
   NSDictionary *deviceInfo = [NSDictionary dictionaryWithContentsOfFile:infoPath];
