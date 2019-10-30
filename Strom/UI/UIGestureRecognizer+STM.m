@@ -7,6 +7,7 @@
 //
 
 #import "UIGestureRecognizer+STM.h"
+#import <objc/runtime.h>
 
 static NSUInteger const kSTMGestureRecognizerInitialIdentifier = 1000;
 
