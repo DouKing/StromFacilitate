@@ -7,98 +7,58 @@
 //
 
 #import "NSObject+STM.h"
-#import "STMObjectRuntime.h"
+#import <objc/runtime.h>
 #include <libkern/OSAtomic.h>
 #import <pthread.h>
 
-static BOOL autoRemoveKVOObserver = NO;
-static NSHashTable *KVOHashTable = nil;
-
-@implementation NSObject (STM)
-
-+ (void)load {
+NSHashTable *KVOHashTable() {
+    static NSHashTable *_KVOHashTable = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        autoRemoveKVOObserver = [[[NSBundle mainBundle] infoDictionary][kSTMAutoRemoveKVOObserverKey] boolValue];
-        if (autoRemoveKVOObserver) { KVOHashTable = [NSHashTable hashTableWithOptions:NSPointerFunctionsStrongMemory]; }
-
-        SEL systemSel = @selector(addObserver:forKeyPath:options:context:);
-        SEL swizzSel = @selector(stm_addObserver:forKeyPath:options:context:);
-        STMSwizzMethod(self, systemSel, swizzSel);
-
-        systemSel = @selector(removeObserver:forKeyPath:);
-        swizzSel = @selector(stm_removeObserver:forKeyPath:);
-        STMSwizzMethod(self, systemSel, swizzSel);
-
-        systemSel = @selector(removeObserver:forKeyPath:context:);
-        swizzSel = @selector(stm_removeObserver:forKeyPath:context:);
-        STMSwizzMethod(self, systemSel, swizzSel);
+        _KVOHashTable = [NSHashTable hashTableWithOptions:NSPointerFunctionsStrongMemory];
     });
+    return _KVOHashTable;
 }
+
+@implementation NSObject (STM)
 
 - (void)stm_addObserver:(NSObject *)observer
              forKeyPath:(NSString *)keyPath
                 options:(NSKeyValueObservingOptions)options
                 context:(nullable void *)context {
-    if (!autoRemoveKVOObserver) {
-        [self stm_addObserver:observer forKeyPath:keyPath options:options context:context];
-        return;
-    }
-
     if (!observer || !keyPath || keyPath.length == 0) { return; }
     @synchronized (self) {
         NSString *kvoHash = [self _stm_Hash:observer :keyPath];
-        if (![KVOHashTable containsObject:kvoHash]) {
-            [KVOHashTable addObject:kvoHash];
-            [self stm_addObserver:observer forKeyPath:keyPath options:options context:context];
+        NSHashTable *hashTable = KVOHashTable();
+        if (![hashTable containsObject:kvoHash]) {
+            [hashTable addObject:kvoHash];
+            [self addObserver:observer forKeyPath:keyPath options:options context:context];
             __weak typeof(self) __weak_self__ = self;
             [observer stm_addDeallocExecutor:^(__unsafe_unretained id  _Nonnull observedOwner, NSUInteger identifier) {
-                [__weak_self__ removeObserver:observedOwner forKeyPath:keyPath context:context];
+                [__weak_self__ stm_removeObserver:observedOwner forKeyPath:keyPath context:context];
             }];
         }
     }
 }
 
 - (void)stm_removeObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath context:(void *)context {
-    if (!autoRemoveKVOObserver) {
-        [self stm_removeObserver:observer forKeyPath:keyPath context:context];
-        return;
-    }
-
     if (!observer || !keyPath || keyPath.length == 0) { return; }
     @synchronized (self) {
         NSString *kvoHash = [self _stm_Hash:observer :keyPath];
-        NSHashTable *hashTable = KVOHashTable;
+        NSHashTable *hashTable = KVOHashTable();
         if (!hashTable) { return; }
         if ([hashTable containsObject:kvoHash]) {
             #if DEBUG
             NSLog(@"[StromFacilitate] %@ remove observer %@ keypath %@", self, observer, keyPath);
             #endif
-            [self stm_removeObserver:observer forKeyPath:keyPath context:context];
+            [self removeObserver:observer forKeyPath:keyPath context:context];
             [hashTable removeObject:kvoHash];
         }
     }
 }
 
 - (void)stm_removeObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath {
-    if (!autoRemoveKVOObserver) {
-        [self stm_removeObserver:observer forKeyPath:keyPath];
-        return;
-    }
-
-    if (!observer || !keyPath || keyPath.length == 0) { return; }
-    @synchronized (self) {
-        NSString *kvoHash = [self _stm_Hash:observer :keyPath];
-        NSHashTable *hashTable = KVOHashTable;
-        if (!hashTable) { return; }
-        if ([hashTable containsObject:kvoHash]) {
-            #if DEBUG
-            NSLog(@"[StromFacilitate] %@ remove observer %@ keypath %@", self, observer, keyPath);
-            #endif
-            [self stm_removeObserver:observer forKeyPath:keyPath];
-            [hashTable removeObject:kvoHash];
-        }
-    }
+    [self stm_removeObserver:observer forKeyPath:keyPath context:nil];
 }
 
 - (NSString *)_stm_Hash:(id)observer :(NSString *)keypath {
@@ -146,17 +106,17 @@ static long gSTMDeallocExecutorIdentifier = 1;
     return executor;
 }
 
-- (dispatch_queue_t)stm_deallocExecutorQueue {
-    dispatch_queue_t queue = objc_getAssociatedObject(self, _cmd);
-    if (!queue) {
-        NSString *queueBaseLabel = [NSString stringWithFormat:@"com.douking.%@", NSStringFromClass([self class])];
-        NSString *queueNameString = [NSString stringWithFormat:@"%@.STMDeallocExecutor.%@", queueBaseLabel, @(arc4random_uniform(MAXFLOAT))];
-        const char *queueName = [queueNameString UTF8String];
-        queue = dispatch_queue_create(queueName, DISPATCH_QUEUE_SERIAL);
-        objc_setAssociatedObject(self, _cmd, queue, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    }
-    return queue;
-}
+//- (dispatch_queue_t)stm_deallocExecutorQueue {
+//    dispatch_queue_t queue = objc_getAssociatedObject(self, _cmd);
+//    if (!queue) {
+//        NSString *queueBaseLabel = [NSString stringWithFormat:@"com.douking.%@", NSStringFromClass([self class])];
+//        NSString *queueNameString = [NSString stringWithFormat:@"%@.STMDeallocExecutor.%@", queueBaseLabel, @(arc4random_uniform(MAXFLOAT))];
+//        const char *queueName = [queueNameString UTF8String];
+//        queue = dispatch_queue_create(queueName, DISPATCH_QUEUE_SERIAL);
+//        objc_setAssociatedObject(self, _cmd, queue, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+//    }
+//    return queue;
+//}
 
 @end
 

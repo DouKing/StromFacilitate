@@ -10,13 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-// 在 info.plist 中配置是否开启 KVO 自释放
-// <key>STMAutoRemoveKVOObserver</key>
-// <true/>
-static NSString * const kSTMAutoRemoveKVOObserverKey = @"STMAutoRemoveKVOObserver";
-
 @interface NSObject (STM)
-
+/// 使用该方法添加的 observer 会自释放
+- (void)stm_addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options context:(nullable void *)context;
+- (void)stm_removeObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath context:(nullable void *)context;
+- (void)stm_removeObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath;
 @end
 
 #pragma mark -
@@ -25,7 +23,7 @@ typedef void (^STMDeallocExecutorBlock)(__unsafe_unretained id owner, NSUInteger
 
 @interface NSObject (STMDeallocExecutor)
 
-@property (nonatomic, strong, readonly) dispatch_queue_t stm_deallocExecutorQueue;
+//@property (nonatomic, strong, readonly) dispatch_queue_t stm_deallocExecutorQueue;
 
 - (NSUInteger)stm_addDeallocExecutor:(STMDeallocExecutorBlock)block;
 - (BOOL)stm_removeDeallocExecutorWithIdentifier:(NSUInteger)identifier;
