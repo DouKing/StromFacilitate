@@ -16,9 +16,9 @@
 
 - (void)dealloc {
   NSLog(@"%s", __func__);
-  [self->testPerson removeObserver:self forKeyPath:@"age"];
-  [self->testPerson removeObserver:self forKeyPath:@"age"];
-  [self->testPerson removeObserver:self forKeyPath:@"age"];
+//  [self->testPerson stm_removeObserver:self forKeyPath:@"age"];
+//  [self->testPerson stm_removeObserver:self forKeyPath:@"age"];
+//  [self->testPerson stm_removeObserver:self forKeyPath:@"age"];
 }
 
 - (void)viewDidLoad {

@@ -14,6 +14,10 @@ NSString * const STMAppVersion() {
   return [[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"];
 }
 
+NSString * const STMAppBuildVersion() {
+  return [[NSBundle mainBundle] infoDictionary][(NSString *)kCFBundleVersionKey];
+}
+
 NSString * const STMSystemVersion() {
   return [[UIDevice currentDevice] systemVersion];
 }

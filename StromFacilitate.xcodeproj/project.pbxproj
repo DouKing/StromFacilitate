@@ -558,6 +558,7 @@
 			baseConfigurationReference = BDADAAA5FBBFAEC10374EDC8 /* Pods-StromFacilitate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = K2VBE95LX6;
 				GCC_PREFIX_HEADER = "StromFacilitate/StromFacilitate-PrefixHeader.pch";
 				INFOPLIST_FILE = StromFacilitate/Info.plist;
@@ -573,6 +574,7 @@
 			baseConfigurationReference = 9D4A9227B3586FF0561078F4 /* Pods-StromFacilitate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = K2VBE95LX6;
 				GCC_PREFIX_HEADER = "StromFacilitate/StromFacilitate-PrefixHeader.pch";
 				INFOPLIST_FILE = StromFacilitate/Info.plist;

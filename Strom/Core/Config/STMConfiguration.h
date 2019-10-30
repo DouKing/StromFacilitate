@@ -37,6 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 FOUNDATION_EXPORT NSString * const STMDocumentPath();
 
 FOUNDATION_EXPORT NSString * const STMAppVersion();
+FOUNDATION_EXPORT NSString * const STMAppBuildVersion();
 FOUNDATION_EXPORT NSString * const STMSystemVersion();
 
 FOUNDATION_EXPORT BOOL STMSystemVersionEqualTo(NSString *version);

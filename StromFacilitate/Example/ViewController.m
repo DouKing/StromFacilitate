@@ -60,7 +60,7 @@ static NSString * const kTableViewCellId = @"kTableViewCellId";
   if ([vc isKindOfClass:NSClassFromString(@"TextFieldViewController")]) {
     self.person = [[Person alloc] init];
     self.person.age = 10;
-    [self.person addObserver:vc forKeyPath:@"age" options:NSKeyValueObservingOptionNew context:nil];
+    [self.person stm_addObserver:vc forKeyPath:@"age" options:NSKeyValueObservingOptionNew context:nil];
     vc->testPerson = self.person;
     [self.timer invalidate];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {

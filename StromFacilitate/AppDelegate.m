@@ -32,6 +32,7 @@
   STMLog(@"status bar color: %@", application.stm_statusBarColor);
   STMLog(@"device platform: %@", [[UIDevice currentDevice] stm_platform]);
   STMLog(@"system version: %@", [[UIDevice currentDevice] systemVersion]);
+  STMLog(@"app version: %@/%@", STMAppVersion(), STMAppBuildVersion());
   return YES;
 }
 
