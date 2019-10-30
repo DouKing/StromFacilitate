@@ -11,7 +11,7 @@
 
 @interface STMControlWrapper : NSObject <NSCopying>
 
-- (instancetype)initWithHandler:(void (^)(id sender))handler forControlEvents:(UIControlEvents)controlEvents;
+- (instancetype)initWithHandler:(STMControlHandler)handler forControlEvents:(UIControlEvents)controlEvents;
 
 @property (nonatomic) UIControlEvents controlEvents;
 @property (nonatomic, copy) void (^handler)(id sender);
@@ -20,7 +20,7 @@
 
 @implementation STMControlWrapper
 
-- (instancetype)initWithHandler:(void (^)(id))handler forControlEvents:(UIControlEvents)controlEvents {
+- (instancetype)initWithHandler:(STMControlHandler)handler forControlEvents:(UIControlEvents)controlEvents {
   self = [super init];
   if (!self) return nil;
 
@@ -42,7 +42,7 @@
 
 @implementation UIControl (STM)
 
-- (void)stm_addEventHandlerForControlEvents:(UIControlEvents)controlEvents :(void (^)(id _Nonnull))handler {
+- (void)stm_addEventHandlerForControlEvents:(UIControlEvents)controlEvents :(STMControlHandler)handler {
   if (!handler) { return; }
   NSMutableDictionary *events = self.stm_events;
   NSNumber *key = @(controlEvents);

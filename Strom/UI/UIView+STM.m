@@ -6,29 +6,16 @@
 
 #import "UIView+STM.h"
 #import "STMObjectRuntime.h"
-#import "UIImage+STM.h"
-
-@interface UIView ()
-
-@property (nonatomic, strong) UIImageView *cornerImageView;
-
-@end
 
 @implementation UIView (STM)
 
-+ (void)load {
-  static dispatch_once_t onceToken;
-  dispatch_once(&onceToken, ^{
-    SEL systemSel = @selector(layoutSubviews);
-    SEL swizzSel = @selector(stm_layoutSubviews);
-    STMSwizzMethod(self, systemSel, swizzSel);
-  });
++ (instancetype)stm_viewFromNib {
+    return [self stm_viewFromNibWithOwner:nil options:nil];
 }
 
-- (void)stm_layoutSubviews {
-  [self stm_layoutSubviews];
-  self.cornerImageView.frame = self.bounds;
-  [self bringSubviewToFront:self.cornerImageView];
++ (instancetype)stm_viewFromNibWithOwner:(id)ownerOrNil options:(NSDictionary *)optionsOrNil {
+    return [[UINib nibWithNibName:NSStringFromClass(self) bundle:nil]
+            instantiateWithOwner:ownerOrNil options:optionsOrNil].firstObject;
 }
 
 #pragma mark - snapshot
@@ -54,32 +41,53 @@
   return snapshot;
 }
 
-#pragma mark -
+#pragma mark - Draw image
 
-- (void)stm_drawCornerRadii:(CGSize)radii {
-  [self stm_drawCornerRadii:radii fillColor:[UIColor whiteColor]];
+- (UIImage *)stm_drawCornerRadii:(CGSize)radii {
+  return [self stm_drawCornerRadii:radii fillColor:[UIColor whiteColor]];
 }
 
-- (void)stm_drawCornerRadii:(CGSize)radii fillColor:(UIColor *)color {
-  [self stm_drawCornerRadii:radii byRoundingCorners:UIRectCornerAllCorners rectSize:self.bounds.size fillColor:color];
+- (UIImage *)stm_drawCornerRadii:(CGSize)radii fillColor:(UIColor *)color {
+  return [self stm_drawCornerRadii:radii byRoundingCorners:UIRectCornerAllCorners rectSize:self.bounds.size fillColor:color];
 }
 
-- (void)stm_drawCornerRadii:(CGSize)radii byRoundingCorners:(UIRectCorner)corners {
-  [self stm_drawCornerRadii:radii byRoundingCorners:corners rectSize:self.bounds.size fillColor:[UIColor whiteColor]];
+- (UIImage *)stm_drawCornerRadii:(CGSize)radii byRoundingCorners:(UIRectCorner)corners {
+  return [self stm_drawCornerRadii:radii byRoundingCorners:corners rectSize:self.bounds.size fillColor:[UIColor whiteColor]];
 }
 
-- (void)stm_drawCornerRadii:(CGSize)radii
+- (UIImage *)stm_drawCornerRadii:(CGSize)radii
           byRoundingCorners:(UIRectCorner)corners
                    rectSize:(CGSize)size
                   fillColor:(UIColor *)color {
   UIImage *image = [self _drawCornerRadii:radii byRoundingCorners:corners rectSize:size fillColor:color];
-  if (!image) { return; }
-  if (!self.cornerImageView) {
-    self.cornerImageView = [[UIImageView alloc] initWithFrame:self.bounds];
-    [self addSubview:self.cornerImageView];
-  }
-  self.cornerImageView.image = image;
+  return image;
 }
+
+- (void)stm_addTapGestureRecognizer:(void (^)(UITapGestureRecognizer * _Nonnull))configure actionHandler:(void (^)(UITapGestureRecognizer * _Nonnull))handler {
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] stm_initWithHandler:^(UITapGestureRecognizer * _Nonnull sender) {
+        !handler ?: handler(sender);
+    }];
+    !configure ?: configure(tap);
+    [self addGestureRecognizer:tap];
+}
+
+- (void)stm_addTapGestureRecognizerWithActionHandler:(void (^)(UITapGestureRecognizer * _Nonnull))handler {
+    [self stm_addTapGestureRecognizer:nil actionHandler:handler];
+}
+
+- (void)stm_addLongPressGestureRecognizer:(void (^)(UILongPressGestureRecognizer * _Nonnull))configure actionHandler:(void (^)(UILongPressGestureRecognizer * _Nonnull))handler {
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] stm_initWithHandler:^(UILongPressGestureRecognizer * _Nonnull sender) {
+        !handler ?: handler(sender);
+    }];
+    !configure ?: configure(longPress);
+    [self addGestureRecognizer:longPress];
+}
+
+- (void)stm_addLongPressGestureRecognizerWithActionHandler:(void (^)(UILongPressGestureRecognizer * _Nonnull))handler {
+    [self stm_addLongPressGestureRecognizer:nil actionHandler:handler];
+}
+
+#pragma mark - Private
 
 - (UIImage *)_drawCornerRadii:(CGSize)radii
             byRoundingCorners:(UIRectCorner)corners
@@ -121,11 +129,6 @@
   objc_setAssociatedObject(self, @selector(cornerImageView), cornerImageView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-@end
-
-
-@implementation UIView (Storyboard)
-
 - (void)setBorderColor:(UIColor *)borderColor {
   self.layer.borderColor = borderColor.CGColor;
 }
@@ -151,19 +154,6 @@
 
 - (CGFloat)cornerRadius {
   return self.layer.cornerRadius;
-}
-
-@end
-
-@implementation UIView (Nib)
-
-+ (instancetype)stm_viewFromNib {
-    return [self stm_viewFromNibWithOwner:nil options:nil];
-}
-
-+ (instancetype)stm_viewFromNibWithOwner:(id)ownerOrNil options:(NSDictionary *)optionsOrNil {
-    return [[UINib nibWithNibName:NSStringFromClass(self) bundle:nil]
-            instantiateWithOwner:ownerOrNil options:optionsOrNil].firstObject;
 }
 
 @end

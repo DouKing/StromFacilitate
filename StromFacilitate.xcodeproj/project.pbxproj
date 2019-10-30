@@ -11,7 +11,6 @@
 		002FEE1B1FF4CD0400EDA602 /* CornerRadiusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002FEE1A1FF4CD0400EDA602 /* CornerRadiusViewController.m */; };
 		003F80BB2201B355006169DA /* STMProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 003F80BA2201B355006169DA /* STMProxy.m */; };
 		0049F30122E5A9220064D2CB /* NSObject+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 0049F2FF22E5A9210064D2CB /* NSObject+STM.m */; };
-		005B580F2223D636003D42D3 /* UIViewController+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 005B580E2223D636003D42D3 /* UIViewController+STM.m */; };
 		005B58122223D7FC003D42D3 /* UIBarButtonItem+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 005B58112223D7FC003D42D3 /* UIBarButtonItem+STM.m */; };
 		005B58152223E510003D42D3 /* UIControl+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 005B58142223E510003D42D3 /* UIControl+STM.m */; };
 		0062A28C21706FBA00B46F55 /* UINavigationBar+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 0062A28B21706FBA00B46F55 /* UINavigationBar+STM.m */; };
@@ -23,6 +22,7 @@
 		006C57DB21A3FC630040A7BC /* UIDevice+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 006C57DA21A3FC630040A7BC /* UIDevice+STM.m */; };
 		006C57DE21A403270040A7BC /* STMDeviceInfo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 006C57DD21A403270040A7BC /* STMDeviceInfo.bundle */; };
 		008C099A210AF24500086B43 /* NSLayoutConstraint+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 008C0999210AF24500086B43 /* NSLayoutConstraint+STM.m */; };
+		00917BE623686BA6009E50E3 /* UIGestureRecognizer+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 00917BE523686BA6009E50E3 /* UIGestureRecognizer+STM.m */; };
 		009D4E5F1FFB977A0095F44A /* UIImage+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 009D4E5B1FFB977A0095F44A /* UIImage+STM.m */; };
 		009D4E601FFB977A0095F44A /* UIColor+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 009D4E5D1FFB977A0095F44A /* UIColor+STM.m */; };
 		00A6688C1F05FD46002751F6 /* UITextField+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A6688B1F05FD46002751F6 /* UITextField+STM.m */; };
@@ -56,8 +56,6 @@
 		003F80BA2201B355006169DA /* STMProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMProxy.m; sourceTree = "<group>"; };
 		0049F2FF22E5A9210064D2CB /* NSObject+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+STM.m"; sourceTree = "<group>"; };
 		0049F30022E5A9210064D2CB /* NSObject+STM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+STM.h"; sourceTree = "<group>"; };
-		005B580D2223D636003D42D3 /* UIViewController+STM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+STM.h"; sourceTree = "<group>"; };
-		005B580E2223D636003D42D3 /* UIViewController+STM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+STM.m"; sourceTree = "<group>"; };
 		005B58102223D7FC003D42D3 /* UIBarButtonItem+STM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+STM.h"; sourceTree = "<group>"; };
 		005B58112223D7FC003D42D3 /* UIBarButtonItem+STM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+STM.m"; sourceTree = "<group>"; };
 		005B58132223E510003D42D3 /* UIControl+STM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+STM.h"; sourceTree = "<group>"; };
@@ -65,7 +63,7 @@
 		0062A28A21706FBA00B46F55 /* UINavigationBar+STM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+STM.h"; sourceTree = "<group>"; };
 		0062A28B21706FBA00B46F55 /* UINavigationBar+STM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+STM.m"; sourceTree = "<group>"; };
 		0064439A1E6FD86F0011ED3F /* ImageBlendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBlendViewController.h; sourceTree = "<group>"; };
-		0064439B1E6FD86F0011ED3F /* ImageBlendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageBlendViewController.m; sourceTree = "<group>"; };
+		0064439B1E6FD86F0011ED3F /* ImageBlendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = ImageBlendViewController.m; sourceTree = "<group>"; tabWidth = 2; };
 		0064439D1E6FD93A0011ED3F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0067E7662212DD3300D37FA3 /* UIAlertController+STM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+STM.h"; sourceTree = "<group>"; };
 		0067E7672212DD3300D37FA3 /* UIAlertController+STM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+STM.m"; sourceTree = "<group>"; };
@@ -78,6 +76,8 @@
 		006C57DD21A403270040A7BC /* STMDeviceInfo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = STMDeviceInfo.bundle; sourceTree = "<group>"; };
 		008C0998210AF24500086B43 /* NSLayoutConstraint+STM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+STM.h"; sourceTree = "<group>"; };
 		008C0999210AF24500086B43 /* NSLayoutConstraint+STM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+STM.m"; sourceTree = "<group>"; };
+		00917BE423686BA6009E50E3 /* UIGestureRecognizer+STM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+STM.h"; sourceTree = "<group>"; };
+		00917BE523686BA6009E50E3 /* UIGestureRecognizer+STM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+STM.m"; sourceTree = "<group>"; };
 		009D4E5B1FFB977A0095F44A /* UIImage+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+STM.m"; sourceTree = "<group>"; };
 		009D4E5C1FFB977A0095F44A /* UIColor+STM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+STM.h"; sourceTree = "<group>"; };
 		009D4E5D1FFB977A0095F44A /* UIColor+STM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+STM.m"; sourceTree = "<group>"; };
@@ -163,8 +163,6 @@
 				001581AE221123700008E21A /* StromUI.h */,
 				006C57D621A3F78B0040A7BC /* UIApplication+STM.h */,
 				006C57D721A3F78B0040A7BC /* UIApplication+STM.m */,
-				005B580D2223D636003D42D3 /* UIViewController+STM.h */,
-				005B580E2223D636003D42D3 /* UIViewController+STM.m */,
 				0067E7662212DD3300D37FA3 /* UIAlertController+STM.h */,
 				0067E7672212DD3300D37FA3 /* UIAlertController+STM.m */,
 				006C57D921A3FC630040A7BC /* UIDevice+STM.h */,
@@ -181,6 +179,8 @@
 				005B58112223D7FC003D42D3 /* UIBarButtonItem+STM.m */,
 				005B58132223E510003D42D3 /* UIControl+STM.h */,
 				005B58142223E510003D42D3 /* UIControl+STM.m */,
+				00917BE423686BA6009E50E3 /* UIGestureRecognizer+STM.h */,
+				00917BE523686BA6009E50E3 /* UIGestureRecognizer+STM.m */,
 				008C0998210AF24500086B43 /* NSLayoutConstraint+STM.h */,
 				008C0999210AF24500086B43 /* NSLayoutConstraint+STM.m */,
 				009D4E5C1FFB977A0095F44A /* UIColor+STM.h */,
@@ -427,13 +427,13 @@
 				0067E7682212DD3300D37FA3 /* UIAlertController+STM.m in Sources */,
 				B891F8221CAE72590043BD59 /* STMObjectRuntime.m in Sources */,
 				00FA6E961FCC2A070050E72C /* NSBundle+STM.m in Sources */,
-				005B580F2223D636003D42D3 /* UIViewController+STM.m in Sources */,
 				009D4E601FFB977A0095F44A /* UIColor+STM.m in Sources */,
 				B891F7E91CAE71770043BD59 /* AppDelegate.m in Sources */,
 				006C57DB21A3FC630040A7BC /* UIDevice+STM.m in Sources */,
 				0049F30122E5A9220064D2CB /* NSObject+STM.m in Sources */,
 				B891F7E61CAE71770043BD59 /* main.m in Sources */,
 				B891F8321CAE772C0043BD59 /* ViewController.m in Sources */,
+				00917BE623686BA6009E50E3 /* UIGestureRecognizer+STM.m in Sources */,
 				B891F8381CAECC9A0043BD59 /* NSString+STM.m in Sources */,
 				B891F8351CAE7A080043BD59 /* STMConfiguration.m in Sources */,
 				00A6688C1F05FD46002751F6 /* UITextField+STM.m in Sources */,

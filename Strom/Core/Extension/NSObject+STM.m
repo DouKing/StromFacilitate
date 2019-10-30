@@ -53,7 +53,7 @@ static NSHashTable *KVOHashTable = nil;
             [self stm_addObserver:observer forKeyPath:keyPath options:options context:context];
             __weak typeof(self) __weak_self__ = self;
             [observer stm_addDeallocExecutor:^(__unsafe_unretained id  _Nonnull observedOwner, NSUInteger identifier) {
-                [__weak_self__ stm_removeObserver:observedOwner forKeyPath:keyPath context:context];
+                [__weak_self__ removeObserver:observedOwner forKeyPath:keyPath context:context];
             }];
         }
     }

@@ -10,9 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void(^STMControlHandler)(__kindof UIControl *sender);
+
 @interface UIControl (STM)
 
-- (void)stm_addEventHandlerForControlEvents:(UIControlEvents)controlEvents :(void (^)(id sender))handler;
+- (void)stm_addEventHandlerForControlEvents:(UIControlEvents)controlEvents :(STMControlHandler)handler;
 - (void)stm_removeEventHandlersForControlEvents:(UIControlEvents)controlEvents;
 - (BOOL)stm_hasEventHandlersForControlEvents:(UIControlEvents)controlEvents;
 
