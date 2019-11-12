@@ -97,7 +97,7 @@
 		B891F7E11CAE71770043BD59 /* StromFacilitate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StromFacilitate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B891F7E51CAE71770043BD59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B891F7E71CAE71770043BD59 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		B891F7E81CAE71770043BD59 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B891F7E81CAE71770043BD59 /* AppDelegate.m */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; tabWidth = 2; };
 		B891F7F01CAE71770043BD59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B891F7F31CAE71770043BD59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B891F7F51CAE71770043BD59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };

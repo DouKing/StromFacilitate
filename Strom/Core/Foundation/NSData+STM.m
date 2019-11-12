@@ -32,7 +32,7 @@
     return nil;
   }
   NSData *encryData = [NSData dataWithBytesNoCopy:buffer length:numBytesEncrypted];
-  free(buffer);
+  //free(buffer);
   return encryData;
 }
 
@@ -56,7 +56,7 @@
     return nil;
   }
   NSData *decryData = [NSData dataWithBytesNoCopy:buffer length:numBytesDecrypted];
-  free(buffer);
+  //free(buffer);
   return decryData;
 }
 

@@ -28,6 +28,11 @@
   UIOffset offset = UIOffsetMake(-5, 2);
   [buttonItem setBackButtonTitlePositionAdjustment:offset forBarMetrics:UIBarMetricsDefault];
 
+  NSDictionary *dic = @{@"k": @"1"};
+  NSData *data = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
+  data = [data stm_AES256EncryptWithKey:@"123"];
+  STMLog(@"aes %@", [[NSString alloc] initWithData:[data stm_AES256DecryptWithKey:@"123"] encoding:NSUTF8StringEncoding]);
+
   application.stm_statusBarColor = [UIColor redColor];
   STMLog(@"status bar color: %@", application.stm_statusBarColor);
   STMLog(@"device platform: %@", [[UIDevice currentDevice] stm_platform]);
