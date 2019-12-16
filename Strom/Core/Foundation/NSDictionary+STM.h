@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSDictionary<KeyType, ObjectType> (STM)
 
+- (NSDictionary<KeyType, ObjectType> *)stm_filter:(BOOL (^)(KeyType key, ObjectType value))block;
+
 - (nullable NSDictionary *)stm_dictionaryBySettingObject:(ObjectType)anObject forKey:(KeyType<NSCopying>)aKey;
 - (nullable NSDictionary *)stm_dictionaryByRemovingObjectForKey:(KeyType<NSCopying>)aKey;
 - (nullable NSDictionary *)stm_dictionaryByAppendingDictionary:(NSDictionary<KeyType, ObjectType> *)dictionary;

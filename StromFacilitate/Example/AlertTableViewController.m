@@ -65,7 +65,11 @@ static NSString * const AlertTypeNameMapping[] = {
       [alert stm_addActionWithTitle:@"A" style:UIAlertActionStyleDestructive handler:nil];
 
       [self presentViewController:alert animated:YES completion:nil];
-      alert.view.tintColor = [UIColor greenColor];
+      // After view is loaded
+      dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [alert stm_setVisualEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleDark]];
+        alert.view.tintColor = [UIColor greenColor];
+      });
       vc.view.backgroundColor = [UIColor yellowColor];
     } break;
 

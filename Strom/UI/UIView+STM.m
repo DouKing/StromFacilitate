@@ -18,6 +18,17 @@
             instantiateWithOwner:ownerOrNil options:optionsOrNil].firstObject;
 }
 
+- (NSArray<__kindof UIView *> *)allSubViewsOfType:(Class)aClass {
+  NSMutableArray *temp = [NSMutableArray array];
+  if ([self isKindOfClass:aClass]) {
+    [temp addObject:self];
+  }
+  for (UIView *subView in self.subviews) {
+    [temp addObjectsFromArray:[subView allSubViewsOfType:aClass]];
+  }
+  return [temp copy];
+}
+
 #pragma mark - snapshot
 
 - (UIImage *)stm_snapshotImage {

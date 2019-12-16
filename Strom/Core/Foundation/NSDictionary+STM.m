@@ -10,6 +10,17 @@
 
 @implementation NSDictionary (STM)
 
+- (NSDictionary *)stm_filter:(BOOL (^)(id _Nonnull, id _Nonnull))block {
+    NSCParameterAssert(block);
+    NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithCapacity:self.count];
+    [self enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+        if (block(key, obj)) {
+            dic[key] = obj;
+        }
+    }];
+    return [dic copy];
+}
+
 - (NSDictionary *)stm_dictionaryBySettingObject:(id)anObject forKey:(id<NSCopying>)aKey {
   if (!anObject || !aKey) {
     return self;

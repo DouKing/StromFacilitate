@@ -8,6 +8,7 @@
 
 #import "UIAlertController+STM.h"
 #import <objc/runtime.h>
+#import "UIView+STM.h"
 
 static NSString * const kSTMAlertActionTitleTextColorKey = @"titleTextColor";
 static NSString * const kSTMAlertActionTitleTextAligmentKey = @"titleTextAlignment";
@@ -87,6 +88,15 @@ static NSString * const kSTMAlertControllerContentViewControllerKey = @"contentV
                                NSForegroundColorAttributeName: color,
                                };
   self.stm_attributedMessage = [[NSAttributedString alloc] initWithString:self.message attributes:attributes];
+}
+
+- (void)stm_setVisualEffect:(UIVisualEffect *)visualEffect {
+  [[self.view allSubViewsOfType:UIVisualEffectView.class]
+   enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    if (![obj isKindOfClass:UIVisualEffectView.class]) { return; }
+    UIVisualEffectView *effectView = obj;
+    effectView.effect = visualEffect;
+  }];
 }
 
 - (void)stm_addDefaultStyleActionsWithTitles:(NSArray<NSString *> *)titles handler:(void (^)(UIAlertAction * _Nonnull, NSInteger))handler {

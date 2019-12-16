@@ -37,6 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)stm_setTitleFont:(UIFont *)font color:(UIColor *)color;
 - (void)stm_setMessageFont:(UIFont *)font color:(UIColor *)color;
+- (void)stm_setVisualEffect:(UIVisualEffect *)visualEffect;
 
 - (void)stm_addDefaultStyleActionsWithTitles:(NSArray<NSString *> *)titles
                                      handler:(void (^ __nullable)(UIAlertAction *action, NSInteger index))handler;

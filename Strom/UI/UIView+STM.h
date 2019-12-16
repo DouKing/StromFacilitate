@@ -40,6 +40,8 @@ IB_DESIGNABLE
 @property (nonatomic, assign) IBInspectable CGFloat borderWidth;
 @property (nonatomic, assign) IBInspectable CGFloat cornerRadius;
 
+- (NSArray<__kindof UIView *> *)allSubViewsOfType:(Class)aClass;
+
 @end
 
 NS_ASSUME_NONNULL_END
