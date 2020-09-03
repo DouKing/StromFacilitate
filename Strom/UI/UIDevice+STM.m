@@ -18,12 +18,12 @@
 
 @implementation UIDevice (STM)
 
-- (NSString *)stm_platform {
+- (NSString *)stm_platformDesc {
   NSString *bundlePath = [[NSBundle bundleForClass:_STMDeviceBundleClass.class] pathForResource:@"STMDeviceInfo" ofType:@"bundle"];
   NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
   NSString *infoPath = [bundle pathForResource:@"device" ofType:@"plist"];
   NSDictionary *deviceInfo = [NSDictionary dictionaryWithContentsOfFile:infoPath];
-  NSString *platform = [self stm_getSysInfoByName:"hw.machine"];
+  NSString *platform = [self stm_platform];
   if (platform) {
     NSString *p = deviceInfo[platform];
     if (p && [p isKindOfClass:NSString.class] && p.length) {
@@ -31,6 +31,10 @@
     }
   }
   return platform;
+}
+
+- (NSString *)stm_platform {
+	return [self stm_getSysInfoByName:"hw.machine"];;
 }
 
 - (NSString *)stm_hwmodel {

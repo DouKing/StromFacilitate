@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIDevice (STM)
 
 - (NSString *)stm_platform;
+- (NSString *)stm_platformDesc;
 - (NSString *)stm_hwmodel;
 - (NSString *)stm_macString;
 - (NSString *)stm_idfaString;
