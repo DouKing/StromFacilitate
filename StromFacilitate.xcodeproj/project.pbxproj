@@ -13,6 +13,7 @@
 		0049F30122E5A9220064D2CB /* NSObject+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 0049F2FF22E5A9210064D2CB /* NSObject+STM.m */; };
 		005B58122223D7FC003D42D3 /* UIBarButtonItem+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 005B58112223D7FC003D42D3 /* UIBarButtonItem+STM.m */; };
 		005B58152223E510003D42D3 /* UIControl+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 005B58142223E510003D42D3 /* UIControl+STM.m */; };
+		005FB96026466D1D005B572D /* NSURLProtocol+STMWebKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 005FB95F26466D1D005B572D /* NSURLProtocol+STMWebKit.m */; };
 		0062A28C21706FBA00B46F55 /* UINavigationBar+STM.m in Sources */ = {isa = PBXBuildFile; fileRef = 0062A28B21706FBA00B46F55 /* UINavigationBar+STM.m */; };
 		0064439C1E6FD86F0011ED3F /* ImageBlendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0064439B1E6FD86F0011ED3F /* ImageBlendViewController.m */; };
 		0064439E1E6FD93A0011ED3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0064439D1E6FD93A0011ED3F /* Main.storyboard */; };
@@ -60,6 +61,8 @@
 		005B58112223D7FC003D42D3 /* UIBarButtonItem+STM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+STM.m"; sourceTree = "<group>"; };
 		005B58132223E510003D42D3 /* UIControl+STM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+STM.h"; sourceTree = "<group>"; };
 		005B58142223E510003D42D3 /* UIControl+STM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+STM.m"; sourceTree = "<group>"; };
+		005FB95E26466D1D005B572D /* NSURLProtocol+STMWebKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURLProtocol+STMWebKit.h"; sourceTree = "<group>"; };
+		005FB95F26466D1D005B572D /* NSURLProtocol+STMWebKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURLProtocol+STMWebKit.m"; sourceTree = "<group>"; };
 		0062A28A21706FBA00B46F55 /* UINavigationBar+STM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+STM.h"; sourceTree = "<group>"; };
 		0062A28B21706FBA00B46F55 /* UINavigationBar+STM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+STM.m"; sourceTree = "<group>"; };
 		0064439A1E6FD86F0011ED3F /* ImageBlendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBlendViewController.h; sourceTree = "<group>"; };
@@ -285,6 +288,8 @@
 				00DCE8EE216B5C9900F08BAF /* NSArray+STM.m */,
 				B891F8361CAECC9A0043BD59 /* NSString+STM.h */,
 				B891F8371CAECC9A0043BD59 /* NSString+STM.m */,
+				005FB95E26466D1D005B572D /* NSURLProtocol+STMWebKit.h */,
+				005FB95F26466D1D005B572D /* NSURLProtocol+STMWebKit.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -454,6 +459,7 @@
 				B891F81C1CAE72590043BD59 /* NSDictionary+STM.m in Sources */,
 				002FEDCF1FF370EA00EDA602 /* UIView+STM.m in Sources */,
 				006C57D821A3F78B0040A7BC /* UIApplication+STM.m in Sources */,
+				005FB96026466D1D005B572D /* NSURLProtocol+STMWebKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
