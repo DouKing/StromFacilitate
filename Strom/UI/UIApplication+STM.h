@@ -28,6 +28,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)stm_openURL:(NSString *)URLString completionHandler:(void (^ __nullable)(BOOL success))completion NS_EXTENSION_UNAVAILABLE_IOS("");
 
+/// 强制退出App
+- (void)stm_exit;
+
 ///状态栏背景色
 @property (nullable, nonatomic, strong) UIColor *stm_statusBarColor;
 

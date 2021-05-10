@@ -7,6 +7,7 @@
 //
 
 #import "UIApplication+STM.h"
+#import <objc/message.h>
 
 @implementation UIApplication (STM)
 
@@ -55,6 +56,16 @@
   } else {
     if (handler) { handler(NO); }
   }
+}
+
+- (void)stm_exit {
+	SEL suspend = @selector(suspend);
+	if ([self respondsToSelector:suspend]) {
+		((void (*)(id, SEL))(void *)objc_msgSend)(self, suspend);
+		exit(0);
+	} else {
+		abort();
+	}
 }
 
 - (__kindof UIViewController *)_stm_topViewControllerOnViewController:(UIViewController *)rootVC {
